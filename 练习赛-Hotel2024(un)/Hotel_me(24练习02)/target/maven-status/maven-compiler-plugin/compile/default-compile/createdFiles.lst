@@ -1,0 +1,8 @@
+net\mooctest\FreeTimeState.class
+net\mooctest\Room.class
+net\mooctest\RoomState.class
+net\mooctest\RoomType.class
+net\mooctest\Hotel.class
+net\mooctest\CheckInState.class
+net\mooctest\BookedState.class
+net\mooctest\Manager.class

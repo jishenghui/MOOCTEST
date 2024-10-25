@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1635047648623" clover="4.4.1">
+   <project name="MTree 0.0.1-SNAPSHOT" timestamp="1635047646566">
+      <metrics coveredelements="624" complexity="217" loc="1603" methods="106" classes="42" statements="405" packages="1" coveredconditionals="141" coveredmethods="98" elements="691" ncloc="980" files="11" conditionals="180" coveredstatements="385"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="624" complexity="217" loc="1603" methods="106" classes="42" statements="405" coveredconditionals="141" coveredmethods="98" elements="691" ncloc="980" files="11" conditionals="180" coveredstatements="385"/>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\ComposedSplitFunction.java" name="ComposedSplitFunction.java">
+            <metrics coveredelements="7" coveredconditionals="0" complexity="2" loc="39" coveredmethods="2" methods="2" elements="7" classes="1" ncloc="20" statements="5" conditionals="0" coveredstatements="5"/>
+            <class name="ComposedSplitFunction">
+               <metrics coveredelements="7" coveredconditionals="0" complexity="2" coveredmethods="2" methods="2" elements="7" statements="5" conditionals="0" coveredstatements="5"/>
+            </class>
+            <line complexity="1" visibility="public" signature="ComposedSplitFunction(PromotionFunction&lt;DATA&gt;,PartitionFunction&lt;DATA&gt;)" num="22" count="6" type="method"/>
+            <line num="27" count="6" type="stmt"/>
+            <line num="28" count="6" type="stmt"/>
+            <line complexity="1" visibility="public" signature="process(Set&lt;DATA&gt;,DistanceFunction&lt;? super DATA&gt;) : SplitResult&lt;DATA&gt;" num="32" count="18" type="method"/>
+            <line num="34" count="18" type="stmt"/>
+            <line num="35" count="18" type="stmt"/>
+            <line num="36" count="18" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\DistanceFunction.java" name="DistanceFunction.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="0" loc="12" coveredmethods="0" methods="0" elements="0" classes="1" ncloc="4" statements="0" conditionals="0" coveredstatements="0"/>
+            <class name="DistanceFunction">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\DistanceFunctions.java" name="DistanceFunctions.java">
+            <metrics coveredelements="59" coveredconditionals="6" complexity="20" loc="171" coveredmethods="14" methods="16" elements="66" classes="5" ncloc="99" statements="42" conditionals="8" coveredstatements="39"/>
+            <class name="DistanceFunctions">
+               <metrics coveredelements="37" coveredconditionals="5" complexity="10" coveredmethods="5" methods="7" elements="42" statements="29" conditionals="6" coveredstatements="27"/>
+            </class>
+            <class name="DistanceFunctions.Pair">
+               <metrics coveredelements="10" coveredconditionals="1" complexity="4" coveredmethods="3" methods="3" elements="12" statements="7" conditionals="2" coveredstatements="6"/>
+            </class>
+            <class name="DistanceFunctions.EuclideanCoordinate">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="DistanceFunctions.IntegerListEuclideanCoordinate">
+               <metrics coveredelements="6" coveredconditionals="0" complexity="3" coveredmethods="3" methods="3" elements="6" statements="3" conditionals="0" coveredstatements="3"/>
+            </class>
+            <class name="DistanceFunctions.DoubleListEuclideanCoordinate">
+               <metrics coveredelements="6" coveredconditionals="0" complexity="3" coveredmethods="3" methods="3" elements="6" statements="3" conditionals="0" coveredstatements="3"/>
+            </class>
+            <line complexity="1" visibility="private" signature="DistanceFunctions()" num="16" count="0" type="method"/>
+            <line complexity="1" visibility="public" signature="cached(DistanceFunction&lt;Data&gt;) : DistanceFunction&lt;Data&gt;" num="28" count="18" type="method"/>
+            <line num="29" count="18" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Pair(Data,Data)" num="34" count="586" type="method"/>
+            <line num="35" count="586" type="stmt"/>
+            <line num="36" count="586" type="stmt"/>
+            <line complexity="1" visibility="public" signature="hashCode() : int" num="39" count="802" type="method"/>
+            <line num="41" count="802" type="stmt"/>
+            <line complexity="2" visibility="public" signature="equals(Object) : boolean" num="44" count="657" type="method"/>
+            <line num="46" count="657" type="stmt"/>
+            <line falsecount="0" truecount="657" num="46" type="cond"/>
+            <line num="47" count="657" type="stmt"/>
+            <line num="48" count="657" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="calculate(Data,Data) : double" num="58" count="460" type="method"/>
+            <line num="60" count="460" type="stmt"/>
+            <line num="61" count="460" type="stmt"/>
+            <line num="62" count="460" type="stmt"/>
+            <line falsecount="126" truecount="334" num="62" type="cond"/>
+            <line num="63" count="334" type="stmt"/>
+            <line num="66" count="126" type="stmt"/>
+            <line num="67" count="126" type="stmt"/>
+            <line num="68" count="126" type="stmt"/>
+            <line falsecount="126" truecount="0" num="68" type="cond"/>
+            <line num="69" count="0" type="stmt"/>
+            <line num="72" count="126" type="stmt"/>
+            <line num="73" count="126" type="stmt"/>
+            <line num="74" count="126" type="stmt"/>
+            <line num="75" count="126" type="stmt"/>
+            <line complexity="2" visibility="public" signature="euclidean(EuclideanCoordinate,EuclideanCoordinate) : double" num="107" count="702" type="method"/>
+            <line num="108" count="702" type="stmt"/>
+            <line num="109" count="699" type="stmt"/>
+            <line num="110" count="699" type="stmt"/>
+            <line falsecount="699" truecount="2057" num="110" type="cond"/>
+            <line num="111" count="2057" type="stmt"/>
+            <line num="112" count="2057" type="stmt"/>
+            <line num="114" count="699" type="stmt"/>
+            <line num="115" count="699" type="stmt"/>
+            <line complexity="1" visibility="public" signature="calculate(EuclideanCoordinate,EuclideanCoordinate) : double" num="125" count="0" type="method"/>
+            <line num="127" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="calculate(List&lt;Integer&gt;,List&lt;Integer&gt;) : double" num="138" count="16" type="method"/>
+            <line complexity="1" visibility="public" signature="IntegerListEuclideanCoordinate(List&lt;Integer&gt;)" num="142" count="32" type="method"/>
+            <line num="142" count="32" type="stmt"/>
+            <line complexity="1" visibility="public" signature="dimensions() : int" num="143" count="30" type="method"/>
+            <line num="143" count="30" type="stmt"/>
+            <line complexity="1" visibility="public" signature="get(int) : double" num="144" count="84" type="method"/>
+            <line num="144" count="84" type="stmt"/>
+            <line num="145" count="16" type="stmt"/>
+            <line num="146" count="16" type="stmt"/>
+            <line num="147" count="16" type="stmt"/>
+            <line num="148" count="16" type="stmt"/>
+            <line complexity="1" visibility="public" signature="calculate(List&lt;Double&gt;,List&lt;Double&gt;) : double" num="158" count="686" type="method"/>
+            <line complexity="1" visibility="public" signature="DoubleListEuclideanCoordinate(List&lt;Double&gt;)" num="162" count="1372" type="method"/>
+            <line num="162" count="1372" type="stmt"/>
+            <line complexity="1" visibility="public" signature="dimensions() : int" num="163" count="1371" type="method"/>
+            <line num="163" count="1371" type="stmt"/>
+            <line complexity="1" visibility="public" signature="get(int) : double" num="164" count="4030" type="method"/>
+            <line num="164" count="4030" type="stmt"/>
+            <line num="165" count="686" type="stmt"/>
+            <line num="166" count="686" type="stmt"/>
+            <line num="167" count="686" type="stmt"/>
+            <line num="168" count="686" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\MTree.java" name="MTree.java">
+            <metrics coveredelements="464" coveredconditionals="113" complexity="167" loc="1006" coveredmethods="72" methods="75" elements="521" classes="25" ncloc="701" statements="296" conditionals="150" coveredstatements="279"/>
+            <class name="MTree">
+               <metrics coveredelements="61" coveredconditionals="12" complexity="23" coveredmethods="10" methods="10" elements="63" statements="41" conditionals="12" coveredstatements="39"/>
+            </class>
+            <class name="MTree.ResultItem">
+               <metrics coveredelements="3" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="3" statements="2" conditionals="0" coveredstatements="2"/>
+            </class>
+            <class name="MTree.SplitNodeReplacement">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <class name="MTree.RootNodeReplacement">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <class name="MTree.NodeUnderCapacity">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="MTree.DataNotFound">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="MTree.Query">
+               <metrics coveredelements="6" coveredconditionals="0" complexity="2" coveredmethods="2" methods="2" elements="6" statements="4" conditionals="0" coveredstatements="4"/>
+            </class>
+            <class name="MTree.Query.ResultsIterator">
+               <metrics coveredelements="83" coveredconditionals="28" complexity="24" coveredmethods="5" methods="6" elements="89" statements="51" conditionals="32" coveredstatements="50"/>
+            </class>
+            <class name="MTree.Query.ResultsIterator.ItemWithDistances">
+               <metrics coveredelements="14" coveredconditionals="4" complexity="4" coveredmethods="2" methods="2" elements="14" statements="8" conditionals="4" coveredstatements="8"/>
+            </class>
+            <class name="MTree.IndexItem">
+               <metrics coveredelements="14" coveredconditionals="4" complexity="8" coveredmethods="4" methods="4" elements="18" statements="6" conditionals="8" coveredstatements="6"/>
+            </class>
+            <class name="MTree.Node">
+               <metrics coveredelements="89" coveredconditionals="16" complexity="29" coveredmethods="18" methods="18" elements="95" statements="55" conditionals="22" coveredstatements="55"/>
+            </class>
+            <class name="MTree.NodeTrait">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="MTree.Leafness">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="MTree.Rootness">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="MTree.RootNodeTrait">
+               <metrics coveredelements="2" coveredconditionals="1" complexity="4" coveredmethods="1" methods="3" elements="7" statements="2" conditionals="2" coveredstatements="0"/>
+            </class>
+            <class name="MTree.NonRootNodeTrait">
+               <metrics coveredelements="6" coveredconditionals="2" complexity="5" coveredmethods="3" methods="3" elements="8" statements="1" conditionals="4" coveredstatements="1"/>
+            </class>
+            <class name="MTree.LeafNodeTrait">
+               <metrics coveredelements="20" coveredconditionals="7" complexity="11" coveredmethods="5" methods="5" elements="25" statements="8" conditionals="12" coveredstatements="8"/>
+            </class>
+            <class name="MTree.NonLeafNodeTrait">
+               <metrics coveredelements="116" coveredconditionals="33" complexity="34" coveredmethods="6" methods="6" elements="139" statements="89" conditionals="44" coveredstatements="77"/>
+            </class>
+            <class name="MTree.NonLeafNodeTrait.CandidateChild">
+               <metrics coveredelements="4" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="4" statements="3" conditionals="0" coveredstatements="3"/>
+            </class>
+            <class name="MTree.NonLeafNodeTrait.ChildWithDistance">
+               <metrics coveredelements="3" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="3" statements="2" conditionals="0" coveredstatements="2"/>
+            </class>
+            <class name="MTree.RootLeafNode">
+               <metrics coveredelements="11" coveredconditionals="2" complexity="7" coveredmethods="4" methods="4" elements="13" statements="5" conditionals="4" coveredstatements="5"/>
+            </class>
+            <class name="MTree.RootNode">
+               <metrics coveredelements="22" coveredconditionals="4" complexity="8" coveredmethods="4" methods="4" elements="24" statements="14" conditionals="6" coveredstatements="14"/>
+            </class>
+            <class name="MTree.InternalNode">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <class name="MTree.LeafNode">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <class name="MTree.Entry">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <line complexity="1" visibility="private" signature="ResultItem(DATA,double)" num="27" count="36" type="method"/>
+            <line num="28" count="36" type="stmt"/>
+            <line num="29" count="36" type="stmt"/>
+            <line complexity="1" visibility="private" signature="SplitNodeReplacement(Object)" num="49" count="18" type="method"/>
+            <line num="50" count="18" type="stmt"/>
+            <line complexity="1" visibility="private" signature="RootNodeReplacement(Object)" num="59" count="7" type="method"/>
+            <line num="60" count="7" type="stmt"/>
+            <line complexity="1" visibility="public" signature="ItemWithDistances(U,double,double)" num="94" count="170" type="method"/>
+            <line num="95" count="170" type="stmt"/>
+            <line num="96" count="170" type="stmt"/>
+            <line num="97" count="170" type="stmt"/>
+            <line complexity="3" visibility="public" signature="compareTo(ItemWithDistances&lt;U&gt;) : int" num="100" count="291" type="method"/>
+            <line num="102" count="291" type="stmt"/>
+            <line falsecount="174" truecount="117" num="102" type="cond"/>
+            <line num="103" count="117" type="stmt"/>
+            <line num="104" count="174" type="stmt"/>
+            <line falsecount="15" truecount="159" num="104" type="cond"/>
+            <line num="105" count="159" type="stmt"/>
+            <line num="107" count="15" type="stmt"/>
+            <line complexity="2" visibility="private" signature="ResultsIterator()" num="120" count="23" type="method"/>
+            <line num="121" count="23" type="stmt"/>
+            <line falsecount="21" truecount="2" num="121" type="cond"/>
+            <line num="122" count="2" type="stmt"/>
+            <line num="123" count="2" type="stmt"/>
+            <line num="126" count="21" type="stmt"/>
+            <line num="127" count="19" type="stmt"/>
+            <line num="129" count="19" type="stmt"/>
+            <line num="130" count="19" type="stmt"/>
+            <line complexity="4" visibility="public" signature="hasNext() : boolean" num="134" count="41" type="method"/>
+            <line num="136" count="41" type="stmt"/>
+            <line falsecount="39" truecount="2" num="136" type="cond"/>
+            <line num="137" count="2" type="stmt"/>
+            <line num="140" count="39" type="stmt"/>
+            <line falsecount="0" truecount="39" num="140" type="cond"/>
+            <line num="141" count="39" type="stmt"/>
+            <line num="144" count="39" type="stmt"/>
+            <line falsecount="36" truecount="3" num="144" type="cond"/>
+            <line num="145" count="3" type="stmt"/>
+            <line num="146" count="3" type="stmt"/>
+            <line num="148" count="36" type="stmt"/>
+            <line complexity="2" visibility="public" signature="next() : ResultItem" num="152" count="39" type="method"/>
+            <line num="154" count="39" type="stmt"/>
+            <line falsecount="3" truecount="36" num="154" type="cond"/>
+            <line num="155" count="36" type="stmt"/>
+            <line num="156" count="36" type="stmt"/>
+            <line num="157" count="36" type="stmt"/>
+            <line num="159" count="3" type="stmt"/>
+            <line complexity="1" visibility="public" signature="remove() : void" num="163" count="0" type="method"/>
+            <line num="165" count="0" type="stmt"/>
+            <line complexity="12" visibility="private" signature="fetchNext() : void" num="169" count="39" type="method"/>
+            <line falsecount="0" truecount="39" num="170" type="cond"/>
+            <line num="172" count="39" type="stmt"/>
+            <line falsecount="37" truecount="2" num="172" type="cond"/>
+            <line num="173" count="2" type="stmt"/>
+            <line num="174" count="2" type="stmt"/>
+            <line num="177" count="37" type="stmt"/>
+            <line falsecount="1" truecount="100" num="177" type="cond"/>
+            <line num="178" count="100" type="stmt"/>
+            <line falsecount="64" truecount="36" num="178" type="cond"/>
+            <line num="179" count="36" type="stmt"/>
+            <line falsecount="0" truecount="64" num="182" type="cond"/>
+            <line num="184" count="64" type="stmt"/>
+            <line num="185" count="64" type="stmt"/>
+            <line num="187" count="64" type="stmt"/>
+            <line num="188" count="153" type="stmt"/>
+            <line falsecount="2" truecount="151" num="188" type="cond"/>
+            <line num="189" count="151" type="stmt"/>
+            <line num="190" count="151" type="stmt"/>
+            <line num="191" count="151" type="stmt"/>
+            <line falsecount="0" truecount="151" num="191" type="cond"/>
+            <line num="192" count="151" type="stmt"/>
+            <line falsecount="57" truecount="94" num="192" type="cond"/>
+            <line num="193" count="94" type="stmt"/>
+            <line num="195" count="94" type="stmt"/>
+            <line num="197" count="57" type="stmt"/>
+            <line num="199" count="57" type="stmt"/>
+            <line num="205" count="64" type="stmt"/>
+            <line falsecount="50" truecount="14" num="205" type="cond"/>
+            <line num="206" count="14" type="stmt"/>
+            <line num="208" count="50" type="stmt"/>
+            <line num="212" count="1" type="stmt"/>
+            <line complexity="3" visibility="private" signature="prepareNextNearest() : boolean" num="216" count="100" type="method"/>
+            <line num="217" count="100" type="stmt"/>
+            <line falsecount="36" truecount="64" num="217" type="cond"/>
+            <line num="218" count="64" type="stmt"/>
+            <line num="219" count="64" type="stmt"/>
+            <line falsecount="28" truecount="36" num="219" type="cond"/>
+            <line num="220" count="36" type="stmt"/>
+            <line num="221" count="36" type="stmt"/>
+            <line num="222" count="36" type="stmt"/>
+            <line num="223" count="36" type="stmt"/>
+            <line num="227" count="64" type="stmt"/>
+            <line complexity="1" visibility="private" signature="Query(DATA,double,int)" num="233" count="23" type="method"/>
+            <line num="234" count="23" type="stmt"/>
+            <line num="235" count="23" type="stmt"/>
+            <line num="236" count="23" type="stmt"/>
+            <line complexity="1" visibility="public" signature="iterator() : Iterator&lt;ResultItem&gt;" num="240" count="23" type="method"/>
+            <line num="242" count="23" type="stmt"/>
+            <line complexity="1" visibility="public" signature="MTree(DistanceFunction&lt;? super DATA&gt;,SplitFunction&lt;DATA&gt;)" num="272" count="1" type="method"/>
+            <line num="274" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="MTree(int,DistanceFunction&lt;? super DATA&gt;,SplitFunction&lt;DATA&gt;)" num="286" count="4" type="method"/>
+            <line num="289" count="4" type="stmt"/>
+            <line complexity="5" visibility="public" signature="MTree(int,int,DistanceFunction&lt;? super DATA&gt;,SplitFunction&lt;DATA&gt;)" num="302" count="9" type="method"/>
+            <line num="306" count="9" type="stmt"/>
+            <line falsecount="6" truecount="3" num="306" type="cond"/>
+            <line num="308" count="3" type="stmt"/>
+            <line num="311" count="6" type="stmt"/>
+            <line falsecount="5" truecount="1" num="311" type="cond"/>
+            <line num="312" count="1" type="stmt"/>
+            <line num="318" count="6" type="stmt"/>
+            <line num="319" count="6" type="stmt"/>
+            <line num="320" count="6" type="stmt"/>
+            <line num="321" count="6" type="stmt"/>
+            <line num="322" count="6" type="stmt"/>
+            <line complexity="5" visibility="public" signature="add(DATA) : void" num="334" count="45" type="method"/>
+            <line num="335" count="45" type="stmt"/>
+            <line falsecount="39" truecount="6" num="335" type="cond"/>
+            <line num="336" count="6" type="stmt"/>
+            <line num="337" count="6" type="stmt"/>
+            <line num="338" count="6" type="stmt"/>
+            <line num="340" count="0" type="stmt"/>
+            <line num="343" count="39" type="stmt"/>
+            <line num="344" count="38" type="stmt"/>
+            <line num="345" count="38" type="stmt"/>
+            <line num="347" count="5" type="stmt"/>
+            <line num="348" count="5" type="stmt"/>
+            <line num="349" count="5" type="stmt"/>
+            <line falsecount="5" truecount="10" num="349" type="cond"/>
+            <line num="350" count="10" type="stmt"/>
+            <line num="352" count="10" type="stmt"/>
+            <line num="353" count="10" type="stmt"/>
+            <line complexity="5" visibility="public" signature="remove(DATA) : boolean" num="365" count="37" type="method"/>
+            <line num="366" count="37" type="stmt"/>
+            <line falsecount="36" truecount="1" num="366" type="cond"/>
+            <line num="367" count="1" type="stmt"/>
+            <line num="370" count="36" type="stmt"/>
+            <line num="371" count="36" type="stmt"/>
+            <line num="372" count="36" type="stmt"/>
+            <line num="374" count="7" type="stmt"/>
+            <line num="376" count="7" type="stmt"/>
+            <line num="378" count="1" type="stmt"/>
+            <line num="380" count="0" type="stmt"/>
+            <line num="382" count="35" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getNearestByRange(DATA,double) : Query" num="392" count="2" type="method"/>
+            <line num="393" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getNearestByLimit(DATA,int) : Query" num="404" count="2" type="method"/>
+            <line num="405" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getNearest(DATA,double,int) : Query" num="417" count="5" type="method"/>
+            <line num="418" count="5" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getNearest(DATA) : Query" num="426" count="18" type="method"/>
+            <line num="427" count="18" type="stmt"/>
+            <line complexity="2" visibility="protected" signature="_check() : void" num="431" count="3" type="method"/>
+            <line num="432" count="3" type="stmt"/>
+            <line falsecount="1" truecount="2" num="432" type="cond"/>
+            <line num="433" count="2" type="stmt"/>
+            <line complexity="1" visibility="private" signature="IndexItem(DATA)" num="443" count="96" type="method"/>
+            <line num="444" count="96" type="stmt"/>
+            <line num="445" count="96" type="stmt"/>
+            <line num="446" count="96" type="stmt"/>
+            <line complexity="1" visibility="package" signature="_check() : int" num="449" count="32" type="method"/>
+            <line num="450" count="32" type="stmt"/>
+            <line num="451" count="32" type="stmt"/>
+            <line num="452" count="32" type="stmt"/>
+            <line complexity="2" visibility="private" signature="_checkRadius() : void" num="455" count="32" type="method"/>
+            <line falsecount="0" truecount="32" num="456" type="cond"/>
+            <line complexity="4" visibility="protected" signature="_checkDistanceToParent() : void" num="459" count="20" type="method"/>
+            <line falsecount="0" truecount="20" num="460" type="cond"/>
+            <line falsecount="0" truecount="20" num="461" type="cond"/>
+            <line falsecount="0" truecount="20" num="462" type="cond"/>
+            <line complexity="1" visibility="private" signature="Node(DATA,R,L)" num="474" count="52" type="method"/>
+            <line num="477" count="52" type="stmt"/>
+            <line num="479" count="52" type="stmt"/>
+            <line num="480" count="52" type="stmt"/>
+            <line num="482" count="52" type="stmt"/>
+            <line num="483" count="52" type="stmt"/>
+            <line complexity="1" visibility="private" signature="addData(DATA,double) : void" num="486" count="86" type="method"/>
+            <line num="487" count="86" type="stmt"/>
+            <line num="488" count="86" type="stmt"/>
+            <line complexity="4" visibility="package" signature="_check() : int" num="491" count="12" type="method"/>
+            <line num="492" count="12" type="stmt"/>
+            <line num="493" count="12" type="stmt"/>
+            <line num="494" count="12" type="stmt"/>
+            <line num="496" count="12" type="stmt"/>
+            <line num="497" count="12" type="stmt"/>
+            <line num="498" count="30" type="stmt"/>
+            <line num="499" count="30" type="stmt"/>
+            <line falsecount="0" truecount="30" num="500" type="cond"/>
+            <line num="502" count="30" type="stmt"/>
+            <line num="503" count="30" type="stmt"/>
+            <line num="505" count="30" type="stmt"/>
+            <line num="506" count="30" type="stmt"/>
+            <line falsecount="18" truecount="12" num="506" type="cond"/>
+            <line num="507" count="12" type="stmt"/>
+            <line falsecount="0" truecount="18" num="509" type="cond"/>
+            <line num="513" count="12" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="doAddData(DATA,double) : void" num="516" count="86" type="method"/>
+            <line num="517" count="86" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="doRemoveData(DATA,double) : void" num="520" count="105" type="method"/>
+            <line num="521" count="105" type="stmt"/>
+            <line complexity="5" visibility="private" signature="checkMaxCapacity() : void" num="524" count="86" type="method"/>
+            <line num="525" count="86" type="stmt"/>
+            <line falsecount="68" truecount="18" num="525" type="cond"/>
+            <line num="526" count="18" type="stmt"/>
+            <line num="527" count="18" type="stmt"/>
+            <line num="529" count="18" type="stmt"/>
+            <line num="530" count="18" type="stmt"/>
+            <line num="531" count="18" type="stmt"/>
+            <line falsecount="18" truecount="36" num="531" type="cond"/>
+            <line num="532" count="36" type="stmt"/>
+            <line num="533" count="36" type="stmt"/>
+            <line num="535" count="36" type="stmt"/>
+            <line num="536" count="36" type="stmt"/>
+            <line num="537" count="72" type="stmt"/>
+            <line num="538" count="72" type="stmt"/>
+            <line num="539" count="72" type="stmt"/>
+            <line num="540" count="72" type="stmt"/>
+            <line num="543" count="36" type="stmt"/>
+            <line falsecount="18" truecount="18" num="543" type="cond"/>
+            <line num="544" count="18" type="stmt"/>
+            <line num="546" count="18" type="stmt"/>
+            <line falsecount="0" truecount="18" num="549" type="cond"/>
+            <line num="551" count="18" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="newSplitNodeReplacement(DATA) : Node" num="556" count="36" type="method"/>
+            <line num="557" count="36" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="addChild(IndexItem,double) : void" num="560" count="148" type="method"/>
+            <line num="561" count="148" type="stmt"/>
+            <line complexity="2" visibility="package" signature="removeData(DATA,double) : void" num="564" count="105" type="method"/>
+            <line num="565" count="105" type="stmt"/>
+            <line num="566" count="81" type="stmt"/>
+            <line falsecount="49" truecount="32" num="566" type="cond"/>
+            <line num="567" count="32" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="getMinCapacity() : int" num="571" count="82" type="method"/>
+            <line num="572" count="82" type="stmt"/>
+            <line complexity="1" visibility="private" signature="updateMetrics(IndexItem,double) : void" num="575" count="192" type="method"/>
+            <line num="576" count="192" type="stmt"/>
+            <line num="577" count="192" type="stmt"/>
+            <line complexity="1" visibility="private" signature="updateRadius(IndexItem) : void" num="580" count="267" type="method"/>
+            <line num="581" count="267" type="stmt"/>
+            <line complexity="1" visibility="package" signature="_checkMinCapacity() : void" num="584" count="10" type="method"/>
+            <line num="585" count="10" type="stmt"/>
+            <line complexity="2" visibility="private" signature="_checkMaxCapacity() : void" num="588" count="12" type="method"/>
+            <line falsecount="0" truecount="12" num="589" type="cond"/>
+            <line complexity="1" visibility="private" signature="_checkChildClass(IndexItem) : void" num="592" count="30" type="method"/>
+            <line num="593" count="30" type="stmt"/>
+            <line complexity="3" visibility="private" signature="_checkChildMetrics(IndexItem) : void" num="596" count="30" type="method"/>
+            <line num="597" count="30" type="stmt"/>
+            <line falsecount="0" truecount="30" num="598" type="cond"/>
+            <line num="600" count="30" type="stmt"/>
+            <line falsecount="0" truecount="30" num="601" type="cond"/>
+            <line complexity="1" visibility="protected" signature="_checkDistanceToParent() : void" num="604" count="12" type="method"/>
+            <line num="605" count="12" type="stmt"/>
+            <line complexity="1" visibility="private" signature="mtree() : MTree&lt;DATA&gt;" num="608" count="352" type="method"/>
+            <line num="609" count="352" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getMinCapacity() : int" num="638" count="0" type="method"/>
+            <line num="640" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="_checkDistanceToParent() : void" num="643" count="2" type="method"/>
+            <line falsecount="0" truecount="2" num="645" type="cond"/>
+            <line complexity="1" visibility="public" signature="_checkMinCapacity() : void" num="648" count="0" type="method"/>
+            <line num="650" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getMinCapacity() : int" num="658" count="82" type="method"/>
+            <line num="660" count="82" type="stmt"/>
+            <line complexity="2" visibility="public" signature="_checkMinCapacity() : void" num="663" count="10" type="method"/>
+            <line falsecount="0" truecount="10" num="665" type="cond"/>
+            <line complexity="2" visibility="public" signature="_checkDistanceToParent() : void" num="668" count="10" type="method"/>
+            <line falsecount="0" truecount="10" num="670" type="cond"/>
+            <line complexity="3" visibility="public" signature="doAddData(DATA,double) : void" num="677" count="44" type="method"/>
+            <line num="678" count="44" type="stmt"/>
+            <line falsecount="0" truecount="44" num="679" type="cond"/>
+            <line num="680" count="44" type="stmt"/>
+            <line falsecount="0" truecount="44" num="681" type="cond"/>
+            <line num="682" count="44" type="stmt"/>
+            <line complexity="3" visibility="public" signature="addChild(IndexItem,double) : void" num="685" count="72" type="method"/>
+            <line falsecount="0" truecount="72" num="686" type="cond"/>
+            <line num="687" count="72" type="stmt"/>
+            <line falsecount="0" truecount="72" num="688" type="cond"/>
+            <line num="689" count="72" type="stmt"/>
+            <line complexity="1" visibility="public" signature="newSplitNodeReplacement(DATA) : Node" num="692" count="24" type="method"/>
+            <line num="693" count="24" type="stmt"/>
+            <line complexity="2" visibility="public" signature="doRemoveData(DATA,double) : void" num="697" count="53" type="method"/>
+            <line num="699" count="53" type="stmt"/>
+            <line falsecount="35" truecount="18" num="699" type="cond"/>
+            <line num="700" count="18" type="stmt"/>
+            <line complexity="2" visibility="public" signature="_checkChildClass(IndexItem) : void" num="704" count="20" type="method"/>
+            <line falsecount="0" truecount="20" num="705" type="cond"/>
+            <line complexity="8" visibility="public" signature="doAddData(DATA,double) : void" num="712" count="42" type="method"/>
+            <line complexity="1" visibility="private" signature="CandidateChild(Node,double,double)" num="717" count="163" type="method"/>
+            <line num="718" count="163" type="stmt"/>
+            <line num="719" count="163" type="stmt"/>
+            <line num="720" count="163" type="stmt"/>
+            <line num="724" count="42" type="stmt"/>
+            <line num="725" count="42" type="stmt"/>
+            <line num="727" count="42" type="stmt"/>
+            <line num="728" count="103" type="stmt"/>
+            <line num="730" count="103" type="stmt"/>
+            <line num="731" count="103" type="stmt"/>
+            <line falsecount="32" truecount="71" num="731" type="cond"/>
+            <line num="732" count="71" type="stmt"/>
+            <line num="733" count="71" type="stmt"/>
+            <line falsecount="20" truecount="51" num="733" type="cond"/>
+            <line num="734" count="51" type="stmt"/>
+            <line num="737" count="32" type="stmt"/>
+            <line falsecount="4" truecount="28" num="737" type="cond"/>
+            <line num="738" count="28" type="stmt"/>
+            <line num="743" count="42" type="stmt"/>
+            <line falsecount="19" truecount="23" num="743" type="cond"/>
+            <line num="747" count="42" type="stmt"/>
+            <line num="748" count="42" type="stmt"/>
+            <line num="749" count="42" type="stmt"/>
+            <line num="750" count="29" type="stmt"/>
+            <line num="753" count="13" type="stmt"/>
+            <line falsecount="0" truecount="13" num="754" type="cond"/>
+            <line num="756" count="13" type="stmt"/>
+            <line falsecount="13" truecount="26" num="756" type="cond"/>
+            <line num="757" count="26" type="stmt"/>
+            <line num="759" count="26" type="stmt"/>
+            <line num="760" count="26" type="stmt"/>
+            <line complexity="7" visibility="public" signature="addChild(IndexItem,double) : void" num="766" count="76" type="method"/>
+            <line num="767" count="76" type="stmt"/>
+            <line complexity="1" visibility="private" signature="ChildWithDistance(Node,double)" num="773" count="76" type="method"/>
+            <line num="774" count="76" type="stmt"/>
+            <line num="775" count="76" type="stmt"/>
+            <line num="779" count="76" type="stmt"/>
+            <line num="780" count="76" type="stmt"/>
+            <line num="782" count="76" type="stmt"/>
+            <line falsecount="76" truecount="76" num="782" type="cond"/>
+            <line num="783" count="76" type="stmt"/>
+            <line num="785" count="76" type="stmt"/>
+            <line num="786" count="76" type="stmt"/>
+            <line num="787" count="76" type="stmt"/>
+            <line falsecount="76" truecount="0" num="787" type="cond"/>
+            <line num="788" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="790" type="cond"/>
+            <line num="793" count="0" type="stmt"/>
+            <line num="794" count="0" type="stmt"/>
+            <line num="796" count="0" type="stmt"/>
+            <line num="798" count="0" type="stmt"/>
+            <line num="799" count="0" type="stmt"/>
+            <line num="801" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="802" type="cond"/>
+            <line num="804" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="804" type="cond"/>
+            <line num="805" count="0" type="stmt"/>
+            <line num="807" count="0" type="stmt"/>
+            <line num="808" count="0" type="stmt"/>
+            <line num="812" count="76" type="stmt"/>
+            <line num="813" count="76" type="stmt"/>
+            <line complexity="1" visibility="public" signature="newSplitNodeReplacement(DATA) : Node" num="819" count="12" type="method"/>
+            <line num="820" count="12" type="stmt"/>
+            <line complexity="6" visibility="public" signature="doRemoveData(DATA,double) : void" num="824" count="52" type="method"/>
+            <line num="825" count="52" type="stmt"/>
+            <line num="826" count="88" type="stmt"/>
+            <line num="828" count="88" type="stmt"/>
+            <line falsecount="18" truecount="70" num="828" type="cond"/>
+            <line num="829" count="70" type="stmt"/>
+            <line num="830" count="70" type="stmt"/>
+            <line falsecount="1" truecount="69" num="830" type="cond"/>
+            <line num="831" count="69" type="stmt"/>
+            <line num="832" count="69" type="stmt"/>
+            <line num="833" count="21" type="stmt"/>
+            <line num="834" count="21" type="stmt"/>
+            <line num="838" count="25" type="stmt"/>
+            <line num="839" count="25" type="stmt"/>
+            <line num="840" count="25" type="stmt"/>
+            <line num="842" count="0" type="stmt"/>
+            <line num="848" count="6" type="stmt"/>
+            <line complexity="9" visibility="private" signature="balanceChildren(Node) : Node" num="852" count="25" type="method"/>
+            <line num="855" count="25" type="stmt"/>
+            <line num="856" count="25" type="stmt"/>
+            <line num="858" count="25" type="stmt"/>
+            <line num="859" count="25" type="stmt"/>
+            <line num="861" count="25" type="stmt"/>
+            <line num="862" count="61" type="stmt"/>
+            <line num="864" count="61" type="stmt"/>
+            <line num="864" count="25" type="stmt"/>
+            <line falsecount="36" truecount="25" num="864" type="cond"/>
+            <line num="866" count="36" type="stmt"/>
+            <line num="867" count="36" type="stmt"/>
+            <line falsecount="28" truecount="8" num="867" type="cond"/>
+            <line num="868" count="8" type="stmt"/>
+            <line falsecount="1" truecount="7" num="868" type="cond"/>
+            <line num="869" count="7" type="stmt"/>
+            <line num="870" count="7" type="stmt"/>
+            <line num="873" count="28" type="stmt"/>
+            <line falsecount="3" truecount="25" num="873" type="cond"/>
+            <line num="874" count="25" type="stmt"/>
+            <line num="875" count="25" type="stmt"/>
+            <line num="880" count="25" type="stmt"/>
+            <line falsecount="7" truecount="18" num="880" type="cond"/>
+            <line num="882" count="18" type="stmt"/>
+            <line num="883" count="18" type="stmt"/>
+            <line num="884" count="18" type="stmt"/>
+            <line num="887" count="18" type="stmt"/>
+            <line falsecount="0" truecount="18" num="888" type="cond"/>
+            <line num="889" count="18" type="stmt"/>
+            <line num="893" count="7" type="stmt"/>
+            <line num="894" count="7" type="stmt"/>
+            <line num="895" count="7" type="stmt"/>
+            <line num="896" count="21" type="stmt"/>
+            <line num="897" count="21" type="stmt"/>
+            <line falsecount="9" truecount="12" num="897" type="cond"/>
+            <line num="898" count="12" type="stmt"/>
+            <line num="899" count="12" type="stmt"/>
+            <line num="903" count="7" type="stmt"/>
+            <line falsecount="0" truecount="7" num="904" type="cond"/>
+            <line num="905" count="7" type="stmt"/>
+            <line num="906" count="7" type="stmt"/>
+            <line complexity="3" visibility="public" signature="_checkChildClass(IndexItem) : void" num="911" count="10" type="method"/>
+            <line falsecount="0" truecount="10" num="912" type="cond"/>
+            <line complexity="1" visibility="private" signature="RootLeafNode(DATA)" num="920" count="8" type="method"/>
+            <line num="921" count="8" type="stmt"/>
+            <line complexity="3" visibility="package" signature="removeData(DATA,double) : void" num="924" count="9" type="method"/>
+            <line num="925" count="9" type="stmt"/>
+            <line num="926" count="9" type="stmt"/>
+            <line falsecount="0" truecount="2" num="928" type="cond"/>
+            <line num="929" count="2" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="getMinCapacity() : int" num="933" count="8" type="method"/>
+            <line num="934" count="8" type="stmt"/>
+            <line complexity="2" visibility="package" signature="_checkMinCapacity() : void" num="937" count="1" type="method"/>
+            <line falsecount="0" truecount="1" num="938" type="cond"/>
+            <line complexity="1" visibility="private" signature="RootNode(DATA)" num="944" count="8" type="method"/>
+            <line num="945" count="8" type="stmt"/>
+            <line complexity="4" visibility="package" signature="removeData(DATA,double) : void" num="948" count="27" type="method"/>
+            <line num="949" count="27" type="stmt"/>
+            <line num="950" count="27" type="stmt"/>
+            <line num="953" count="5" type="stmt"/>
+            <line num="955" count="5" type="stmt"/>
+            <line num="956" count="5" type="stmt"/>
+            <line falsecount="2" truecount="3" num="956" type="cond"/>
+            <line num="957" count="3" type="stmt"/>
+            <line falsecount="0" truecount="2" num="959" type="cond"/>
+            <line num="960" count="2" type="stmt"/>
+            <line num="963" count="5" type="stmt"/>
+            <line num="964" count="15" type="stmt"/>
+            <line num="965" count="15" type="stmt"/>
+            <line num="967" count="5" type="stmt"/>
+            <line num="969" count="5" type="stmt"/>
+            <line complexity="1" visibility="protected" signature="getMinCapacity() : int" num="974" count="27" type="method"/>
+            <line num="976" count="27" type="stmt"/>
+            <line complexity="2" visibility="package" signature="_checkMinCapacity() : void" num="979" count="1" type="method"/>
+            <line falsecount="0" truecount="1" num="981" type="cond"/>
+            <line complexity="1" visibility="private" signature="InternalNode(DATA)" num="987" count="12" type="method"/>
+            <line num="988" count="12" type="stmt"/>
+            <line complexity="1" visibility="public" signature="LeafNode(DATA)" num="995" count="24" type="method"/>
+            <line num="996" count="24" type="stmt"/>
+            <line complexity="1" visibility="private" signature="Entry(DATA)" num="1002" count="44" type="method"/>
+            <line num="1003" count="44" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\Pair.java" name="Pair.java">
+            <metrics coveredelements="12" coveredconditionals="0" complexity="5" loc="53" coveredmethods="3" methods="3" elements="12" classes="1" ncloc="17" statements="9" conditionals="0" coveredstatements="9"/>
+            <class name="Pair">
+               <metrics coveredelements="12" coveredconditionals="0" complexity="5" coveredmethods="3" methods="3" elements="12" statements="9" conditionals="0" coveredstatements="9"/>
+            </class>
+            <line complexity="1" visibility="public" signature="Pair()" num="24" count="1" type="method"/>
+            <line complexity="1" visibility="public" signature="Pair(T,T)" num="31" count="38" type="method"/>
+            <line num="32" count="38" type="stmt"/>
+            <line num="33" count="38" type="stmt"/>
+            <line complexity="3" visibility="public" signature="get(int) : T" num="45" count="74" type="method"/>
+            <line num="46" count="74" type="stmt"/>
+            <line num="47" count="36" type="stmt"/>
+            <line num="47" count="36" type="stmt"/>
+            <line num="48" count="37" type="stmt"/>
+            <line num="48" count="37" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\PartitionFunction.java" name="PartitionFunction.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="0" loc="25" coveredmethods="0" methods="0" elements="0" classes="1" ncloc="5" statements="0" conditionals="0" coveredstatements="0"/>
+            <class name="PartitionFunction">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\PartitionFunctions.java" name="PartitionFunctions.java">
+            <metrics coveredelements="38" coveredconditionals="10" complexity="10" loc="106" coveredmethods="3" methods="4" elements="39" classes="2" ncloc="58" statements="25" conditionals="10" coveredstatements="25"/>
+            <class name="PartitionFunctions">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="1" coveredmethods="0" methods="1" elements="1" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="PartitionFunctions.BalancedPartition">
+               <metrics coveredelements="38" coveredconditionals="10" complexity="9" coveredmethods="3" methods="3" elements="38" statements="25" conditionals="10" coveredstatements="25"/>
+            </class>
+            <line complexity="1" visibility="private" signature="PartitionFunctions()" num="20" count="0" type="method"/>
+            <line complexity="7" visibility="public" signature="process(Pair&lt;DATA&gt;,Set&lt;DATA&gt;,DistanceFunction&lt;? super DATA&gt;) : Pair&lt;Set&lt;DATA&gt;&gt;" num="51" count="18" type="method"/>
+            <line num="58" count="18" type="stmt"/>
+            <line num="60" count="18" type="stmt"/>
+            <line complexity="1" visibility="public" signature="compare(DATA,DATA) : int" num="61" count="97" type="method"/>
+            <line num="63" count="97" type="stmt"/>
+            <line num="64" count="97" type="stmt"/>
+            <line num="65" count="97" type="stmt"/>
+            <line num="69" count="18" type="stmt"/>
+            <line num="71" count="18" type="stmt"/>
+            <line complexity="1" visibility="public" signature="compare(DATA,DATA) : int" num="72" count="97" type="method"/>
+            <line num="74" count="97" type="stmt"/>
+            <line num="75" count="97" type="stmt"/>
+            <line num="76" count="97" type="stmt"/>
+            <line num="80" count="18" type="stmt"/>
+            <line num="82" count="18" type="stmt"/>
+            <line num="83" count="18" type="stmt"/>
+            <line num="85" count="18" type="stmt"/>
+            <line falsecount="18" truecount="54" num="85" type="cond"/>
+            <line num="86" count="54" type="stmt"/>
+            <line falsecount="18" truecount="72" num="86" type="cond"/>
+            <line num="87" count="72" type="stmt"/>
+            <line num="88" count="72" type="stmt"/>
+            <line falsecount="36" truecount="36" num="88" type="cond"/>
+            <line num="89" count="36" type="stmt"/>
+            <line num="90" count="36" type="stmt"/>
+            <line num="94" count="54" type="stmt"/>
+            <line falsecount="18" truecount="72" num="94" type="cond"/>
+            <line num="95" count="72" type="stmt"/>
+            <line num="96" count="72" type="stmt"/>
+            <line falsecount="36" truecount="36" num="96" type="cond"/>
+            <line num="97" count="36" type="stmt"/>
+            <line num="98" count="36" type="stmt"/>
+            <line num="103" count="18" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\PromotionFunction.java" name="PromotionFunction.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="0" loc="23" coveredmethods="0" methods="0" elements="0" classes="1" ncloc="5" statements="0" conditionals="0" coveredstatements="0"/>
+            <class name="PromotionFunction">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\PromotionFunctions.java" name="PromotionFunctions.java">
+            <metrics coveredelements="3" coveredconditionals="0" complexity="2" loc="34" coveredmethods="1" methods="2" elements="4" classes="2" ncloc="15" statements="2" conditionals="0" coveredstatements="2"/>
+            <class name="PromotionFunctions">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="1" coveredmethods="0" methods="1" elements="1" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="PromotionFunctions.RandomPromotion">
+               <metrics coveredelements="3" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="3" statements="2" conditionals="0" coveredstatements="2"/>
+            </class>
+            <line complexity="1" visibility="private" signature="PromotionFunctions()" num="15" count="0" type="method"/>
+            <line complexity="1" visibility="public" signature="process(Set&lt;DATA&gt;,DistanceFunction&lt;? super DATA&gt;) : Pair&lt;DATA&gt;" num="25" count="18" type="method"/>
+            <line num="29" count="18" type="stmt"/>
+            <line num="30" count="18" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\SplitFunction.java" name="SplitFunction.java">
+            <metrics coveredelements="3" coveredconditionals="0" complexity="1" loc="60" coveredmethods="1" methods="1" elements="3" classes="2" ncloc="13" statements="2" conditionals="0" coveredstatements="2"/>
+            <class name="SplitFunction">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="SplitFunction.SplitResult">
+               <metrics coveredelements="3" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="3" statements="2" conditionals="0" coveredstatements="2"/>
+            </class>
+            <line complexity="1" visibility="public" signature="SplitResult(Pair&lt;DATA&gt;,Pair&lt;Set&lt;DATA&gt;&gt;)" num="53" count="18" type="method"/>
+            <line num="54" count="18" type="stmt"/>
+            <line num="55" count="18" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\main\java\net\mooctest\Utils.java" name="Utils.java">
+            <metrics coveredelements="38" coveredconditionals="12" complexity="10" loc="74" coveredmethods="2" methods="3" elements="39" classes="1" ncloc="43" statements="24" conditionals="12" coveredstatements="24"/>
+            <class name="Utils">
+               <metrics coveredelements="38" coveredconditionals="12" complexity="10" coveredmethods="2" methods="3" elements="39" statements="24" conditionals="12" coveredstatements="24"/>
+            </class>
+            <line complexity="1" visibility="private" signature="Utils()" num="17" count="0" type="method"/>
+            <line complexity="5" visibility="public" signature="minMax(Iterable&lt;T&gt;) : Pair&lt;T&gt;" num="27" count="4" type="method"/>
+            <line num="28" count="4" type="stmt"/>
+            <line num="29" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="29" type="cond"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="33" count="2" type="stmt"/>
+            <line num="34" count="2" type="stmt"/>
+            <line num="36" count="2" type="stmt"/>
+            <line falsecount="2" truecount="8" num="36" type="cond"/>
+            <line num="37" count="8" type="stmt"/>
+            <line num="38" count="8" type="stmt"/>
+            <line falsecount="6" truecount="2" num="38" type="cond"/>
+            <line num="39" count="2" type="stmt"/>
+            <line num="41" count="8" type="stmt"/>
+            <line falsecount="6" truecount="2" num="41" type="cond"/>
+            <line num="42" count="2" type="stmt"/>
+            <line num="46" count="2" type="stmt"/>
+            <line complexity="4" visibility="public" signature="randomSample(Collection&lt;T&gt;,int) : List&lt;T&gt;" num="57" count="20" type="method"/>
+            <line num="58" count="20" type="stmt"/>
+            <line num="59" count="20" type="stmt"/>
+            <line num="60" count="20" type="stmt"/>
+            <line num="61" count="20" type="stmt"/>
+            <line falsecount="20" truecount="39" num="61" type="cond"/>
+            <line num="62" count="39" type="stmt"/>
+            <line num="63" count="39" type="stmt"/>
+            <line num="64" count="39" type="stmt"/>
+            <line num="65" count="39" type="stmt"/>
+            <line num="66" count="39" type="stmt"/>
+            <line falsecount="12" truecount="27" num="66" type="cond"/>
+            <line num="67" count="27" type="stmt"/>
+            <line num="69" count="39" type="stmt"/>
+            <line num="71" count="20" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="MTree 0.0.1-SNAPSHOT" timestamp="1635047646566">
+      <metrics coveredelements="268" complexity="19" loc="392" methods="6" classes="1" statements="267" packages="1" coveredconditionals="0" coveredmethods="6" elements="273" ncloc="325" files="1" conditionals="0" coveredstatements="262"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="268" complexity="19" loc="392" methods="6" classes="1" statements="267" coveredconditionals="0" coveredmethods="6" elements="273" ncloc="325" files="1" conditionals="0" coveredstatements="262"/>
+         <file path="C:\mooctest\projects\6190\113863\MTree\src\test\java\net\mooctest\PairTest.java" name="PairTest.java">
+            <metrics coveredelements="268" coveredconditionals="0" complexity="19" loc="392" coveredmethods="6" methods="6" elements="273" classes="1" ncloc="325" statements="267" conditionals="0" coveredstatements="262"/>
+            <class name="PairTest">
+               <metrics coveredelements="268" complexity="19" methods="6" testruns="6" statements="267" coveredconditionals="0" coveredmethods="6" elements="273" testfailures="0" testduration="0.040999999999999995" conditionals="0" coveredstatements="262" testpasses="6"/>
+            </class>
+            <line complexity="2" visibility="public" signature="test() : void" num="10" testsuccess="true" count="1" testduration="0.007" type="method"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="19" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test1() : void" num="22" testsuccess="true" count="1" testduration="0.018" type="method"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="38" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="46" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="63" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="65" count="1" type="stmt"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="68" count="1" type="stmt"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="72" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="78" count="1" type="stmt"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="82" count="1" type="stmt"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="89" count="1" type="stmt"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line complexity="5" visibility="public" signature="test2() : void" num="96" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="98" count="1" type="stmt"/>
+            <line num="99" count="1" type="stmt"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="110" count="1" type="stmt"/>
+            <line num="112" count="0" type="stmt"/>
+            <line num="116" count="1" type="stmt"/>
+            <line num="117" count="1" type="stmt"/>
+            <line num="120" count="1" type="stmt"/>
+            <line num="121" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+            <line num="127" count="1" type="stmt"/>
+            <line num="130" count="1" type="stmt"/>
+            <line num="132" count="1" type="stmt"/>
+            <line num="133" count="1" type="stmt"/>
+            <line num="136" count="1" type="stmt"/>
+            <line num="139" count="1" type="stmt"/>
+            <line num="140" count="1" type="stmt"/>
+            <line num="141" count="1" type="stmt"/>
+            <line num="144" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="test3() : void" num="148" testsuccess="true" count="1" testduration="0.013" type="method"/>
+            <line num="150" count="1" type="stmt"/>
+            <line num="151" count="1" type="stmt"/>
+            <line num="152" count="1" type="stmt"/>
+            <line num="153" count="1" type="stmt"/>
+            <line num="154" count="1" type="stmt"/>
+            <line num="156" count="1" type="stmt"/>
+            <line num="158" count="1" type="stmt"/>
+            <line num="160" count="1" type="stmt"/>
+            <line num="161" count="1" type="stmt"/>
+            <line num="163" count="1" type="stmt"/>
+            <line num="167" count="1" type="stmt"/>
+            <line num="168" count="1" type="stmt"/>
+            <line num="169" count="1" type="stmt"/>
+            <line num="170" count="1" type="stmt"/>
+            <line num="172" count="1" type="stmt"/>
+            <line num="174" count="1" type="stmt"/>
+            <line num="175" count="1" type="stmt"/>
+            <line num="176" count="1" type="stmt"/>
+            <line num="177" count="1" type="stmt"/>
+            <line num="178" count="1" type="stmt"/>
+            <line num="179" count="1" type="stmt"/>
+            <line num="180" count="1" type="stmt"/>
+            <line num="181" count="1" type="stmt"/>
+            <line num="182" count="1" type="stmt"/>
+            <line num="183" count="1" type="stmt"/>
+            <line num="184" count="1" type="stmt"/>
+            <line num="185" count="1" type="stmt"/>
+            <line num="186" count="1" type="stmt"/>
+            <line num="188" count="1" type="stmt"/>
+            <line num="189" count="1" type="stmt"/>
+            <line num="190" count="1" type="stmt"/>
+            <line num="191" count="1" type="stmt"/>
+            <line num="192" count="1" type="stmt"/>
+            <line num="193" count="1" type="stmt"/>
+            <line num="194" count="1" type="stmt"/>
+            <line num="195" count="1" type="stmt"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="197" count="1" type="stmt"/>
+            <line num="198" count="1" type="stmt"/>
+            <line num="199" count="1" type="stmt"/>
+            <line num="200" count="1" type="stmt"/>
+            <line num="201" count="1" type="stmt"/>
+            <line num="202" count="1" type="stmt"/>
+            <line num="204" count="1" type="stmt"/>
+            <line num="205" count="1" type="stmt"/>
+            <line num="206" count="1" type="stmt"/>
+            <line num="207" count="1" type="stmt"/>
+            <line num="208" count="1" type="stmt"/>
+            <line num="209" count="1" type="stmt"/>
+            <line num="210" count="1" type="stmt"/>
+            <line num="212" count="1" type="stmt"/>
+            <line num="213" count="1" type="stmt"/>
+            <line num="214" count="1" type="stmt"/>
+            <line num="215" count="1" type="stmt"/>
+            <line num="216" count="1" type="stmt"/>
+            <line num="217" count="1" type="stmt"/>
+            <line num="218" count="1" type="stmt"/>
+            <line num="219" count="1" type="stmt"/>
+            <line num="221" count="1" type="stmt"/>
+            <line num="222" count="1" type="stmt"/>
+            <line num="224" count="1" type="stmt"/>
+            <line num="225" count="1" type="stmt"/>
+            <line num="227" count="1" type="stmt"/>
+            <line num="228" count="1" type="stmt"/>
+            <line num="229" count="1" type="stmt"/>
+            <line num="231" count="1" type="stmt"/>
+            <line num="232" count="1" type="stmt"/>
+            <line num="233" count="1" type="stmt"/>
+            <line num="234" count="1" type="stmt"/>
+            <line num="235" count="1" type="stmt"/>
+            <line num="236" count="1" type="stmt"/>
+            <line num="237" count="1" type="stmt"/>
+            <line num="240" count="1" type="stmt"/>
+            <line num="243" count="1" type="stmt"/>
+            <line num="244" count="1" type="stmt"/>
+            <line num="245" count="1" type="stmt"/>
+            <line num="246" count="1" type="stmt"/>
+            <line num="247" count="1" type="stmt"/>
+            <line num="248" count="1" type="stmt"/>
+            <line num="249" count="1" type="stmt"/>
+            <line num="250" count="1" type="stmt"/>
+            <line num="251" count="1" type="stmt"/>
+            <line num="252" count="1" type="stmt"/>
+            <line num="253" count="1" type="stmt"/>
+            <line num="254" count="1" type="stmt"/>
+            <line num="255" count="1" type="stmt"/>
+            <line num="256" count="1" type="stmt"/>
+            <line num="257" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="test4() : void" num="261" testsuccess="true" count="1" testduration="0.002" type="method"/>
+            <line num="263" count="1" type="stmt"/>
+            <line num="264" count="1" type="stmt"/>
+            <line num="265" count="1" type="stmt"/>
+            <line num="266" count="1" type="stmt"/>
+            <line num="267" count="1" type="stmt"/>
+            <line num="268" count="1" type="stmt"/>
+            <line num="269" count="1" type="stmt"/>
+            <line num="270" count="1" type="stmt"/>
+            <line num="271" count="1" type="stmt"/>
+            <line num="272" count="1" type="stmt"/>
+            <line num="273" count="1" type="stmt"/>
+            <line num="274" count="1" type="stmt"/>
+            <line num="275" count="1" type="stmt"/>
+            <line num="276" count="1" type="stmt"/>
+            <line num="277" count="1" type="stmt"/>
+            <line num="278" count="1" type="stmt"/>
+            <line num="279" count="1" type="stmt"/>
+            <line num="280" count="1" type="stmt"/>
+            <line num="281" count="1" type="stmt"/>
+            <line num="283" count="1" type="stmt"/>
+            <line num="284" count="1" type="stmt"/>
+            <line num="285" count="1" type="stmt"/>
+            <line num="286" count="1" type="stmt"/>
+            <line num="287" count="1" type="stmt"/>
+            <line num="288" count="1" type="stmt"/>
+            <line num="289" count="1" type="stmt"/>
+            <line num="290" count="1" type="stmt"/>
+            <line num="291" count="1" type="stmt"/>
+            <line num="292" count="1" type="stmt"/>
+            <line num="293" count="1" type="stmt"/>
+            <line num="294" count="1" type="stmt"/>
+            <line num="295" count="1" type="stmt"/>
+            <line num="296" count="1" type="stmt"/>
+            <line num="297" count="1" type="stmt"/>
+            <line num="299" count="1" type="stmt"/>
+            <line num="300" count="1" type="stmt"/>
+            <line num="301" count="1" type="stmt"/>
+            <line num="302" count="1" type="stmt"/>
+            <line num="303" count="1" type="stmt"/>
+            <line num="305" count="1" type="stmt"/>
+            <line num="306" count="1" type="stmt"/>
+            <line num="307" count="1" type="stmt"/>
+            <line num="309" count="1" type="stmt"/>
+            <line num="312" count="1" type="stmt"/>
+            <line num="313" count="1" type="stmt"/>
+            <line num="315" count="1" type="stmt"/>
+            <line num="318" count="1" type="stmt"/>
+            <line num="319" count="1" type="stmt"/>
+            <line num="320" count="1" type="stmt"/>
+            <line num="321" count="1" type="stmt"/>
+            <line num="322" count="1" type="stmt"/>
+            <line num="323" count="1" type="stmt"/>
+            <line num="324" count="1" type="stmt"/>
+            <line num="325" count="1" type="stmt"/>
+            <line num="326" count="1" type="stmt"/>
+            <line num="327" count="1" type="stmt"/>
+            <line num="328" count="1" type="stmt"/>
+            <line num="329" count="1" type="stmt"/>
+            <line num="330" count="1" type="stmt"/>
+            <line num="331" count="1" type="stmt"/>
+            <line num="332" count="1" type="stmt"/>
+            <line complexity="5" visibility="public" signature="test5() : void" num="335" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="337" count="1" type="stmt"/>
+            <line num="338" count="1" type="stmt"/>
+            <line num="339" count="1" type="stmt"/>
+            <line num="341" count="1" type="stmt"/>
+            <line num="342" count="1" type="stmt"/>
+            <line num="343" count="1" type="stmt"/>
+            <line num="344" count="1" type="stmt"/>
+            <line num="347" count="1" type="stmt"/>
+            <line num="349" count="1" type="stmt"/>
+            <line num="350" count="1" type="stmt"/>
+            <line num="352" count="1" type="stmt"/>
+            <line num="353" count="1" type="stmt"/>
+            <line num="355" count="1" type="stmt"/>
+            <line num="356" count="1" type="stmt"/>
+            <line num="358" count="1" type="stmt"/>
+            <line num="359" count="1" type="stmt"/>
+            <line num="361" count="1" type="stmt"/>
+            <line num="363" count="1" type="stmt"/>
+            <line num="365" count="1" type="stmt"/>
+            <line num="366" count="1" type="stmt"/>
+            <line num="367" count="1" type="stmt"/>
+            <line num="370" count="1" type="stmt"/>
+            <line num="372" count="1" type="stmt"/>
+            <line num="373" count="1" type="stmt"/>
+            <line num="374" count="1" type="stmt"/>
+            <line num="377" count="1" type="stmt"/>
+            <line num="380" count="1" type="stmt"/>
+            <line num="381" count="1" type="stmt"/>
+            <line num="382" count="1" type="stmt"/>
+            <line num="383" count="0" type="stmt"/>
+            <line num="384" count="0" type="stmt"/>
+            <line num="385" count="0" type="stmt"/>
+            <line num="386" count="0" type="stmt"/>
+            <line num="389" count="1" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

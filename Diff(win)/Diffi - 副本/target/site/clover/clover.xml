@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1711787249049" clover="4.4.1">
+   <project name="Diffi 0.0.1-SNAPSHOT" timestamp="1711785640830">
+      <metrics coveredelements="38" complexity="112" loc="567" methods="51" classes="9" statements="262" packages="1" coveredconditionals="8" coveredmethods="8" elements="411" ncloc="489" files="9" conditionals="98" coveredstatements="22"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="38" complexity="112" loc="567" methods="51" classes="9" statements="262" coveredconditionals="8" coveredmethods="8" elements="411" ncloc="489" files="9" conditionals="98" coveredstatements="22"/>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\Diffi.java" name="Diffi.java">
+            <metrics coveredelements="6" coveredconditionals="0" complexity="4" loc="31" coveredmethods="2" methods="3" elements="14" classes="1" ncloc="24" statements="9" conditionals="2" coveredstatements="4"/>
+            <class name="Diffi">
+               <metrics coveredelements="6" coveredconditionals="0" complexity="4" coveredmethods="2" methods="3" elements="14" statements="9" conditionals="2" coveredstatements="4"/>
+            </class>
+            <line complexity="1" visibility="public" signature="Diffi(Option)" num="9" count="1" type="method"/>
+            <line num="10" count="1" type="stmt"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="addOption(Option) : void" num="16" count="1" type="method"/>
+            <line num="17" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="parse(String[]) : void" num="20" count="0" type="method"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="24" type="cond"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\ExtBoolArray.java" name="ExtBoolArray.java">
+            <metrics coveredelements="23" coveredconditionals="8" complexity="9" loc="34" coveredmethods="4" methods="4" elements="26" classes="1" ncloc="28" statements="12" conditionals="10" coveredstatements="11"/>
+            <class name="ExtBoolArray">
+               <metrics coveredelements="23" coveredconditionals="8" complexity="9" coveredmethods="4" methods="4" elements="26" statements="12" conditionals="10" coveredstatements="11"/>
+            </class>
+            <line complexity="1" visibility="public" signature="ExtBoolArray(int)" num="6" count="2" type="method"/>
+            <line num="7" count="2" type="stmt"/>
+            <line complexity="2" visibility="public" signature="setTrue(int,int) : void" num="10" count="2" type="method"/>
+            <line num="11" count="2" type="stmt"/>
+            <line falsecount="2" truecount="5" num="11" type="cond"/>
+            <line num="12" count="5" type="stmt"/>
+            <line complexity="3" visibility="public" signature="isFalse(int,int) : boolean" num="16" count="2" type="method"/>
+            <line num="17" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="17" type="cond"/>
+            <line num="18" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="18" type="cond"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="22" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="left() : int" num="25" count="2" type="method"/>
+            <line num="26" count="2" type="stmt"/>
+            <line num="27" count="2" type="stmt"/>
+            <line falsecount="2" truecount="6" num="27" type="cond"/>
+            <line num="28" count="6" type="stmt"/>
+            <line falsecount="6" truecount="0" num="28" type="cond"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="32" count="2" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\FileDiffPatch.java" name="FileDiffPatch.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="14" loc="73" coveredmethods="0" methods="4" elements="62" classes="1" ncloc="67" statements="42" conditionals="16" coveredstatements="0"/>
+            <class name="FileDiffPatch">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="14" coveredmethods="0" methods="4" elements="62" statements="42" conditionals="16" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="createPatch(String,String,String) : void" num="8" count="0" type="method"/>
+            <line num="9" count="0" type="stmt"/>
+            <line complexity="7" visibility="public" signature="createPatch(String,String,String,boolean) : void" num="12" count="0" type="method"/>
+            <line num="13" count="0" type="stmt"/>
+            <line num="14" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="14" type="cond"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="18" type="cond"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="22" type="cond"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="28" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="30" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="30" type="cond"/>
+            <line num="31" count="0" type="stmt"/>
+            <line num="33" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="33" type="cond"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="doPatch(String,String,String) : void" num="41" count="0" type="method"/>
+            <line num="42" count="0" type="stmt"/>
+            <line complexity="5" visibility="public" signature="doPatch(String,String,String,boolean) : void" num="45" count="0" type="method"/>
+            <line num="46" count="0" type="stmt"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="48" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="48" type="cond"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line num="52" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="52" type="cond"/>
+            <line num="53" count="0" type="stmt"/>
+            <line num="55" count="0" type="stmt"/>
+            <line num="56" count="0" type="stmt"/>
+            <line num="57" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+            <line num="59" count="0" type="stmt"/>
+            <line num="60" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="63" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line num="65" count="0" type="stmt"/>
+            <line num="66" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="66" type="cond"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="70" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\IndexedString.java" name="IndexedString.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="13" loc="60" coveredmethods="0" methods="3" elements="52" classes="1" ncloc="50" statements="31" conditionals="18" coveredstatements="0"/>
+            <class name="IndexedString">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="13" coveredmethods="0" methods="3" elements="52" statements="31" conditionals="18" coveredstatements="0"/>
+            </class>
+            <line complexity="3" visibility="private" signature="count(char) : int" num="7" count="0" type="method"/>
+            <line num="8" count="0" type="stmt"/>
+            <line num="9" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="9" type="cond"/>
+            <line num="10" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="10" type="cond"/>
+            <line num="11" count="0" type="stmt"/>
+            <line num="14" count="0" type="stmt"/>
+            <line complexity="4" visibility="public" signature="IndexedString(String)" num="17" count="0" type="method"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="21" type="cond"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="24" type="cond"/>
+            <line num="25" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="25" type="cond"/>
+            <line num="26" count="0" type="stmt"/>
+            <line complexity="6" visibility="public" signature="indexOf(char[]) : int" num="32" count="0" type="method"/>
+            <line num="33" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="36" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line num="38" count="0" type="stmt"/>
+            <line num="39" count="0" type="stmt"/>
+            <line num="41" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="41" type="cond"/>
+            <line num="43" count="0" type="stmt"/>
+            <line num="46" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="46" type="cond"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="48" count="0" type="stmt"/>
+            <line num="49" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="49" type="cond"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="52" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="52" type="cond"/>
+            <line num="54" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\Option.java" name="Option.java">
+            <metrics coveredelements="9" coveredconditionals="0" complexity="19" loc="79" coveredmethods="2" methods="13" elements="50" classes="1" ncloc="64" statements="25" conditionals="12" coveredstatements="7"/>
+            <class name="Option">
+               <metrics coveredelements="9" coveredconditionals="0" complexity="19" coveredmethods="2" methods="13" elements="50" statements="25" conditionals="12" coveredstatements="7"/>
+            </class>
+            <line complexity="1" visibility="public" signature="Option(String,String,boolean,String,String)" num="12" count="2" type="method"/>
+            <line num="13" count="2" type="stmt"/>
+            <line num="14" count="2" type="stmt"/>
+            <line num="15" count="2" type="stmt"/>
+            <line num="16" count="2" type="stmt"/>
+            <line num="17" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Option(String,String)" num="21" count="0" type="method"/>
+            <line num="22" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Option(String)" num="25" count="2" type="method"/>
+            <line num="26" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Option(String,boolean,String,String)" num="29" count="0" type="method"/>
+            <line num="30" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getBeschriebung() : String" num="33" count="0" type="method"/>
+            <line num="34" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getDelim() : String" num="37" count="0" type="method"/>
+            <line num="38" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="isHasArg() : boolean" num="41" count="0" type="method"/>
+            <line num="42" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getName() : String" num="45" count="0" type="method"/>
+            <line num="46" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getDefaultv() : String" num="49" count="0" type="method"/>
+            <line num="50" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="isIsSet() : boolean" num="53" count="0" type="method"/>
+            <line num="54" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="getValue() : String" num="57" count="0" type="method"/>
+            <line num="58" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="58" type="cond"/>
+            <line num="59" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="61" type="cond"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="is(String) : boolean" num="67" count="0" type="method"/>
+            <line num="68" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="68" type="cond"/>
+            <line falsecount="0" truecount="0" num="68" type="cond"/>
+            <line complexity="3" visibility="public" signature="parse(String) : void" num="71" count="0" type="method"/>
+            <line num="72" count="0" type="stmt"/>
+            <line num="73" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="73" type="cond"/>
+            <line num="74" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="74" type="cond"/>
+            <line num="76" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\RelativeString.java" name="RelativeString.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="20" loc="106" coveredmethods="0" methods="12" elements="71" classes="1" ncloc="92" statements="47" conditionals="12" coveredstatements="0"/>
+            <class name="RelativeString">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="20" coveredmethods="0" methods="12" elements="71" statements="47" conditionals="12" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="RelativeString()" num="14" count="0" type="method"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+            <line complexity="4" visibility="public" signature="RelativeString(InputStream)" num="19" count="0" type="method"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="25" type="cond"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="30" count="0" type="stmt"/>
+            <line num="31" count="0" type="stmt"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="33" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="33" type="cond"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getAbsolute() : String" num="41" count="0" type="method"/>
+            <line num="42" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="setAbsolute(String) : void" num="45" count="0" type="method"/>
+            <line num="46" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="linksCount() : int" num="49" count="0" type="method"/>
+            <line num="50" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getLink(int) : StringLink" num="53" count="0" type="method"/>
+            <line num="54" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="addLink(StringLink) : boolean" num="57" count="0" type="method"/>
+            <line num="58" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="toString() : String" num="61" count="0" type="method"/>
+            <line num="63" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="debugPrint() : void" num="66" count="0" type="method"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="68" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="68" type="cond"/>
+            <line num="69" count="0" type="stmt"/>
+            <line num="70" count="0" type="stmt"/>
+            <line num="72" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="bytesToStream(OutputStream) : void" num="75" count="0" type="method"/>
+            <line num="76" count="0" type="stmt"/>
+            <line num="77" count="0" type="stmt"/>
+            <line num="78" count="0" type="stmt"/>
+            <line num="79" count="0" type="stmt"/>
+            <line num="80" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="80" type="cond"/>
+            <line num="81" count="0" type="stmt"/>
+            <line num="83" count="0" type="stmt"/>
+            <line num="84" count="0" type="stmt"/>
+            <line num="85" count="0" type="stmt"/>
+            <line num="87" count="0" type="stmt"/>
+            <line complexity="2" visibility="private" signature="bytessaved() : int" num="91" count="0" type="method"/>
+            <line num="92" count="0" type="stmt"/>
+            <line num="93" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="93" type="cond"/>
+            <line num="94" count="0" type="stmt"/>
+            <line num="96" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="getLength() : int" num="98" count="0" type="method"/>
+            <line num="100" count="0" type="stmt"/>
+            <line num="101" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="101" type="cond"/>
+            <line num="102" count="0" type="stmt"/>
+            <line num="104" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\StringFromFile.java" name="StringFromFile.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="2" loc="21" coveredmethods="0" methods="1" elements="12" classes="1" ncloc="18" statements="9" conditionals="2" coveredstatements="0"/>
+            <class name="StringFromFile">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="2" coveredmethods="0" methods="1" elements="12" statements="9" conditionals="2" coveredstatements="0"/>
+            </class>
+            <line complexity="2" visibility="public" signature="readString(String) : String" num="8" count="0" type="method"/>
+            <line num="9" count="0" type="stmt"/>
+            <line num="10" count="0" type="stmt"/>
+            <line num="11" count="0" type="stmt"/>
+            <line num="12" count="0" type="stmt"/>
+            <line num="13" count="0" type="stmt"/>
+            <line num="14" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="14" type="cond"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\StringIncrementor.java" name="StringIncrementor.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="20" loc="86" coveredmethods="0" methods="4" elements="85" classes="1" ncloc="79" statements="55" conditionals="26" coveredstatements="0"/>
+            <class name="StringIncrementor">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="20" coveredmethods="0" methods="4" elements="85" statements="55" conditionals="26" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="diff(String,String) : RelativeString" num="4" count="0" type="method"/>
+            <line num="5" count="0" type="stmt"/>
+            <line complexity="13" visibility="public" signature="diff(String,String,boolean) : RelativeString" num="8" count="0" type="method"/>
+            <line num="9" count="0" type="stmt"/>
+            <line num="10" count="0" type="stmt"/>
+            <line num="11" count="0" type="stmt"/>
+            <line num="12" count="0" type="stmt"/>
+            <line num="13" count="0" type="stmt"/>
+            <line num="14" count="0" type="stmt"/>
+            <line num="15" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="15" type="cond"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line num="19" count="0" type="stmt"/>
+            <line num="20" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="20" type="cond"/>
+            <line num="21" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="21" type="cond"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="27" type="cond"/>
+            <line num="28" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="29" type="cond"/>
+            <line num="30" count="0" type="stmt"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="33" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="37" type="cond"/>
+            <line num="38" count="0" type="stmt"/>
+            <line num="39" count="0" type="stmt"/>
+            <line num="41" count="0" type="stmt"/>
+            <line num="42" count="0" type="stmt"/>
+            <line num="43" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="43" type="cond"/>
+            <line num="44" count="0" type="stmt"/>
+            <line num="46" count="0" type="stmt"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="51" type="cond"/>
+            <line num="52" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="52" type="cond"/>
+            <line num="53" count="0" type="stmt"/>
+            <line num="57" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="patch(String,RelativeString) : String" num="61" count="0" type="method"/>
+            <line num="62" count="0" type="stmt"/>
+            <line complexity="5" visibility="public" signature="patch(String,RelativeString,boolean) : String" num="65" count="0" type="method"/>
+            <line num="66" count="0" type="stmt"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="68" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="68" type="cond"/>
+            <line num="69" count="0" type="stmt"/>
+            <line num="70" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="70" type="cond"/>
+            <line num="71" count="0" type="stmt"/>
+            <line num="72" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="72" type="cond"/>
+            <line num="73" count="0" type="stmt"/>
+            <line num="75" count="0" type="stmt"/>
+            <line num="76" count="0" type="stmt"/>
+            <line num="78" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="78" type="cond"/>
+            <line num="79" count="0" type="stmt"/>
+            <line num="81" count="0" type="stmt"/>
+            <line num="83" count="0" type="stmt"/>
+            <line num="84" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\main\java\net\mooctest\StringLink.java" name="StringLink.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="11" loc="77" coveredmethods="0" methods="7" elements="39" classes="1" ncloc="67" statements="32" conditionals="0" coveredstatements="0"/>
+            <class name="StringLink">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="11" coveredmethods="0" methods="7" elements="39" statements="32" conditionals="0" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="StringLink(int,int,int)" num="14" count="0" type="method"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="StringLink(byte[])" num="20" count="0" type="method"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="23" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="31" count="0" type="stmt"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getLen() : int" num="39" count="0" type="method"/>
+            <line num="40" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getPosNew() : int" num="43" count="0" type="method"/>
+            <line num="44" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getPosOrig() : int" num="47" count="0" type="method"/>
+            <line num="48" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="toString() : String" num="51" count="0" type="method"/>
+            <line num="53" count="0" type="stmt"/>
+            <line complexity="3" visibility="public" signature="toBytes() : byte[]" num="56" count="0" type="method"/>
+            <line num="57" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+            <line num="59" count="0" type="stmt"/>
+            <line num="60" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="63" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line num="65" count="0" type="stmt"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="69" count="0" type="stmt"/>
+            <line num="70" count="0" type="stmt"/>
+            <line num="72" count="0" type="stmt"/>
+            <line num="75" count="0" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="Diffi 0.0.1-SNAPSHOT" timestamp="1711785640830">
+      <metrics coveredelements="14" complexity="15" loc="293" methods="10" classes="2" statements="76" packages="1" coveredconditionals="0" coveredmethods="2" elements="86" ncloc="130" files="2" conditionals="0" coveredstatements="12"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="14" complexity="15" loc="293" methods="10" classes="2" statements="76" coveredconditionals="0" coveredmethods="2" elements="86" ncloc="130" files="2" conditionals="0" coveredstatements="12"/>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\test\java\net\mooctest\DiffiTest.java" name="DiffiTest.java">
+            <metrics coveredelements="14" coveredconditionals="0" complexity="2" loc="151" coveredmethods="2" methods="2" elements="14" classes="1" ncloc="25" statements="12" conditionals="0" coveredstatements="12"/>
+            <class name="DiffiTest">
+               <metrics coveredelements="14" complexity="2" methods="2" testruns="2" statements="12" coveredconditionals="0" coveredmethods="2" elements="14" testfailures="0" testduration="0.03" conditionals="0" coveredstatements="12" testpasses="2"/>
+            </class>
+            <line complexity="1" visibility="public" signature="test() : void" num="13" testsuccess="true" count="1" testduration="0.028" type="method"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test1() : void" num="22" testsuccess="true" count="1" testduration="0.002" type="method"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\8673\126581\Diffi\src\test\java\net\mooctest\DiffiTest2.java" name="DiffiTest2.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="13" loc="142" coveredmethods="0" methods="8" elements="72" classes="1" ncloc="105" statements="64" conditionals="0" coveredstatements="0"/>
+            <class name="DiffiTest2">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="13" coveredmethods="0" methods="8" elements="72" statements="64" conditionals="0" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="test() : void" num="13" count="0" type="method"/>
+            <line num="15" count="0" type="stmt"/>
+            <line num="16" count="0" type="stmt"/>
+            <line num="17" count="0" type="stmt"/>
+            <line num="18" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test1() : void" num="22" count="0" type="method"/>
+            <line num="24" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="28" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="30" count="0" type="stmt"/>
+            <line num="31" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test2() : void" num="34" count="0" type="method"/>
+            <line num="36" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line num="38" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test3() : void" num="46" count="0" type="method"/>
+            <line num="57" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+            <line num="59" count="0" type="stmt"/>
+            <line num="60" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="63" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line num="65" count="0" type="stmt"/>
+            <line num="66" count="0" type="stmt"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="70" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test4() : void" num="75" count="0" type="method"/>
+            <line num="77" count="0" type="stmt"/>
+            <line num="78" count="0" type="stmt"/>
+            <line complexity="4" visibility="public" signature="test5() : void" num="81" count="0" type="method"/>
+            <line num="83" count="0" type="stmt"/>
+            <line num="84" count="0" type="stmt"/>
+            <line num="85" count="0" type="stmt"/>
+            <line num="86" count="0" type="stmt"/>
+            <line num="87" count="0" type="stmt"/>
+            <line num="88" count="0" type="stmt"/>
+            <line num="89" count="0" type="stmt"/>
+            <line num="90" count="0" type="stmt"/>
+            <line num="91" count="0" type="stmt"/>
+            <line num="92" count="0" type="stmt"/>
+            <line num="93" count="0" type="stmt"/>
+            <line num="94" count="0" type="stmt"/>
+            <line num="95" count="0" type="stmt"/>
+            <line num="96" count="0" type="stmt"/>
+            <line num="99" count="0" type="stmt"/>
+            <line num="101" count="0" type="stmt"/>
+            <line num="102" count="0" type="stmt"/>
+            <line num="105" count="0" type="stmt"/>
+            <line num="107" count="0" type="stmt"/>
+            <line num="108" count="0" type="stmt"/>
+            <line num="109" count="0" type="stmt"/>
+            <line num="111" count="0" type="stmt"/>
+            <line num="114" count="0" type="stmt"/>
+            <line num="116" count="0" type="stmt"/>
+            <line num="117" count="0" type="stmt"/>
+            <line num="118" count="0" type="stmt"/>
+            <line num="119" count="0" type="stmt"/>
+            <line num="120" count="0" type="stmt"/>
+            <line num="121" count="0" type="stmt"/>
+            <line num="122" count="0" type="stmt"/>
+            <line num="123" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test6() : void" num="126" count="0" type="method"/>
+            <line num="128" count="0" type="stmt"/>
+            <line num="129" count="0" type="stmt"/>
+            <line num="130" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test7() : void" num="135" count="0" type="method"/>
+            <line num="137" count="0" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31c20790-1c3d-4ec3-bd8d-040ed161c716" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\mooctest\projects\7338\126581\SPLAYTREE1\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2U6fICgCftijV9OBsLwrYz8qavE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JAVA_HOME&quot;: &quot;C:\\Program Files\\Java\\jdk1.8.0_351&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;cores_evosuite_param&quot;: &quot;1&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;evosuite_gui_dialog_height&quot;: &quot;600&quot;,
+    &quot;evosuite_gui_dialog_width&quot;: &quot;600&quot;,
+    &quot;evosuite_jar_location&quot;: &quot;&quot;,
+    &quot;execution_mode&quot;: &quot;JAR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IDM/压缩文件/diffblue-cover-ij-2023.07.02-2022.3.zip&quot;,
+    &quot;memory_evosuite_param&quot;: &quot;2000&quot;,
+    &quot;mvn_location&quot;: &quot;D:\\apache-maven-3.9.0\\bin\\mvn.cmd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;target_folder_evosuite_param&quot;: &quot;src/evo&quot;,
+    &quot;time_evosuite_param&quot;: &quot;3&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\mooctest\projects\7338\126581\SPLAYTREE1\src\test\java\net\mooctest" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="net.mooctest" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SplaySubTreeTest2.test06">
+    <configuration name="SplaySubTreeTest2.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPLAYTREE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.mooctest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.mooctest" />
+      <option name="MAIN_CLASS_NAME" value="net.mooctest.SplaySubTreeTest2" />
+      <option name="METHOD_NAME" value="test03" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplaySubTreeTest2.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPLAYTREE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.mooctest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.mooctest" />
+      <option name="MAIN_CLASS_NAME" value="net.mooctest.SplaySubTreeTest2" />
+      <option name="METHOD_NAME" value="test04" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplaySubTreeTest2.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPLAYTREE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.mooctest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.mooctest" />
+      <option name="MAIN_CLASS_NAME" value="net.mooctest.SplaySubTreeTest2" />
+      <option name="METHOD_NAME" value="test05" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplaySubTreeTest2.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPLAYTREE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.mooctest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.mooctest" />
+      <option name="MAIN_CLASS_NAME" value="net.mooctest.SplaySubTreeTest2" />
+      <option name="METHOD_NAME" value="test06" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplayTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SPLAYTREE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.mooctest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.mooctest" />
+      <option name="MAIN_CLASS_NAME" value="net.mooctest.SplayTreeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Write tests for method SplaySubTree.find" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration">
+      <module name="SPLAYTREE1" />
+      <settings run-config-name="Write tests for method SplaySubTree.find" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="net.mooctest.SplaySubTree.find:(Ljava/lang/Comparable;)Lnet/mooctest/SplaySubTree;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for method SplaySubTree.remove" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration">
+      <module name="SPLAYTREE1" />
+      <settings run-config-name="Write tests for method SplaySubTree.remove" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="net.mooctest.SplaySubTree.remove:(Ljava/lang/Comparable;)Lnet/mooctest/SplaySubTree;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SplaySubTreeTest2.test06" />
+        <item itemvalue="JUnit.SplaySubTreeTest2.test05" />
+        <item itemvalue="JUnit.SplaySubTreeTest2.test04" />
+        <item itemvalue="JUnit.SplaySubTreeTest2.test03" />
+        <item itemvalue="JUnit.SplayTreeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31c20790-1c3d-4ec3-bd8d-040ed161c716" name="Changes" comment="" />
+      <created>1692264868656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692264868656</updated>
+      <workItem from="1692264870087" duration="155000" />
+      <workItem from="1692265046981" duration="323000" />
+      <workItem from="1692265381256" duration="231000" />
+      <workItem from="1692265639410" duration="63000" />
+      <workItem from="1692265735191" duration="247000" />
+      <workItem from="1692266001837" duration="229000" />
+      <workItem from="1692266252876" duration="1583000" />
+      <workItem from="1692267870297" duration="79000" />
+      <workItem from="1692267976535" duration="273000" />
+      <workItem from="1692268271920" duration="441000" />
+      <workItem from="1692268742808" duration="95000" />
+      <workItem from="1692268858521" duration="309000" />
+      <workItem from="1692269189296" duration="87000" />
+      <workItem from="1692269293001" duration="172000" />
+      <workItem from="1692269484545" duration="151000" />
+      <workItem from="1692269656961" duration="1957000" />
+      <workItem from="1692284954878" duration="880000" />
+      <workItem from="1692610309493" duration="5714000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/mooctest/SplaySubTree.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SPLAYTREE1$SplayTreeTest.ic" NAME="SplayTreeTest 覆盖结果" MODIFIED="1692284606675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>net.mooctest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SPLAYTREE1$RemoveTest.ic" NAME="RemoveTest 覆盖结果" MODIFIED="1692284515337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>net.mooctest.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SPLAYTREE1$SplaySubTreeTest_testToString.ic" NAME="SplaySubTreeTest.testToString 覆盖结果" MODIFIED="1692284487082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>net.mooctest.*</FILTER>
+    </SUITE>
+  </component>
+</project>

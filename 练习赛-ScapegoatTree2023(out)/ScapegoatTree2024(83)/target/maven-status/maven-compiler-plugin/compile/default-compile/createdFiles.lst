@@ -1,0 +1,5 @@
+net\mooctest\ScapegoatTree.class
+net\mooctest\MathUtils.class
+net\mooctest\AbstractSelfBalancingBinarySearchTree.class
+net\mooctest\AbstractBinarySearchTree$Node.class
+net\mooctest\AbstractBinarySearchTree.class

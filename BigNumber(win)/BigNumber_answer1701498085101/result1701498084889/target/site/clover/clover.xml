@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1701498084631" clover="4.4.1">
+   <project name="BigNumber 0.0.1-SNAPSHOT" timestamp="1701498082344">
+      <metrics coveredelements="172" complexity="43" loc="149" methods="3" classes="1" statements="101" packages="1" coveredconditionals="68" coveredmethods="3" elements="172" ncloc="143" files="1" conditionals="68" coveredstatements="101"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="172" complexity="43" loc="149" methods="3" classes="1" statements="101" coveredconditionals="68" coveredmethods="3" elements="172" ncloc="143" files="1" conditionals="68" coveredstatements="101"/>
+         <file path="C:\mooctest\projects\8599\126581\BigNumber\src\main\java\net\mooctest\BigNumber.java" name="BigNumber.java">
+            <metrics coveredelements="172" coveredconditionals="68" complexity="43" loc="149" coveredmethods="3" methods="3" elements="172" classes="1" ncloc="143" statements="101" conditionals="68" coveredstatements="101"/>
+            <class name="BigNumber">
+               <metrics coveredelements="172" coveredconditionals="68" complexity="43" coveredmethods="3" methods="3" elements="172" statements="101" conditionals="68" coveredstatements="101"/>
+            </class>
+            <line complexity="15" visibility="public" signature="bigNumberSimpleMulti(String,String) : String" num="5" count="15" type="method"/>
+            <line num="6" count="15" type="stmt"/>
+            <line num="7" count="15" type="stmt"/>
+            <line num="8" count="15" type="stmt"/>
+            <line num="9" count="15" type="stmt"/>
+            <line num="10" count="15" type="stmt"/>
+            <line falsecount="9" truecount="6" num="10" type="cond"/>
+            <line num="11" count="6" type="stmt"/>
+            <line num="12" count="6" type="stmt"/>
+            <line num="14" count="15" type="stmt"/>
+            <line falsecount="11" truecount="4" num="14" type="cond"/>
+            <line num="15" count="4" type="stmt"/>
+            <line falsecount="2" truecount="2" num="15" type="cond"/>
+            <line num="16" count="2" type="stmt"/>
+            <line num="18" count="2" type="stmt"/>
+            <line num="20" count="4" type="stmt"/>
+            <line num="22" count="15" type="stmt"/>
+            <line num="23" count="15" type="stmt"/>
+            <line num="24" count="15" type="stmt"/>
+            <line num="25" count="15" type="stmt"/>
+            <line num="26" count="15" type="stmt"/>
+            <line num="27" count="15" type="stmt"/>
+            <line num="28" count="15" type="stmt"/>
+            <line falsecount="15" truecount="92" num="28" type="cond"/>
+            <line num="29" count="92" type="stmt"/>
+            <line falsecount="92" truecount="130" num="29" type="cond"/>
+            <line num="30" count="130" type="stmt"/>
+            <line num="33" count="15" type="stmt"/>
+            <line falsecount="15" truecount="121" num="33" type="cond"/>
+            <line num="34" count="121" type="stmt"/>
+            <line falsecount="106" truecount="15" num="34" type="cond"/>
+            <line num="35" count="15" type="stmt"/>
+            <line num="36" count="15" type="stmt"/>
+            <line num="39" count="15" type="stmt"/>
+            <line num="40" count="15" type="stmt"/>
+            <line num="41" count="15" type="stmt"/>
+            <line falsecount="15" truecount="121" num="41" type="cond"/>
+            <line num="42" count="121" type="stmt"/>
+            <line falsecount="96" truecount="25" num="42" type="cond"/>
+            <line num="43" count="25" type="stmt"/>
+            <line num="45" count="96" type="stmt"/>
+            <line num="47" count="96" type="stmt"/>
+            <line num="49" count="15" type="stmt"/>
+            <line falsecount="2" truecount="13" num="49" type="cond"/>
+            <line num="50" count="13" type="stmt"/>
+            <line falsecount="7" truecount="6" num="50" type="cond"/>
+            <line num="51" count="6" type="stmt"/>
+            <line num="54" count="2" type="stmt"/>
+            <line num="56" count="15" type="stmt"/>
+            <line num="57" count="15" type="stmt"/>
+            <line complexity="10" visibility="public" signature="bigNumberAdd(String,String) : String" num="60" count="7" type="method"/>
+            <line num="61" count="7" type="stmt"/>
+            <line num="62" count="7" type="stmt"/>
+            <line num="63" count="7" type="stmt"/>
+            <line num="64" count="7" type="stmt"/>
+            <line num="65" count="7" type="stmt"/>
+            <line num="66" count="7" type="stmt"/>
+            <line falsecount="4" truecount="3" num="66" type="cond"/>
+            <line num="67" count="7" type="stmt"/>
+            <line num="68" count="7" type="stmt"/>
+            <line falsecount="7" truecount="59" num="68" type="cond"/>
+            <line num="69" count="59" type="stmt"/>
+            <line falsecount="10" truecount="49" num="69" type="cond"/>
+            <line num="70" count="59" type="stmt"/>
+            <line falsecount="42" truecount="17" num="70" type="cond"/>
+            <line num="71" count="59" type="stmt"/>
+            <line num="73" count="7" type="stmt"/>
+            <line falsecount="7" truecount="59" num="73" type="cond"/>
+            <line num="74" count="59" type="stmt"/>
+            <line falsecount="56" truecount="3" num="74" type="cond"/>
+            <line num="75" count="3" type="stmt"/>
+            <line num="76" count="3" type="stmt"/>
+            <line num="79" count="7" type="stmt"/>
+            <line num="80" count="7" type="stmt"/>
+            <line num="81" count="7" type="stmt"/>
+            <line falsecount="7" truecount="59" num="81" type="cond"/>
+            <line num="82" count="59" type="stmt"/>
+            <line falsecount="51" truecount="8" num="82" type="cond"/>
+            <line num="83" count="8" type="stmt"/>
+            <line num="85" count="51" type="stmt"/>
+            <line num="87" count="51" type="stmt"/>
+            <line num="89" count="7" type="stmt"/>
+            <line num="90" count="7" type="stmt"/>
+            <line complexity="18" visibility="public" signature="bigNumberSub(String,String) : String" num="93" count="8" type="method"/>
+            <line num="94" count="8" type="stmt"/>
+            <line num="95" count="8" type="stmt"/>
+            <line num="96" count="8" type="stmt"/>
+            <line num="97" count="8" type="stmt"/>
+            <line num="98" count="8" type="stmt"/>
+            <line num="99" count="8" type="stmt"/>
+            <line falsecount="7" truecount="1" num="99" type="cond"/>
+            <line num="100" count="8" type="stmt"/>
+            <line num="101" count="8" type="stmt"/>
+            <line num="102" count="8" type="stmt"/>
+            <line falsecount="7" truecount="1" num="102" type="cond"/>
+            <line num="103" count="1" type="stmt"/>
+            <line num="104" count="7" type="stmt"/>
+            <line falsecount="1" truecount="6" num="104" type="cond"/>
+            <line num="105" count="6" type="stmt"/>
+            <line num="106" count="6" type="stmt"/>
+            <line falsecount="6" truecount="9" num="106" type="cond"/>
+            <line num="107" count="9" type="stmt"/>
+            <line num="109" count="6" type="stmt"/>
+            <line falsecount="3" truecount="3" num="109" type="cond"/>
+            <line num="110" count="3" type="stmt"/>
+            <line num="113" count="8" type="stmt"/>
+            <line falsecount="8" truecount="51" num="113" type="cond"/>
+            <line num="114" count="51" type="stmt"/>
+            <line falsecount="28" truecount="23" num="114" type="cond"/>
+            <line num="115" count="51" type="stmt"/>
+            <line falsecount="3" truecount="48" num="115" type="cond"/>
+            <line num="116" count="51" type="stmt"/>
+            <line falsecount="39" truecount="12" num="116" type="cond"/>
+            <line num="117" count="12" type="stmt"/>
+            <line num="119" count="39" type="stmt"/>
+            <line num="122" count="8" type="stmt"/>
+            <line falsecount="8" truecount="43" num="122" type="cond"/>
+            <line num="123" count="43" type="stmt"/>
+            <line falsecount="38" truecount="5" num="123" type="cond"/>
+            <line num="124" count="5" type="stmt"/>
+            <line num="125" count="5" type="stmt"/>
+            <line num="129" count="8" type="stmt"/>
+            <line num="130" count="8" type="stmt"/>
+            <line falsecount="4" truecount="4" num="130" type="cond"/>
+            <line num="131" count="4" type="stmt"/>
+            <line num="133" count="8" type="stmt"/>
+            <line num="134" count="8" type="stmt"/>
+            <line falsecount="8" truecount="51" num="134" type="cond"/>
+            <line num="135" count="51" type="stmt"/>
+            <line falsecount="39" truecount="12" num="135" type="cond"/>
+            <line num="136" count="12" type="stmt"/>
+            <line num="138" count="39" type="stmt"/>
+            <line num="140" count="39" type="stmt"/>
+            <line num="142" count="8" type="stmt"/>
+            <line falsecount="6" truecount="2" num="142" type="cond"/>
+            <line num="143" count="2" type="stmt"/>
+            <line num="145" count="8" type="stmt"/>
+            <line num="146" count="8" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="BigNumber 0.0.1-SNAPSHOT" timestamp="1701498082344">
+      <metrics coveredelements="60" complexity="30" loc="179" methods="30" classes="1" statements="30" packages="1" coveredconditionals="0" coveredmethods="30" elements="60" ncloc="125" files="1" conditionals="0" coveredstatements="30"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="60" complexity="30" loc="179" methods="30" classes="1" statements="30" coveredconditionals="0" coveredmethods="30" elements="60" ncloc="125" files="1" conditionals="0" coveredstatements="30"/>
+         <file path="C:\mooctest\projects\8599\126581\BigNumber\src\test\java\net\mooctest\BigNumberTest.java" name="BigNumberTest.java">
+            <metrics coveredelements="60" coveredconditionals="0" complexity="30" loc="179" coveredmethods="30" methods="30" elements="60" classes="1" ncloc="125" statements="30" conditionals="0" coveredstatements="30"/>
+            <class name="BigNumberTest">
+               <metrics coveredelements="60" complexity="30" methods="30" testruns="30" statements="30" coveredconditionals="0" coveredmethods="30" elements="60" testfailures="0" testduration="0.035" conditionals="0" coveredstatements="30" testpasses="30"/>
+            </class>
+            <line complexity="1" visibility="public" signature="testBasicCase() : void" num="9" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="11" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testNegativeNumbers() : void" num="14" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="16" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testZero() : void" num="19" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="21" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLargeNumbers() : void" num="24" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="26" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testBothNegativeNumbers() : void" num="29" testsuccess="true" count="1" testduration="0.006" type="method"/>
+            <line num="31" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLargeNumbersWithDifferentSigns() : void" num="34" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="36" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLeadingZeros() : void" num="39" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="41" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testBasicCase2() : void" num="56" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="58" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testNegativeNumbers1() : void" num="61" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="63" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testZero1() : void" num="66" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="68" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLargeNumbers1() : void" num="71" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="73" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDifferentLengthNumbers1() : void" num="76" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="78" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLeadingZeros1() : void" num="81" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="83" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testEmptyString1() : void" num="86" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="88" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testBasicCase1() : void" num="95" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="97" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testPositiveResult() : void" num="100" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="102" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testNegativeResult() : void" num="105" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="107" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testZeroResult() : void" num="110" testsuccess="true" count="1" testduration="0.029" type="method"/>
+            <line num="112" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLargeNumbers2() : void" num="115" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="117" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDifferentLengthNumbers() : void" num="120" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="122" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testLeadingZeros2() : void" num="125" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="127" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testEmptyString() : void" num="130" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="132" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSignsBothPositive() : void" num="140" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="142" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSignsBothNegative() : void" num="145" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="147" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSignAIsPositiveSignBIsNegative() : void" num="150" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="152" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSignAIsNegativeSignBIsPositive() : void" num="155" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="157" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testIfResultBecomesNegative() : void" num="160" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="162" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testWithZeros() : void" num="165" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="167" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testWithSingleDigit() : void" num="170" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="172" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testWithNegativeSingleDigit() : void" num="175" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="177" count="1" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

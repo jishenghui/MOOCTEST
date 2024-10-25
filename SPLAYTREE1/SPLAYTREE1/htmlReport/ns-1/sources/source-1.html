@@ -1,0 +1,610 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > SplaySubTree</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">net.mooctest</a>
+</div>
+
+<h1>Coverage Summary for Class: SplaySubTree (net.mooctest)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SplaySubTree</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    84.4%
+  </span>
+  <span class="absValue">
+    (259/307)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package net.mooctest;
+&nbsp;
+&nbsp;public class SplaySubTree&lt;T extends Comparable&lt;T&gt;&gt; {
+&nbsp;
+&nbsp;	private T data;
+&nbsp;	private SplaySubTree&lt;T&gt; left, right, parent;
+&nbsp;	private long size; // number of nodes in tree
+&nbsp;	private int count;
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 *            - If node==null then size will be 0 otherwise node will be in the
+&nbsp;	 *            tree and size will be 1
+&nbsp;	 */
+<b class="fc">&nbsp;	public SplaySubTree(T node) {</b>
+<b class="fc">&nbsp;		data = node;</b>
+<b class="fc">&nbsp;		if (node != null) {</b>
+<b class="fc">&nbsp;			size = count = 1;</b>
+&nbsp;		}
+&nbsp;	}
+&nbsp;	
+&nbsp;	
+&nbsp;
+&nbsp;	public String toString() {
+<b class="fc">&nbsp;		String lft = &quot;&quot;;</b>
+<b class="fc">&nbsp;		String rght = &quot;&quot;;</b>
+<b class="fc">&nbsp;		String myData = &quot; data=&quot; + data;</b>
+<b class="fc">&nbsp;		if (left != null) {</b>
+<b class="fc">&nbsp;			myData += &quot; left=&quot; + left.data;</b>
+<b class="fc">&nbsp;			lft = left.toString();</b>
+&nbsp;		} else {
+<b class="fc">&nbsp;			myData += &quot; left= null&quot;;</b>
+&nbsp;		}
+<b class="fc">&nbsp;		if (right != null) {</b>
+<b class="fc">&nbsp;			myData += &quot; right=&quot; + right.data;</b>
+<b class="fc">&nbsp;			rght = right.toString();</b>
+&nbsp;		} else {
+<b class="fc">&nbsp;			myData += &quot; right null&quot;;</b>
+&nbsp;		}
+<b class="fc">&nbsp;		myData += &quot; sz=&quot;+size + &quot; cnt=&quot;+count;</b>
+<b class="fc">&nbsp;		return myData + &quot;\n&quot; + lft + rght;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	public T getData() {
+<b class="fc">&nbsp;		return data;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param index
+&nbsp;	 *            - of the node to search for.
+&nbsp;	 * @return - null if index&lt;=0 or index&gt;=size otherwise SubTree at index.
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; get(long index) {
+<b class="fc">&nbsp;		if (index &gt; size || index &lt; 0)</b>
+<b class="fc">&nbsp;			return null;</b>
+<b class="fc">&nbsp;		long cS = 1;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; cT = this;</b>
+<b class="fc">&nbsp;		if (cT.left != null)</b>
+<b class="fc">&nbsp;			cS += cT.left.size;</b>
+<b class="fc">&nbsp;		while (cS != index) {</b>
+<b class="fc">&nbsp;			if (cS &gt; index) {</b>
+<b class="fc">&nbsp;				cS--;</b>
+<b class="fc">&nbsp;				cT = cT.left;</b>
+<b class="fc">&nbsp;				if (cT != null &amp;&amp; cT.right != null)</b>
+<b class="fc">&nbsp;					cS -= cT.right.size;</b>
+&nbsp;			} else {
+<b class="fc">&nbsp;				cS++;</b>
+<b class="fc">&nbsp;				cT = cT.right;</b>
+<b class="fc">&nbsp;				if (cT != null &amp;&amp; cT.left != null)</b>
+<b class="fc">&nbsp;					cS += cT.left.size;</b>
+&nbsp;			}
+&nbsp;		}
+<b class="fc">&nbsp;		return cT;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @return - the number of nodes in the tree.
+&nbsp;	 */
+&nbsp;	public long size() {
+<b class="fc">&nbsp;		return size;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 *            - to search for.
+&nbsp;	 * @return - the index of node. All nodes are ordered according to the
+&nbsp;	 *         compareTo(T) method.
+&nbsp;	 * 
+&nbsp;	 */
+&nbsp;	public long indexOf(T node) {
+<b class="fc">&nbsp;		if (node == null)</b>
+<b class="nc">&nbsp;			return -1;</b>
+<b class="fc">&nbsp;		long cI = 1;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; cT = this;</b>
+<b class="fc">&nbsp;		if (cT.left != null)</b>
+<b class="fc">&nbsp;			cI += cT.left.size;</b>
+<b class="fc">&nbsp;		while (!cT.data.equals(node)) {</b>
+<b class="fc">&nbsp;			if (cT.data.compareTo(node) &gt; 0) {</b>
+<b class="fc">&nbsp;				cI--;</b>
+<b class="fc">&nbsp;				cT = cT.left;</b>
+<b class="fc">&nbsp;				if (cT != null &amp;&amp; cT.right != null)</b>
+<b class="fc">&nbsp;					cI -= cT.right.size;</b>
+&nbsp;			} else {
+<b class="fc">&nbsp;				cI++;</b>
+<b class="fc">&nbsp;				cT = cT.right;</b>
+<b class="fc">&nbsp;				if (cT != null &amp;&amp; cT.left != null)</b>
+<b class="fc">&nbsp;					cI += cT.left.size;</b>
+&nbsp;			}
+<b class="fc">&nbsp;			if (cT == null)</b>
+<b class="fc">&nbsp;				return -1;</b>
+&nbsp;		}
+&nbsp;
+<b class="fc">&nbsp;		return cI;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 *            - is added to the tree. If node is null tree is unchanged.
+&nbsp;	 * @return - New root of the tree.
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; add(T node) {
+<b class="fc">&nbsp;		if (node == null)</b>
+<b class="fc">&nbsp;			return this;</b>
+<b class="fc">&nbsp;		if (this.data == null)</b>
+<b class="fc">&nbsp;			return new SplaySubTree&lt;T&gt;(node);</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; current = this;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; child = null;</b>
+&nbsp;
+<b class="fc">&nbsp;		if (this.data.compareTo(node) &lt; 0)</b>
+<b class="fc">&nbsp;			child = this.right;</b>
+<b class="fc">&nbsp;		else if(this.data.compareTo(node)&gt;0)</b>
+<b class="fc">&nbsp;			child = this.left;</b>
+<b class="fc">&nbsp;		while (child != null &amp;&amp; current.data.compareTo(node)!=0) {</b>
+<b class="fc">&nbsp;			current = child;</b>
+<b class="fc">&nbsp;			if (current.data.compareTo(node) &lt; 0)</b>
+<b class="fc">&nbsp;				child = current.right;</b>
+<b class="fc">&nbsp;			else if(current.data.compareTo(node)&gt;0)</b>
+<b class="fc">&nbsp;				child = current.left;</b>
+&nbsp;		}
+&nbsp;		
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; newNode = new SplaySubTree&lt;T&gt;(node);</b>
+<b class="fc">&nbsp;		if (current.data.compareTo(node) &lt; 0) {</b>
+<b class="fc">&nbsp;			current.right = newNode;</b>
+<b class="fc">&nbsp;		} else if(current.data.compareTo(node)&gt;0){</b>
+<b class="fc">&nbsp;			current.left = newNode;</b>
+&nbsp;		}else {
+<b class="fc">&nbsp;			current.size++;</b>
+<b class="fc">&nbsp;			current.count++;</b>
+<b class="fc">&nbsp;			newNode = current;</b>
+<b class="fc">&nbsp;			current = newNode.parent;</b>
+&nbsp;		}
+<b class="fc">&nbsp;		newNode.parent = current;</b>
+<b class="fc">&nbsp;		if (newNode.splay())</b>
+<b class="fc">&nbsp;			return newNode;</b>
+<b class="nc">&nbsp;		return this;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 *            - is removed from the tree. If node is null tree is unchanged.
+&nbsp;	 * @return - New root of the tree.
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; remove(T node) {
+<b class="fc">&nbsp;		if (node == null)</b>
+<b class="fc">&nbsp;			return this;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; x = find(node);</b>
+<b class="fc">&nbsp;		if (x == null)</b>
+<b class="fc">&nbsp;			return this;</b>
+<b class="fc">&nbsp;		if(x.data.equals(node)) {</b>
+<b class="fc">&nbsp;			x.count--;</b>
+<b class="fc">&nbsp;			x.size--;</b>
+<b class="fc">&nbsp;			if(size&gt;0) {</b>
+<b class="fc">&nbsp;				x.splay();</b>
+<b class="fc">&nbsp;				return x;</b>
+&nbsp;			}
+&nbsp;		}
+&nbsp;		// To delete a node x:
+&nbsp;		// if x has no children remove it.
+&nbsp;
+<b class="fc">&nbsp;		if (x.left == null &amp;&amp; x.right == null) {</b>
+<b class="fc">&nbsp;			if (x.parent != null) {</b>
+<b class="nc">&nbsp;				if (x.parent.left == x) {</b>
+<b class="nc">&nbsp;					parent.left = null;</b>
+&nbsp;				} else
+<b class="nc">&nbsp;					parent.right = null;</b>
+&nbsp;			} else
+<b class="fc">&nbsp;				return new SplaySubTree(null);</b>
+&nbsp;
+&nbsp;		}
+&nbsp;		// if x has one child remove x, and put the child in place of x
+<b class="nc">&nbsp;		if (x.left == null) {</b>
+<b class="nc">&nbsp;			if (x.parent != null) {</b>
+<b class="nc">&nbsp;				if (x.parent.left == x) {</b>
+<b class="nc">&nbsp;					parent.left = x.right;</b>
+<b class="nc">&nbsp;					x.right.parent = parent;</b>
+<b class="nc">&nbsp;					x = x.right;</b>
+&nbsp;				} else {
+<b class="nc">&nbsp;					parent.right = x.right;</b>
+<b class="nc">&nbsp;					x.right.parent = parent;</b>
+<b class="nc">&nbsp;					x = x.right;</b>
+&nbsp;				}
+&nbsp;			} else {
+<b class="nc">&nbsp;				x.right.parent = null;</b>
+<b class="nc">&nbsp;				return x.right;</b>
+&nbsp;			}
+<b class="nc">&nbsp;		} else if (x.right == null) {</b>
+<b class="nc">&nbsp;			if (x.parent != null) {</b>
+<b class="nc">&nbsp;				if (x.parent.left == x) {</b>
+<b class="nc">&nbsp;					parent.left = x.left;</b>
+<b class="nc">&nbsp;					x.left.parent = parent;</b>
+<b class="nc">&nbsp;					x = x.left;</b>
+&nbsp;				} else {
+<b class="nc">&nbsp;					parent.right = x.left;</b>
+<b class="nc">&nbsp;					x.left.parent = parent;</b>
+<b class="nc">&nbsp;					x = x.left;</b>
+&nbsp;				}
+&nbsp;			} else {
+<b class="nc">&nbsp;				x.left.parent = null;</b>
+<b class="nc">&nbsp;				return x.left;</b>
+&nbsp;			}
+&nbsp;		} else {
+&nbsp;			// if x has two children, swap its value with that of
+&nbsp;			// the rightmost node of its left sub tree
+<b class="nc">&nbsp;			SplaySubTree&lt;T&gt; rmc = x.left;</b>
+<b class="nc">&nbsp;			while (rmc.right != null)</b>
+<b class="nc">&nbsp;				rmc = rmc.right;</b>
+<b class="nc">&nbsp;			x.data = rmc.data;</b>
+&nbsp;			// Then remove that node instead.
+<b class="nc">&nbsp;			rmc.left.parent = rmc.parent;</b>
+<b class="nc">&nbsp;			if (rmc.parent == x) {</b>
+<b class="nc">&nbsp;				x.left = rmc.left;</b>
+&nbsp;			} else {
+<b class="nc">&nbsp;				rmc.parent.right = rmc.left;</b>
+&nbsp;			}
+<b class="nc">&nbsp;			x = rmc;</b>
+&nbsp;		}
+&nbsp;
+&nbsp;		// After deletion, splay the parent of the removed node to the top of
+&nbsp;		// the tree.
+<b class="nc">&nbsp;		x.splay();</b>
+<b class="nc">&nbsp;		return x;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param other
+&nbsp;	 * @return
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; join(SplaySubTree&lt;T&gt; other) {
+<b class="fc">&nbsp;		return null;</b>
+&nbsp;
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 * @return
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; split(T node) {
+<b class="fc">&nbsp;		return null;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * @param node
+&nbsp;	 * @return
+&nbsp;	 */
+&nbsp;	public SplaySubTree&lt;T&gt; find(T node) {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; current = this;</b>
+<b class="fc">&nbsp;		if (this.data == null)</b>
+<b class="fc">&nbsp;			return null;</b>
+<b class="fc">&nbsp;		while (current != null) {</b>
+<b class="fc">&nbsp;			if (node.equals(current.data))</b>
+<b class="fc">&nbsp;				return current;</b>
+<b class="fc">&nbsp;			if (node.compareTo(current.data) &lt; 0)</b>
+<b class="fc">&nbsp;				current = current.left;</b>
+&nbsp;			else
+<b class="fc">&nbsp;				current = current.right;</b>
+&nbsp;		}
+&nbsp;		
+<b class="fc">&nbsp;		return current;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * Assuming this node is an interior or leaf node of a larger tree this method
+&nbsp;	 * moves this node up to the root balancing the tree in the process
+&nbsp;	 */
+&nbsp;	public boolean splay() {
+&nbsp;		// if (Math.random() &lt; 0.5)
+&nbsp;		// return false;   // if putting this back in, be careful about updating size when adding and removing nodes
+<b class="fc">&nbsp;		while (this.parent != null) {</b>
+<b class="fc">&nbsp;			SplaySubTree&lt;T&gt; p = this.parent;</b>
+<b class="fc">&nbsp;			SplaySubTree&lt;T&gt; g = p.parent;</b>
+<b class="fc">&nbsp;			if (g == null &amp;&amp; this == p.left) {</b>
+<b class="fc">&nbsp;				zig();</b>
+<b class="fc">&nbsp;			} else if (g == null &amp;&amp; this == p.right) {</b>
+<b class="fc">&nbsp;				zag();</b>
+<b class="fc">&nbsp;			} else if (p.left == this &amp;&amp; g.left == p) {</b>
+<b class="fc">&nbsp;				zigzig();</b>
+<b class="fc">&nbsp;			} else if (p.right == this &amp;&amp; g.right == p) {</b>
+<b class="fc">&nbsp;				zagzag();</b>
+<b class="fc">&nbsp;			} else if (p.right == this &amp;&amp; g.left == p) {</b>
+<b class="fc">&nbsp;				zigzag();</b>
+&nbsp;			} else {
+<b class="fc">&nbsp;				zagzig();</b>
+&nbsp;			}
+<b class="fc">&nbsp;		}</b>
+<b class="fc">&nbsp;		return true;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zig() {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.right;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+&nbsp;
+<b class="fc">&nbsp;		this.right = p;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		p.left = b;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			b.parent = p;</b>
+<b class="fc">&nbsp;		this.parent = null;</b>
+<b class="fc">&nbsp;		p.size = p.count;</b>
+<b class="fc">&nbsp;		if (p.right != null)</b>
+<b class="fc">&nbsp;			p.size += p.right.size;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		this.size = p.size + this.count;</b>
+<b class="fc">&nbsp;		if (this.left != null)</b>
+<b class="fc">&nbsp;			this.size += this.left.size;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zag() {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.left;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+&nbsp;
+<b class="fc">&nbsp;		this.left = p;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		p.right = b;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			b.parent = p;</b>
+<b class="fc">&nbsp;		this.parent = null;</b>
+<b class="fc">&nbsp;		p.size = p.count;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		if (p.left != null)</b>
+<b class="fc">&nbsp;			p.size += p.left.size;</b>
+<b class="fc">&nbsp;		this.size = p.size + this.count;</b>
+<b class="fc">&nbsp;		if (this.right != null)</b>
+<b class="fc">&nbsp;			this.size += this.right.size;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used by zigzig, zagzag, zigzag, zagzig This &quot;fixes&quot;
+&nbsp;	 * the great grandparent
+&nbsp;	 */
+&nbsp;	private void fixGG(SplaySubTree&lt;T&gt; g) {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; gg = g.parent;</b>
+<b class="fc">&nbsp;		if (gg != null) {</b>
+<b class="fc">&nbsp;			if (g == gg.left)</b>
+<b class="fc">&nbsp;				gg.left = this;</b>
+<b class="fc">&nbsp;			if (g == gg.right)</b>
+<b class="fc">&nbsp;				gg.right = this;</b>
+&nbsp;		}
+<b class="fc">&nbsp;		this.parent = gg;</b>
+&nbsp;		// might need to update size
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zigzig() {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; g = parent.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.right;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; c = p.right;</b>
+<b class="fc">&nbsp;		fixGG(g);</b>
+&nbsp;
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			b.parent = p;</b>
+<b class="fc">&nbsp;		p.left = b;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="nc">&nbsp;			c.parent = g;</b>
+<b class="fc">&nbsp;		g.left = c;</b>
+<b class="fc">&nbsp;		g.parent = p;</b>
+<b class="fc">&nbsp;		p.right = g;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		this.right = p;</b>
+&nbsp;
+<b class="fc">&nbsp;		g.size = g.count;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="nc">&nbsp;			g.size += c.size;</b>
+<b class="fc">&nbsp;		if (g.right != null)</b>
+<b class="fc">&nbsp;			g.size += g.right.size;</b>
+<b class="fc">&nbsp;		p.size = p.count;</b>
+<b class="fc">&nbsp;		if (g != null)</b>
+<b class="fc">&nbsp;			p.size += g.size;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		this.size = p.size + this.count;</b>
+<b class="fc">&nbsp;		if (this.left != null)</b>
+<b class="fc">&nbsp;			this.size += this.left.size;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zagzag() {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; g = parent.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.left;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; c = p.left;</b>
+&nbsp;
+<b class="fc">&nbsp;		fixGG(g);</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="nc">&nbsp;			b.parent = p;</b>
+&nbsp;		// above line throws java.lang.NullPointerException
+&nbsp;
+<b class="fc">&nbsp;		p.right = b;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="fc">&nbsp;			c.parent = g;</b>
+<b class="fc">&nbsp;		g.right = c;</b>
+<b class="fc">&nbsp;		g.parent = p;</b>
+<b class="fc">&nbsp;		p.left = g;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		this.left = p;</b>
+<b class="fc">&nbsp;		g.size = g.count;</b>
+<b class="fc">&nbsp;		if (g.left != null)</b>
+<b class="fc">&nbsp;			g.size += g.left.size;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="fc">&nbsp;			g.size += c.size;</b>
+<b class="fc">&nbsp;		p.size = g.size + p.count;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="nc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		this.size = p.size + this.count;</b>
+<b class="fc">&nbsp;		if (this.right != null)</b>
+<b class="nc">&nbsp;			this.size += this.right.size;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zigzag() {
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; g = parent.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.left;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; c = this.right;</b>
+&nbsp;
+<b class="fc">&nbsp;		fixGG(g);</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="nc">&nbsp;			b.parent = p;</b>
+<b class="fc">&nbsp;		p.right = b;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="nc">&nbsp;			c.parent = g;</b>
+<b class="fc">&nbsp;		g.left = c;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		this.left = p;</b>
+<b class="fc">&nbsp;		g.parent = this;</b>
+<b class="fc">&nbsp;		this.right = g;</b>
+<b class="fc">&nbsp;		g.size = g.count;</b>
+<b class="fc">&nbsp;		if (g.right != null)</b>
+<b class="fc">&nbsp;			g.size += g.right.size;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="nc">&nbsp;			g.size += c.size;</b>
+<b class="fc">&nbsp;		p.size = p.count;</b>
+<b class="fc">&nbsp;		if (p.left != null)</b>
+<b class="fc">&nbsp;			p.size += p.left.size;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="nc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		this.size = g.size + p.size + this.count;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;	/**
+&nbsp;	 * This is a helper method used in the splay() operation
+&nbsp;	 */
+&nbsp;	private void zagzig() {
+&nbsp;
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; g = parent.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; b = this.right;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; p = this.parent;</b>
+<b class="fc">&nbsp;		SplaySubTree&lt;T&gt; c = this.left;</b>
+<b class="fc">&nbsp;		fixGG(g);</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			b.parent = p;</b>
+<b class="fc">&nbsp;		p.left = b;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="fc">&nbsp;			c.parent = g;</b>
+<b class="fc">&nbsp;		g.right = c;</b>
+<b class="fc">&nbsp;		p.parent = this;</b>
+<b class="fc">&nbsp;		this.right = p;</b>
+<b class="fc">&nbsp;		g.parent = this;</b>
+<b class="fc">&nbsp;		this.left = g;</b>
+<b class="fc">&nbsp;		g.size = g.count;</b>
+<b class="fc">&nbsp;		if (g.left != null)</b>
+<b class="fc">&nbsp;			g.size += g.left.size;</b>
+<b class="fc">&nbsp;		if (c != null)</b>
+<b class="fc">&nbsp;			g.size += c.size;</b>
+<b class="fc">&nbsp;		p.size = p.count;</b>
+<b class="fc">&nbsp;		if (p.right != null)</b>
+<b class="nc">&nbsp;			p.size += p.right.size;</b>
+<b class="fc">&nbsp;		if (b != null)</b>
+<b class="fc">&nbsp;			p.size += b.size;</b>
+<b class="fc">&nbsp;		this.size = g.size + p.size + this.count;</b>
+&nbsp;	}
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-08-17 23:04</div>
+</div>
+</body>
+</html>

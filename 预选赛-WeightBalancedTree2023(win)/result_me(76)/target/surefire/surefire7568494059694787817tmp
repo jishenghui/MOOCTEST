@@ -1,0 +1,27 @@
+#surefire
+#Sun Oct 22 11:58:41 CST 2023
+testClassesDirectory=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\target\\test-classes
+classPathUrl.4=C\:\\repo\\org\\openclover\\clover\\4.4.1\\clover-4.4.1.jar
+classPathUrl.3=C\:\\repo\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar
+classPathUrl.2=C\:\\repo\\junit\\junit\\4.12\\junit-4.12.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\target\\classes
+reportsDirectory=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\target\\surefire-reports
+classPathUrl.0=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\target\\test-classes
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\target\\clover\\src-test-instrumented
+surefireClassPathUrl.1=C\:\\repo\\org\\apache\\maven\\surefire\\surefire-api\\2.12.4\\surefire-api-2.12.4.jar
+surefireClassPathUrl.0=C\:\\repo\\org\\apache\\maven\\surefire\\surefire-junit4\\2.12.4\\surefire-junit4-2.12.4.jar
+runOrder=filesystem
+useSystemClassLoader=true
+excludes0=**/*$*
+isTrimStackTrace=true
+tc.0=net.mooctest.AirportTest
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+runStatisticsFile=C\:\\mooctest\\projects\\7823\\126581\\WeightBalancedTree2023\\.surefire-65E09FADD295A42E1E1578D92C84E030727918EE
+includes0=**/Test*.java
+childDelegation=false
+classPathUrl.5=C\:\\Users\\U\\AppData\\Local\\Temp\\grover5292679365107639953.jar

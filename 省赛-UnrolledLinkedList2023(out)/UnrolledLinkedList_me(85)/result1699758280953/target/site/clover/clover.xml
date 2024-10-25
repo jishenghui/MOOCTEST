@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1699758280531" clover="4.4.1">
+   <project name="UnrolledLinkedList2023 0.0.1-SNAPSHOT" timestamp="1699758278207">
+      <metrics coveredelements="459" complexity="123" loc="981" methods="38" classes="3" statements="281" packages="1" coveredconditionals="149" coveredmethods="38" elements="475" ncloc="501" files="1" conditionals="156" coveredstatements="272"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="459" complexity="123" loc="981" methods="38" classes="3" statements="281" coveredconditionals="149" coveredmethods="38" elements="475" ncloc="501" files="1" conditionals="156" coveredstatements="272"/>
+         <file path="C:\mooctest\projects\8058\126581\UnrolledLinkedList2023\src\main\java\net\mooctest\UnrolledLinkedList.java" name="UnrolledLinkedList.java">
+            <metrics coveredelements="459" coveredconditionals="149" complexity="123" loc="981" coveredmethods="38" methods="38" elements="475" classes="3" ncloc="501" statements="281" conditionals="156" coveredstatements="272"/>
+            <class name="UnrolledLinkedList">
+               <metrics coveredelements="403" coveredconditionals="139" complexity="106" coveredmethods="26" methods="26" elements="419" statements="247" conditionals="146" coveredstatements="238"/>
+            </class>
+            <class name="UnrolledLinkedList.Node">
+               <metrics coveredelements="2" coveredconditionals="0" complexity="1" coveredmethods="1" methods="1" elements="2" statements="1" conditionals="0" coveredstatements="1"/>
+            </class>
+            <class name="UnrolledLinkedList.ULLIterator">
+               <metrics coveredelements="54" coveredconditionals="10" complexity="16" coveredmethods="11" methods="11" elements="54" statements="33" conditionals="10" coveredstatements="33"/>
+            </class>
+            <line complexity="2" visibility="public" signature="UnrolledLinkedList(int)" num="87" count="24" type="method"/>
+            <line num="89" count="24" type="stmt"/>
+            <line falsecount="23" truecount="1" num="89" type="cond"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="92" count="23" type="stmt"/>
+            <line num="93" count="23" type="stmt"/>
+            <line num="94" count="23" type="stmt"/>
+            <line complexity="1" visibility="public" signature="UnrolledLinkedList()" num="102" count="20" type="method"/>
+            <line num="104" count="20" type="stmt"/>
+            <line complexity="1" visibility="public" signature="size() : int" num="113" count="1" type="method"/>
+            <line num="115" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="isEmpty() : boolean" num="124" count="2" type="method"/>
+            <line num="127" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="contains(Object) : boolean" num="140" count="5" type="method"/>
+            <line num="143" count="5" type="stmt"/>
+            <line complexity="1" visibility="public" signature="iterator() : Iterator&lt;E&gt;" num="152" count="4" type="method"/>
+            <line num="155" count="4" type="stmt"/>
+            <line complexity="3" visibility="public" signature="toArray() : Object[]" num="173" count="1" type="method"/>
+            <line num="176" count="1" type="stmt"/>
+            <line num="177" count="1" type="stmt"/>
+            <line num="178" count="1" type="stmt"/>
+            <line falsecount="1" truecount="1" num="178" type="cond"/>
+            <line num="179" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="179" type="cond"/>
+            <line num="180" count="10" type="stmt"/>
+            <line num="181" count="10" type="stmt"/>
+            <line num="184" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="toArray(T[]) : T[]" num="202" count="2" type="method"/>
+            <line num="205" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="205" type="cond"/>
+            <line num="206" count="1" type="stmt"/>
+            <line num="209" count="2" type="stmt"/>
+            <line num="210" count="2" type="stmt"/>
+            <line num="211" count="2" type="stmt"/>
+            <line falsecount="2" truecount="2" num="211" type="cond"/>
+            <line num="212" count="2" type="stmt"/>
+            <line falsecount="2" truecount="20" num="212" type="cond"/>
+            <line num="213" count="20" type="stmt"/>
+            <line num="214" count="20" type="stmt"/>
+            <line num="217" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="add(E) : boolean" num="227" count="179" type="method"/>
+            <line num="230" count="179" type="stmt"/>
+            <line num="231" count="179" type="stmt"/>
+            <line complexity="8" visibility="public" signature="remove(Object) : boolean" num="248" count="5" type="method"/>
+            <line num="251" count="5" type="stmt"/>
+            <line num="252" count="5" type="stmt"/>
+            <line num="253" count="5" type="stmt"/>
+            <line falsecount="4" truecount="1" num="253" type="cond"/>
+            <line num="254" count="1" type="stmt"/>
+            <line falsecount="1" truecount="1" num="254" type="cond"/>
+            <line num="255" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="255" type="cond"/>
+            <line num="256" count="10" type="stmt"/>
+            <line falsecount="10" truecount="0" num="256" type="cond"/>
+            <line num="257" count="0" type="stmt"/>
+            <line num="258" count="0" type="stmt"/>
+            <line num="261" count="1" type="stmt"/>
+            <line num="262" count="1" type="stmt"/>
+            <line num="265" count="4" type="stmt"/>
+            <line falsecount="2" truecount="4" num="265" type="cond"/>
+            <line num="266" count="4" type="stmt"/>
+            <line falsecount="2" truecount="24" num="266" type="cond"/>
+            <line num="267" count="24" type="stmt"/>
+            <line falsecount="22" truecount="2" num="267" type="cond"/>
+            <line num="268" count="2" type="stmt"/>
+            <line num="269" count="2" type="stmt"/>
+            <line num="272" count="2" type="stmt"/>
+            <line num="273" count="2" type="stmt"/>
+            <line num="276" count="3" type="stmt"/>
+            <line complexity="4" visibility="public" signature="containsAll(Collection&lt;?&gt;) : boolean" num="290" count="3" type="method"/>
+            <line num="293" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="293" type="cond"/>
+            <line num="294" count="1" type="stmt"/>
+            <line num="296" count="2" type="stmt"/>
+            <line num="297" count="2" type="stmt"/>
+            <line falsecount="1" truecount="3" num="297" type="cond"/>
+            <line num="298" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="298" type="cond"/>
+            <line num="299" count="1" type="stmt"/>
+            <line num="302" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="addAll(Collection&lt;? extends E&gt;) : boolean" num="319" count="2" type="method"/>
+            <line num="322" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="322" type="cond"/>
+            <line num="323" count="1" type="stmt"/>
+            <line num="325" count="1" type="stmt"/>
+            <line num="326" count="1" type="stmt"/>
+            <line num="327" count="1" type="stmt"/>
+            <line falsecount="1" truecount="2" num="327" type="cond"/>
+            <line num="328" count="2" type="stmt"/>
+            <line num="329" count="2" type="stmt"/>
+            <line num="331" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="removeAll(Collection&lt;?&gt;) : boolean" num="345" count="2" type="method"/>
+            <line num="348" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="348" type="cond"/>
+            <line num="349" count="1" type="stmt"/>
+            <line num="351" count="1" type="stmt"/>
+            <line num="352" count="1" type="stmt"/>
+            <line num="353" count="1" type="stmt"/>
+            <line falsecount="1" truecount="2" num="353" type="cond"/>
+            <line num="354" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="354" type="cond"/>
+            <line num="355" count="1" type="stmt"/>
+            <line num="358" count="1" type="stmt"/>
+            <line complexity="5" visibility="public" signature="retainAll(Collection&lt;?&gt;) : boolean" num="374" count="3" type="method"/>
+            <line num="377" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="377" type="cond"/>
+            <line num="378" count="1" type="stmt"/>
+            <line num="380" count="2" type="stmt"/>
+            <line num="381" count="2" type="stmt"/>
+            <line falsecount="2" truecount="2" num="381" type="cond"/>
+            <line num="382" count="2" type="stmt"/>
+            <line falsecount="2" truecount="8" num="382" type="cond"/>
+            <line num="383" count="8" type="stmt"/>
+            <line falsecount="0" truecount="8" num="383" type="cond"/>
+            <line num="384" count="8" type="stmt"/>
+            <line num="385" count="8" type="stmt"/>
+            <line num="386" count="8" type="stmt"/>
+            <line num="390" count="2" type="stmt"/>
+            <line complexity="3" visibility="public" signature="clear() : void" num="397" count="3" type="method"/>
+            <line num="400" count="3" type="stmt"/>
+            <line num="401" count="3" type="stmt"/>
+            <line falsecount="3" truecount="1" num="401" type="cond"/>
+            <line num="402" count="1" type="stmt"/>
+            <line num="403" count="1" type="stmt"/>
+            <line num="404" count="1" type="stmt"/>
+            <line num="405" count="1" type="stmt"/>
+            <line num="406" count="1" type="stmt"/>
+            <line num="408" count="3" type="stmt"/>
+            <line num="409" count="3" type="stmt"/>
+            <line falsecount="3" truecount="20" num="409" type="cond"/>
+            <line num="410" count="20" type="stmt"/>
+            <line num="412" count="3" type="stmt"/>
+            <line num="413" count="3" type="stmt"/>
+            <line num="414" count="3" type="stmt"/>
+            <line complexity="6" visibility="public" signature="get(int) : E" num="425" count="12" type="method"/>
+            <line num="427" count="12" type="stmt"/>
+            <line falsecount="10" truecount="2" num="427" type="cond"/>
+            <line num="428" count="2" type="stmt"/>
+            <line num="430" count="10" type="stmt"/>
+            <line num="431" count="10" type="stmt"/>
+            <line num="432" count="10" type="stmt"/>
+            <line falsecount="5" truecount="5" num="432" type="cond"/>
+            <line num="433" count="5" type="stmt"/>
+            <line num="434" count="5" type="stmt"/>
+            <line falsecount="5" truecount="0" num="434" type="cond"/>
+            <line num="435" count="0" type="stmt"/>
+            <line num="436" count="0" type="stmt"/>
+            <line num="439" count="5" type="stmt"/>
+            <line num="440" count="5" type="stmt"/>
+            <line num="441" count="5" type="stmt"/>
+            <line falsecount="5" truecount="0" num="441" type="cond"/>
+            <line num="442" count="0" type="stmt"/>
+            <line num="445" count="10" type="stmt"/>
+            <line complexity="6" visibility="public" signature="set(int,E) : E" num="458" count="7" type="method"/>
+            <line num="461" count="7" type="stmt"/>
+            <line falsecount="5" truecount="2" num="461" type="cond"/>
+            <line num="462" count="2" type="stmt"/>
+            <line num="464" count="5" type="stmt"/>
+            <line num="465" count="5" type="stmt"/>
+            <line num="466" count="5" type="stmt"/>
+            <line num="467" count="5" type="stmt"/>
+            <line falsecount="2" truecount="3" num="467" type="cond"/>
+            <line num="468" count="3" type="stmt"/>
+            <line num="469" count="3" type="stmt"/>
+            <line falsecount="3" truecount="0" num="469" type="cond"/>
+            <line num="470" count="0" type="stmt"/>
+            <line num="471" count="0" type="stmt"/>
+            <line num="474" count="2" type="stmt"/>
+            <line num="475" count="2" type="stmt"/>
+            <line num="476" count="2" type="stmt"/>
+            <line falsecount="2" truecount="0" num="476" type="cond"/>
+            <line num="477" count="0" type="stmt"/>
+            <line num="480" count="5" type="stmt"/>
+            <line num="481" count="5" type="stmt"/>
+            <line num="482" count="5" type="stmt"/>
+            <line complexity="6" visibility="public" signature="add(int,E) : void" num="495" count="8" type="method"/>
+            <line num="498" count="8" type="stmt"/>
+            <line falsecount="6" truecount="2" num="498" type="cond"/>
+            <line num="499" count="2" type="stmt"/>
+            <line num="501" count="6" type="stmt"/>
+            <line num="502" count="6" type="stmt"/>
+            <line num="503" count="6" type="stmt"/>
+            <line falsecount="2" truecount="4" num="503" type="cond"/>
+            <line num="504" count="4" type="stmt"/>
+            <line num="505" count="4" type="stmt"/>
+            <line falsecount="3" truecount="1" num="505" type="cond"/>
+            <line num="506" count="1" type="stmt"/>
+            <line num="507" count="1" type="stmt"/>
+            <line num="510" count="2" type="stmt"/>
+            <line num="511" count="2" type="stmt"/>
+            <line num="512" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="512" type="cond"/>
+            <line num="513" count="1" type="stmt"/>
+            <line num="516" count="4" type="stmt"/>
+            <line complexity="6" visibility="public" signature="remove(int) : E" num="529" count="9" type="method"/>
+            <line num="532" count="9" type="stmt"/>
+            <line falsecount="7" truecount="2" num="532" type="cond"/>
+            <line num="533" count="2" type="stmt"/>
+            <line num="535" count="7" type="stmt"/>
+            <line num="536" count="7" type="stmt"/>
+            <line num="537" count="7" type="stmt"/>
+            <line num="538" count="7" type="stmt"/>
+            <line falsecount="2" truecount="5" num="538" type="cond"/>
+            <line num="539" count="5" type="stmt"/>
+            <line num="540" count="5" type="stmt"/>
+            <line falsecount="4" truecount="1" num="540" type="cond"/>
+            <line num="541" count="1" type="stmt"/>
+            <line num="542" count="1" type="stmt"/>
+            <line num="545" count="2" type="stmt"/>
+            <line num="546" count="2" type="stmt"/>
+            <line num="547" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="547" type="cond"/>
+            <line num="548" count="1" type="stmt"/>
+            <line num="551" count="5" type="stmt"/>
+            <line num="552" count="5" type="stmt"/>
+            <line num="553" count="5" type="stmt"/>
+            <line complexity="8" visibility="public" signature="indexOf(Object) : int" num="568" count="7" type="method"/>
+            <line num="571" count="7" type="stmt"/>
+            <line num="572" count="7" type="stmt"/>
+            <line num="573" count="7" type="stmt"/>
+            <line falsecount="5" truecount="2" num="573" type="cond"/>
+            <line num="574" count="2" type="stmt"/>
+            <line falsecount="1" truecount="2" num="574" type="cond"/>
+            <line num="575" count="2" type="stmt"/>
+            <line falsecount="1" truecount="21" num="575" type="cond"/>
+            <line num="576" count="21" type="stmt"/>
+            <line falsecount="20" truecount="1" num="576" type="cond"/>
+            <line num="577" count="1" type="stmt"/>
+            <line num="580" count="1" type="stmt"/>
+            <line num="581" count="1" type="stmt"/>
+            <line num="584" count="5" type="stmt"/>
+            <line falsecount="2" truecount="5" num="584" type="cond"/>
+            <line num="585" count="5" type="stmt"/>
+            <line falsecount="2" truecount="28" num="585" type="cond"/>
+            <line num="586" count="28" type="stmt"/>
+            <line falsecount="25" truecount="3" num="586" type="cond"/>
+            <line num="587" count="3" type="stmt"/>
+            <line num="590" count="2" type="stmt"/>
+            <line num="591" count="2" type="stmt"/>
+            <line num="594" count="3" type="stmt"/>
+            <line complexity="8" visibility="public" signature="lastIndexOf(Object) : int" num="609" count="4" type="method"/>
+            <line num="612" count="4" type="stmt"/>
+            <line num="613" count="4" type="stmt"/>
+            <line num="614" count="4" type="stmt"/>
+            <line falsecount="2" truecount="2" num="614" type="cond"/>
+            <line num="615" count="2" type="stmt"/>
+            <line falsecount="1" truecount="2" num="615" type="cond"/>
+            <line num="616" count="2" type="stmt"/>
+            <line num="617" count="2" type="stmt"/>
+            <line falsecount="1" truecount="11" num="617" type="cond"/>
+            <line num="618" count="11" type="stmt"/>
+            <line falsecount="10" truecount="1" num="618" type="cond"/>
+            <line num="619" count="1" type="stmt"/>
+            <line num="622" count="1" type="stmt"/>
+            <line num="625" count="2" type="stmt"/>
+            <line falsecount="1" truecount="2" num="625" type="cond"/>
+            <line num="626" count="2" type="stmt"/>
+            <line num="627" count="2" type="stmt"/>
+            <line falsecount="1" truecount="18" num="627" type="cond"/>
+            <line num="628" count="18" type="stmt"/>
+            <line falsecount="17" truecount="1" num="628" type="cond"/>
+            <line num="629" count="1" type="stmt"/>
+            <line num="632" count="1" type="stmt"/>
+            <line num="635" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="listIterator() : ListIterator&lt;E&gt;" num="646" count="1" type="method"/>
+            <line num="649" count="1" type="stmt"/>
+            <line complexity="6" visibility="public" signature="listIterator(int) : ListIterator&lt;E&gt;" num="674" count="7" type="method"/>
+            <line num="677" count="7" type="stmt"/>
+            <line falsecount="5" truecount="2" num="677" type="cond"/>
+            <line num="678" count="2" type="stmt"/>
+            <line num="680" count="5" type="stmt"/>
+            <line num="681" count="5" type="stmt"/>
+            <line num="682" count="5" type="stmt"/>
+            <line falsecount="3" truecount="2" num="682" type="cond"/>
+            <line num="683" count="2" type="stmt"/>
+            <line num="684" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="684" type="cond"/>
+            <line num="685" count="1" type="stmt"/>
+            <line num="686" count="1" type="stmt"/>
+            <line num="689" count="3" type="stmt"/>
+            <line num="690" count="3" type="stmt"/>
+            <line num="691" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="691" type="cond"/>
+            <line num="692" count="1" type="stmt"/>
+            <line num="695" count="3" type="stmt"/>
+            <line complexity="1" visibility="package" signature="Node()" num="726" count="36" type="method"/>
+            <line num="728" count="36" type="stmt"/>
+            <line complexity="1" visibility="package" signature="ULLIterator(Node,int,int)" num="742" count="8" type="method"/>
+            <line num="744" count="8" type="stmt"/>
+            <line num="745" count="8" type="stmt"/>
+            <line num="746" count="8" type="stmt"/>
+            <line complexity="1" visibility="public" signature="hasNext() : boolean" num="750" count="1" type="method"/>
+            <line num="753" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="next() : E" num="757" count="3" type="method"/>
+            <line num="760" count="3" type="stmt"/>
+            <line num="761" count="3" type="stmt"/>
+            <line falsecount="1" truecount="2" num="761" type="cond"/>
+            <line num="762" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="762" type="cond"/>
+            <line num="763" count="1" type="stmt"/>
+            <line num="764" count="1" type="stmt"/>
+            <line num="766" count="1" type="stmt"/>
+            <line num="769" count="2" type="stmt"/>
+            <line num="770" count="2" type="stmt"/>
+            <line num="771" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="hasPrevious() : boolean" num="775" count="1" type="method"/>
+            <line num="778" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="previous() : E" num="782" count="3" type="method"/>
+            <line num="785" count="3" type="stmt"/>
+            <line num="786" count="3" type="stmt"/>
+            <line falsecount="1" truecount="2" num="786" type="cond"/>
+            <line num="787" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="787" type="cond"/>
+            <line num="788" count="1" type="stmt"/>
+            <line num="789" count="1" type="stmt"/>
+            <line num="791" count="1" type="stmt"/>
+            <line num="794" count="2" type="stmt"/>
+            <line num="795" count="2" type="stmt"/>
+            <line num="796" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="nextIndex() : int" num="800" count="1" type="method"/>
+            <line num="803" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="previousIndex() : int" num="807" count="1" type="method"/>
+            <line num="810" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="remove() : void" num="814" count="1" type="method"/>
+            <line num="817" count="1" type="stmt"/>
+            <line num="818" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="set(E) : void" num="822" count="1" type="method"/>
+            <line num="825" count="1" type="stmt"/>
+            <line num="826" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="add(E) : void" num="830" count="1" type="method"/>
+            <line num="833" count="1" type="stmt"/>
+            <line num="834" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="checkForModification() : void" num="838" count="8" type="method"/>
+            <line num="840" count="8" type="stmt"/>
+            <line falsecount="7" truecount="1" num="840" type="cond"/>
+            <line num="841" count="1" type="stmt"/>
+            <line complexity="7" visibility="public" signature="insertIntoNode(Node,int,E) : void" num="858" count="185" type="method"/>
+            <line num="861" count="185" type="stmt"/>
+            <line falsecount="183" truecount="2" num="861" type="cond"/>
+            <line num="863" count="2" type="stmt"/>
+            <line num="865" count="2" type="stmt"/>
+            <line num="866" count="2" type="stmt"/>
+            <line num="867" count="2" type="stmt"/>
+            <line num="868" count="2" type="stmt"/>
+            <line falsecount="2" truecount="8" num="868" type="cond"/>
+            <line num="869" count="8" type="stmt"/>
+            <line num="870" count="8" type="stmt"/>
+            <line num="872" count="2" type="stmt"/>
+            <line num="873" count="2" type="stmt"/>
+            <line num="875" count="2" type="stmt"/>
+            <line num="876" count="2" type="stmt"/>
+            <line num="877" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="877" type="cond"/>
+            <line num="878" count="1" type="stmt"/>
+            <line num="880" count="2" type="stmt"/>
+            <line num="882" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="882" type="cond"/>
+            <line num="883" count="1" type="stmt"/>
+            <line num="888" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="888" type="cond"/>
+            <line num="889" count="1" type="stmt"/>
+            <line num="890" count="1" type="stmt"/>
+            <line num="893" count="185" type="stmt"/>
+            <line falsecount="185" truecount="27" num="893" type="cond"/>
+            <line num="894" count="27" type="stmt"/>
+            <line num="896" count="185" type="stmt"/>
+            <line num="897" count="185" type="stmt"/>
+            <line num="898" count="185" type="stmt"/>
+            <line num="899" count="185" type="stmt"/>
+            <line complexity="6" visibility="public" signature="removeFromNode(Node,int) : void" num="910" count="18" type="method"/>
+            <line num="912" count="18" type="stmt"/>
+            <line num="913" count="18" type="stmt"/>
+            <line falsecount="18" truecount="83" num="913" type="cond"/>
+            <line num="914" count="83" type="stmt"/>
+            <line num="916" count="18" type="stmt"/>
+            <line num="917" count="18" type="stmt"/>
+            <line falsecount="17" truecount="1" num="917" type="cond"/>
+            <line num="918" count="1" type="stmt"/>
+            <line num="919" count="17" type="stmt"/>
+            <line falsecount="16" truecount="1" num="919" type="cond"/>
+            <line num="920" count="1" type="stmt"/>
+            <line num="922" count="17" type="stmt"/>
+            <line num="923" count="17" type="stmt"/>
+            <line complexity="4" visibility="public" signature="mergeWithNextNode(Node) : void" num="932" count="3" type="method"/>
+            <line num="934" count="3" type="stmt"/>
+            <line num="935" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="935" type="cond"/>
+            <line num="936" count="1" type="stmt"/>
+            <line num="937" count="1" type="stmt"/>
+            <line num="939" count="2" type="stmt"/>
+            <line num="940" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="940" type="cond"/>
+            <line num="941" count="1" type="stmt"/>
+            <line num="943" count="2" type="stmt"/>
+            <line num="944" count="2" type="stmt"/>
+            <line falsecount="2" truecount="0" num="944" type="cond"/>
+            <line num="945" count="0" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="UnrolledLinkedList2023 0.0.1-SNAPSHOT" timestamp="1699758278207">
+      <metrics coveredelements="277" complexity="67" loc="441" methods="19" classes="1" statements="215" packages="1" coveredconditionals="43" coveredmethods="19" elements="278" ncloc="356" files="1" conditionals="44" coveredstatements="215"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="277" complexity="67" loc="441" methods="19" classes="1" statements="215" coveredconditionals="43" coveredmethods="19" elements="278" ncloc="356" files="1" conditionals="44" coveredstatements="215"/>
+         <file path="C:\mooctest\projects\8058\126581\UnrolledLinkedList2023\src\test\java\net\mooctest\UnrolledLinkedListTest.java" name="UnrolledLinkedListTest.java">
+            <metrics coveredelements="277" coveredconditionals="43" complexity="67" loc="441" coveredmethods="19" methods="19" elements="278" classes="1" ncloc="356" statements="215" conditionals="44" coveredstatements="215"/>
+            <class name="UnrolledLinkedListTest">
+               <metrics coveredelements="277" complexity="67" methods="19" testruns="19" statements="215" coveredconditionals="43" coveredmethods="19" elements="278" testfailures="0" testduration="0.027000000000000003" conditionals="44" coveredstatements="215" testpasses="19"/>
+            </class>
+            <line complexity="1" visibility="public" signature="test() : void" num="16" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line complexity="12" visibility="public" signature="test1() : void" num="23" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="26" type="cond"/>
+            <line num="27" count="10" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line falsecount="0" truecount="6" num="30" type="cond"/>
+            <line num="31" count="6" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="48" type="cond"/>
+            <line num="49" count="10" type="stmt"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+            <line falsecount="1" truecount="3" num="62" type="cond"/>
+            <line num="63" count="3" type="stmt"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="67" count="1" type="stmt"/>
+            <line falsecount="1" truecount="5" num="67" type="cond"/>
+            <line num="68" count="5" type="stmt"/>
+            <line num="70" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="77" count="1" type="stmt"/>
+            <line num="78" count="1" type="stmt"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="82" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="test2() : void" num="89" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="94" type="cond"/>
+            <line num="95" count="10" type="stmt"/>
+            <line num="98" count="1" type="stmt"/>
+            <line num="99" count="1" type="stmt"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="103" count="1" type="stmt"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="108" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="110" count="1" type="stmt"/>
+            <line complexity="5" visibility="public" signature="test3() : void" num="115" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="117" count="1" type="stmt"/>
+            <line num="119" count="1" type="stmt"/>
+            <line num="120" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="131" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="131" type="cond"/>
+            <line num="132" count="10" type="stmt"/>
+            <line num="135" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="135" type="cond"/>
+            <line num="136" count="10" type="stmt"/>
+            <line complexity="5" visibility="public" signature="test4() : void" num="142" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="144" count="1" type="stmt"/>
+            <line num="147" count="1" type="stmt"/>
+            <line num="148" count="1" type="stmt"/>
+            <line num="152" count="1" type="stmt"/>
+            <line num="153" count="1" type="stmt"/>
+            <line num="159" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="159" type="cond"/>
+            <line num="160" count="10" type="stmt"/>
+            <line num="162" count="1" type="stmt"/>
+            <line falsecount="1" truecount="5" num="162" type="cond"/>
+            <line num="163" count="5" type="stmt"/>
+            <line num="165" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="test5() : void" num="168" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="170" count="1" type="stmt"/>
+            <line num="172" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="172" type="cond"/>
+            <line num="173" count="10" type="stmt"/>
+            <line num="175" count="1" type="stmt"/>
+            <line num="176" count="1" type="stmt"/>
+            <line num="177" count="1" type="stmt"/>
+            <line num="178" count="1" type="stmt"/>
+            <line num="179" count="1" type="stmt"/>
+            <line num="184" count="1" type="stmt"/>
+            <line num="185" count="1" type="stmt"/>
+            <line num="187" count="1" type="stmt"/>
+            <line num="188" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test6() : void" num="194" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="197" count="1" type="stmt"/>
+            <line num="199" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="199" type="cond"/>
+            <line num="200" count="10" type="stmt"/>
+            <line num="202" count="1" type="stmt"/>
+            <line num="203" count="1" type="stmt"/>
+            <line num="204" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="test7() : void" num="208" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="210" count="1" type="stmt"/>
+            <line num="211" count="1" type="stmt"/>
+            <line num="212" count="1" type="stmt"/>
+            <line num="216" count="1" type="stmt"/>
+            <line num="217" count="1" type="stmt"/>
+            <line num="221" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="221" type="cond"/>
+            <line num="222" count="10" type="stmt"/>
+            <line num="224" count="1" type="stmt"/>
+            <line num="225" count="1" type="stmt"/>
+            <line num="226" count="1" type="stmt"/>
+            <line num="227" count="1" type="stmt"/>
+            <line num="228" count="1" type="stmt"/>
+            <line num="229" count="1" type="stmt"/>
+            <line num="230" count="1" type="stmt"/>
+            <line num="232" count="1" type="stmt"/>
+            <line num="233" count="1" type="stmt"/>
+            <line num="234" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test8() : void" num="238" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="240" count="1" type="stmt"/>
+            <line num="241" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="241" type="cond"/>
+            <line num="242" count="10" type="stmt"/>
+            <line num="245" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="test9() : void" num="249" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="251" count="1" type="stmt"/>
+            <line num="252" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="252" type="cond"/>
+            <line num="253" count="10" type="stmt"/>
+            <line num="257" count="1" type="stmt"/>
+            <line num="258" count="1" type="stmt"/>
+            <line num="259" count="1" type="stmt"/>
+            <line num="260" count="1" type="stmt"/>
+            <line num="261" count="1" type="stmt"/>
+            <line num="262" count="1" type="stmt"/>
+            <line num="263" count="1" type="stmt"/>
+            <line num="264" count="1" type="stmt"/>
+            <line num="265" count="1" type="stmt"/>
+            <line num="266" count="1" type="stmt"/>
+            <line num="270" count="1" type="stmt"/>
+            <line num="271" count="1" type="stmt"/>
+            <line num="275" count="1" type="stmt"/>
+            <line num="276" count="1" type="stmt"/>
+            <line num="277" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test10() : void" num="279" testsuccess="true" count="1" testduration="0.021" type="method"/>
+            <line num="281" count="1" type="stmt"/>
+            <line num="282" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="282" type="cond"/>
+            <line num="283" count="10" type="stmt"/>
+            <line num="285" count="1" type="stmt"/>
+            <line num="286" count="1" type="stmt"/>
+            <line num="287" count="1" type="stmt"/>
+            <line num="288" count="1" type="stmt"/>
+            <line num="289" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="test11() : void" num="291" testsuccess="true" count="1" testduration="0.002" type="method"/>
+            <line num="293" count="1" type="stmt"/>
+            <line num="294" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="294" type="cond"/>
+            <line num="295" count="10" type="stmt"/>
+            <line num="297" count="1" type="stmt"/>
+            <line num="299" count="1" type="stmt"/>
+            <line num="300" count="1" type="stmt"/>
+            <line num="301" count="1" type="stmt"/>
+            <line num="302" count="1" type="stmt"/>
+            <line num="306" count="1" type="stmt"/>
+            <line num="307" count="1" type="stmt"/>
+            <line num="308" count="1" type="stmt"/>
+            <line num="309" count="1" type="stmt"/>
+            <line num="310" count="1" type="stmt"/>
+            <line num="311" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test12() : void" num="314" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="316" count="1" type="stmt"/>
+            <line num="317" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="317" type="cond"/>
+            <line num="318" count="10" type="stmt"/>
+            <line num="320" count="1" type="stmt"/>
+            <line num="321" count="1" type="stmt"/>
+            <line num="322" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="test13() : void" num="324" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="326" count="1" type="stmt"/>
+            <line num="327" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="327" type="cond"/>
+            <line num="328" count="10" type="stmt"/>
+            <line num="330" count="1" type="stmt"/>
+            <line num="331" count="1" type="stmt"/>
+            <line num="332" count="1" type="stmt"/>
+            <line num="333" count="1" type="stmt"/>
+            <line num="335" count="1" type="stmt"/>
+            <line num="337" count="1" type="stmt"/>
+            <line num="338" count="1" type="stmt"/>
+            <line complexity="6" visibility="public" signature="test14() : void" num="345" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="347" count="1" type="stmt"/>
+            <line num="348" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="348" type="cond"/>
+            <line num="349" count="10" type="stmt"/>
+            <line num="351" count="1" type="stmt"/>
+            <line num="352" count="1" type="stmt"/>
+            <line num="353" count="1" type="stmt"/>
+            <line num="357" count="1" type="stmt"/>
+            <line num="358" count="1" type="stmt"/>
+            <line num="362" count="1" type="stmt"/>
+            <line num="363" count="1" type="stmt"/>
+            <line num="367" count="1" type="stmt"/>
+            <line num="368" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test15() : void" num="375" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="377" count="1" type="stmt"/>
+            <line num="378" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="378" type="cond"/>
+            <line num="379" count="10" type="stmt"/>
+            <line num="381" count="1" type="stmt"/>
+            <line num="382" count="1" type="stmt"/>
+            <line num="383" count="1" type="stmt"/>
+            <line num="384" count="1" type="stmt"/>
+            <line complexity="4" visibility="public" signature="test16() : void" num="387" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="389" count="1" type="stmt"/>
+            <line num="390" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="390" type="cond"/>
+            <line num="391" count="10" type="stmt"/>
+            <line num="393" count="1" type="stmt"/>
+            <line num="394" count="1" type="stmt"/>
+            <line num="395" count="1" type="stmt"/>
+            <line num="399" count="1" type="stmt"/>
+            <line num="400" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="test17() : void" num="408" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="410" count="1" type="stmt"/>
+            <line num="411" count="1" type="stmt"/>
+            <line num="412" count="1" type="stmt"/>
+            <line num="413" count="1" type="stmt"/>
+            <line num="414" count="1" type="stmt"/>
+            <line num="415" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="test18() : void" num="417" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="419" count="1" type="stmt"/>
+            <line num="420" count="1" type="stmt"/>
+            <line num="421" count="1" type="stmt"/>
+            <line num="422" count="1" type="stmt"/>
+            <line num="423" count="1" type="stmt"/>
+            <line num="424" count="1" type="stmt"/>
+            <line num="425" count="1" type="stmt"/>
+            <line num="426" count="1" type="stmt"/>
+            <line num="427" count="1" type="stmt"/>
+            <line num="428" count="1" type="stmt"/>
+            <line num="429" count="1" type="stmt"/>
+            <line num="430" count="1" type="stmt"/>
+            <line num="431" count="1" type="stmt"/>
+            <line num="432" count="1" type="stmt"/>
+            <line num="433" count="1" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

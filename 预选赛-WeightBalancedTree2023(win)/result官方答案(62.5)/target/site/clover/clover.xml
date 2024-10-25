@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1697946111063" clover="4.4.1">
+   <project name="WeightBalancedTree2023 0.0.1-SNAPSHOT" timestamp="1697946109213">
+      <metrics coveredelements="329" complexity="133" loc="884" methods="64" classes="8" statements="302" packages="1" coveredconditionals="71" coveredmethods="61" elements="494" ncloc="575" files="5" conditionals="128" coveredstatements="197"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="329" complexity="133" loc="884" methods="64" classes="8" statements="302" coveredconditionals="71" coveredmethods="61" elements="494" ncloc="575" files="5" conditionals="128" coveredstatements="197"/>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\main\java\net\mooctest\Airport.java" name="Airport.java">
+            <metrics coveredelements="48" coveredconditionals="8" complexity="17" loc="89" coveredmethods="12" methods="12" elements="48" classes="1" ncloc="46" statements="28" conditionals="8" coveredstatements="28"/>
+            <class name="Airport">
+               <metrics coveredelements="48" coveredconditionals="8" complexity="17" coveredmethods="12" methods="12" elements="48" statements="28" conditionals="8" coveredstatements="28"/>
+            </class>
+            <line complexity="1" visibility="public" signature="Airport(String,String,String,String,float,float)" num="31" count="3" type="method"/>
+            <line num="32" count="3" type="stmt"/>
+            <line num="33" count="3" type="stmt"/>
+            <line num="34" count="3" type="stmt"/>
+            <line num="35" count="3" type="stmt"/>
+            <line num="36" count="3" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Airport(String)" num="43" count="1" type="method"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="46" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getName() : String" num="52" count="2" type="method"/>
+            <line num="52" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getCode() : String" num="54" count="2" type="method"/>
+            <line num="54" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getCity() : String" num="56" count="2" type="method"/>
+            <line num="56" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getCountry() : String" num="58" count="2" type="method"/>
+            <line num="58" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getX() : float" num="60" count="2" type="method"/>
+            <line num="60" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getY() : float" num="62" count="2" type="method"/>
+            <line num="62" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getCoord(int) : float" num="64" count="1" type="method"/>
+            <line num="64" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getPoint2D() : Point2D" num="66" count="1" type="method"/>
+            <line num="66" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="toString() : String" num="68" count="5" type="method"/>
+            <line num="68" count="5" type="stmt"/>
+            <line complexity="6" visibility="public" signature="getString(String) : String" num="74" count="9" type="method"/>
+            <line num="75" count="9" type="stmt"/>
+            <line falsecount="8" truecount="1" num="75" type="cond"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="78" count="8" type="stmt"/>
+            <line falsecount="6" truecount="2" num="78" type="cond"/>
+            <line num="79" count="2" type="stmt"/>
+            <line num="81" count="6" type="stmt"/>
+            <line falsecount="4" truecount="2" num="81" type="cond"/>
+            <line num="82" count="2" type="stmt"/>
+            <line num="84" count="4" type="stmt"/>
+            <line falsecount="2" truecount="2" num="84" type="cond"/>
+            <line num="85" count="2" type="stmt"/>
+            <line num="87" count="2" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\main\java\net\mooctest\BJTree.java" name="BJTree.java">
+            <metrics coveredelements="212" coveredconditionals="50" complexity="69" loc="391" coveredmethods="35" methods="36" elements="248" classes="4" ncloc="310" statements="148" conditionals="64" coveredstatements="127"/>
+            <class name="BJTree">
+               <metrics coveredelements="55" coveredconditionals="16" complexity="19" coveredmethods="10" methods="10" elements="58" statements="30" conditionals="18" coveredstatements="29"/>
+            </class>
+            <class name="BJTree.Node">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+            <class name="BJTree.InternalNode">
+               <metrics coveredelements="115" coveredconditionals="27" complexity="32" coveredmethods="14" methods="14" elements="136" statements="88" conditionals="34" coveredstatements="74"/>
+            </class>
+            <class name="BJTree.ExternalNode">
+               <metrics coveredelements="42" coveredconditionals="7" complexity="18" coveredmethods="11" methods="12" elements="54" statements="30" conditionals="12" coveredstatements="24"/>
+            </class>
+            <line complexity="1" visibility="package" signature="InternalNode(Key,Node,Node)" num="51" count="50" type="method"/>
+            <line num="52" count="50" type="stmt"/>
+            <line num="53" count="50" type="stmt"/>
+            <line num="54" count="50" type="stmt"/>
+            <line num="55" count="50" type="stmt"/>
+            <line num="56" count="50" type="stmt"/>
+            <line complexity="2" visibility="package" signature="find(Key) : Value" num="59" count="6" type="method"/>
+            <line num="60" count="6" type="stmt"/>
+            <line falsecount="3" truecount="3" num="60" type="cond"/>
+            <line num="61" count="3" type="stmt"/>
+            <line num="63" count="3" type="stmt"/>
+            <line complexity="2" visibility="private" signature="balance() : boolean" num="67" count="82" type="method"/>
+            <line num="68" count="82" type="stmt"/>
+            <line num="69" count="82" type="stmt"/>
+            <line falsecount="46" truecount="36" num="69" type="cond"/>
+            <line num="70" count="36" type="stmt"/>
+            <line num="72" count="46" type="stmt"/>
+            <line complexity="2" visibility="private" signature="maxR() : boolean" num="76" count="46" type="method"/>
+            <line num="77" count="46" type="stmt"/>
+            <line num="78" count="46" type="stmt"/>
+            <line falsecount="3" truecount="43" num="78" type="cond"/>
+            <line num="79" count="43" type="stmt"/>
+            <line num="81" count="3" type="stmt"/>
+            <line complexity="4" visibility="package" signature="rebuild(Key) : Node" num="85" count="82" type="method"/>
+            <line num="86" count="82" type="stmt"/>
+            <line falsecount="79" truecount="3" num="86" type="cond"/>
+            <line num="87" count="3" type="stmt"/>
+            <line num="88" count="3" type="stmt"/>
+            <line num="89" count="3" type="stmt"/>
+            <line num="91" count="79" type="stmt"/>
+            <line num="92" count="79" type="stmt"/>
+            <line falsecount="1" truecount="78" num="92" type="cond"/>
+            <line num="93" count="78" type="stmt"/>
+            <line num="95" count="1" type="stmt"/>
+            <line num="98" count="79" type="stmt"/>
+            <line complexity="5" visibility="package" signature="buildTree(List&lt;Node&gt;) : Node" num="101" count="39" type="method"/>
+            <line num="103" count="39" type="stmt"/>
+            <line num="107" count="39" type="stmt"/>
+            <line falsecount="18" truecount="21" num="107" type="cond"/>
+            <line num="108" count="21" type="stmt"/>
+            <line num="110" count="18" type="stmt"/>
+            <line num="111" count="18" type="stmt"/>
+            <line falsecount="18" truecount="63" num="111" type="cond"/>
+            <line num="112" count="63" type="stmt"/>
+            <line num="114" count="18" type="stmt"/>
+            <line num="115" count="18" type="stmt"/>
+            <line num="116" count="18" type="stmt"/>
+            <line num="117" count="18" type="stmt"/>
+            <line num="119" count="18" type="stmt"/>
+            <line falsecount="18" truecount="63" num="119" type="cond"/>
+            <line num="120" count="63" type="stmt"/>
+            <line num="121" count="63" type="stmt"/>
+            <line num="122" count="63" type="stmt"/>
+            <line num="123" count="63" type="stmt"/>
+            <line falsecount="24" truecount="39" num="123" type="cond"/>
+            <line num="124" count="39" type="stmt"/>
+            <line num="125" count="39" type="stmt"/>
+            <line num="130" count="18" type="stmt"/>
+            <line num="131" count="18" type="stmt"/>
+            <line num="133" count="18" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getExternalNodes(ArrayList&lt;Node&gt;) : ArrayList&lt;Node&gt;" num="136" count="18" type="method"/>
+            <line num="137" count="18" type="stmt"/>
+            <line num="138" count="18" type="stmt"/>
+            <line num="139" count="18" type="stmt"/>
+            <line complexity="2" visibility="package" signature="insert(Key,Value,float) : Node" num="142" count="64" type="method"/>
+            <line num="143" count="64" type="stmt"/>
+            <line falsecount="64" truecount="0" num="143" type="cond"/>
+            <line num="144" count="0" type="stmt"/>
+            <line num="146" count="64" type="stmt"/>
+            <line num="150" count="64" type="stmt"/>
+            <line num="151" count="64" type="stmt"/>
+            <line num="153" count="64" type="stmt"/>
+            <line complexity="4" visibility="package" signature="delete(Key) : Node" num="156" count="1" type="method"/>
+            <line num="157" count="1" type="stmt"/>
+            <line num="159" count="1" type="stmt"/>
+            <line falsecount="1" truecount="0" num="159" type="cond"/>
+            <line num="160" count="0" type="stmt"/>
+            <line num="161" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="161" type="cond"/>
+            <line num="162" count="0" type="stmt"/>
+            <line num="164" count="0" type="stmt"/>
+            <line num="165" count="0" type="stmt"/>
+            <line num="166" count="0" type="stmt"/>
+            <line num="167" count="0" type="stmt"/>
+            <line num="170" count="1" type="stmt"/>
+            <line num="171" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="171" type="cond"/>
+            <line num="172" count="1" type="stmt"/>
+            <line num="174" count="0" type="stmt"/>
+            <line num="175" count="0" type="stmt"/>
+            <line num="176" count="0" type="stmt"/>
+            <line num="177" count="0" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getPreorderList(ArrayList&lt;String&gt;) : ArrayList&lt;String&gt;" num="182" count="2" type="method"/>
+            <line num="183" count="2" type="stmt"/>
+            <line num="184" count="2" type="stmt"/>
+            <line num="185" count="2" type="stmt"/>
+            <line num="186" count="2" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getMin() : Value" num="189" count="1" type="method"/>
+            <line num="190" count="1" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getMax() : Value" num="193" count="2" type="method"/>
+            <line num="194" count="2" type="stmt"/>
+            <line complexity="3" visibility="package" signature="findDown(Key) : Value" num="197" count="3" type="method"/>
+            <line num="198" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="198" type="cond"/>
+            <line num="199" count="1" type="stmt"/>
+            <line num="201" count="2" type="stmt"/>
+            <line num="202" count="2" type="stmt"/>
+            <line falsecount="2" truecount="0" num="202" type="cond"/>
+            <line num="203" count="0" type="stmt"/>
+            <line num="205" count="2" type="stmt"/>
+            <line complexity="3" visibility="package" signature="findUp(Key) : Value" num="210" count="3" type="method"/>
+            <line num="211" count="3" type="stmt"/>
+            <line falsecount="2" truecount="1" num="211" type="cond"/>
+            <line num="212" count="1" type="stmt"/>
+            <line num="213" count="1" type="stmt"/>
+            <line falsecount="1" truecount="0" num="213" type="cond"/>
+            <line num="214" count="0" type="stmt"/>
+            <line num="216" count="1" type="stmt"/>
+            <line num="219" count="2" type="stmt"/>
+            <line complexity="1" visibility="package" signature="ExternalNode(Key,Value,float)" num="228" count="39" type="method"/>
+            <line num="229" count="39" type="stmt"/>
+            <line num="230" count="39" type="stmt"/>
+            <line num="231" count="39" type="stmt"/>
+            <line num="232" count="39" type="stmt"/>
+            <line complexity="2" visibility="package" signature="find(Key) : Value" num="235" count="4" type="method"/>
+            <line num="236" count="4" type="stmt"/>
+            <line falsecount="1" truecount="3" num="236" type="cond"/>
+            <line num="237" count="3" type="stmt"/>
+            <line num="239" count="1" type="stmt"/>
+            <line complexity="1" visibility="package" signature="rebuild(Key) : Node" num="243" count="37" type="method"/>
+            <line num="244" count="37" type="stmt"/>
+            <line complexity="1" visibility="package" signature="buildTree(List&lt;Node&gt;) : Node" num="247" count="0" type="method"/>
+            <line num="248" count="0" type="stmt"/>
+            <line complexity="3" visibility="package" signature="insert(Key,Value,float) : Node" num="251" count="32" type="method"/>
+            <line num="252" count="32" type="stmt"/>
+            <line falsecount="32" truecount="0" num="252" type="cond"/>
+            <line num="253" count="0" type="stmt"/>
+            <line num="255" count="32" type="stmt"/>
+            <line num="256" count="32" type="stmt"/>
+            <line falsecount="32" truecount="0" num="256" type="cond"/>
+            <line num="257" count="0" type="stmt"/>
+            <line num="259" count="32" type="stmt"/>
+            <line complexity="2" visibility="package" signature="delete(Key) : Node" num="264" count="1" type="method"/>
+            <line num="265" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="265" type="cond"/>
+            <line num="266" count="1" type="stmt"/>
+            <line num="268" count="0" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getPreorderList(ArrayList&lt;String&gt;) : ArrayList&lt;String&gt;" num="272" count="3" type="method"/>
+            <line num="273" count="3" type="stmt"/>
+            <line num="274" count="3" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getExternalNodes(ArrayList&lt;Node&gt;) : ArrayList&lt;Node&gt;" num="277" count="21" type="method"/>
+            <line num="278" count="21" type="stmt"/>
+            <line num="279" count="21" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getMin() : Value" num="282" count="1" type="method"/>
+            <line num="283" count="1" type="stmt"/>
+            <line complexity="1" visibility="package" signature="getMax() : Value" num="286" count="1" type="method"/>
+            <line num="287" count="1" type="stmt"/>
+            <line complexity="2" visibility="package" signature="findDown(Key) : Value" num="290" count="1" type="method"/>
+            <line num="291" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="291" type="cond"/>
+            <line num="292" count="1" type="stmt"/>
+            <line num="294" count="0" type="stmt"/>
+            <line complexity="2" visibility="package" signature="findUp(Key) : Value" num="298" count="1" type="method"/>
+            <line num="299" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="299" type="cond"/>
+            <line num="300" count="1" type="stmt"/>
+            <line num="302" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="BJTree()" num="313" count="12" type="method"/>
+            <line num="314" count="12" type="stmt"/>
+            <line complexity="2" visibility="public" signature="find(Key) : Value" num="317" count="5" type="method"/>
+            <line num="318" count="5" type="stmt"/>
+            <line falsecount="4" truecount="1" num="318" type="cond"/>
+            <line num="319" count="1" type="stmt"/>
+            <line num="321" count="4" type="stmt"/>
+            <line complexity="2" visibility="public" signature="insert(Key,Value,float) : void" num="325" count="39" type="method"/>
+            <line num="326" count="39" type="stmt"/>
+            <line falsecount="32" truecount="7" num="326" type="cond"/>
+            <line num="327" count="7" type="stmt"/>
+            <line num="329" count="32" type="stmt"/>
+            <line num="331" count="39" type="stmt"/>
+            <line complexity="3" visibility="public" signature="delete(Key) : void" num="335" count="1" type="method"/>
+            <line num="336" count="1" type="stmt"/>
+            <line falsecount="1" truecount="0" num="336" type="cond"/>
+            <line num="337" count="0" type="stmt"/>
+            <line num="339" count="1" type="stmt"/>
+            <line num="341" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="341" type="cond"/>
+            <line num="342" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="clear() : void" num="346" count="6" type="method"/>
+            <line num="347" count="6" type="stmt"/>
+            <line complexity="2" visibility="public" signature="getPreorderList() : ArrayList&lt;String&gt;" num="350" count="2" type="method"/>
+            <line num="351" count="2" type="stmt"/>
+            <line num="352" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="352" type="cond"/>
+            <line num="353" count="1" type="stmt"/>
+            <line num="355" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="getMin() : Value" num="359" count="2" type="method"/>
+            <line num="360" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="360" type="cond"/>
+            <line num="361" count="1" type="stmt"/>
+            <line num="363" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="getMax() : Value" num="367" count="2" type="method"/>
+            <line num="368" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="368" type="cond"/>
+            <line num="369" count="1" type="stmt"/>
+            <line num="371" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="findDown(Key) : Value" num="375" count="2" type="method"/>
+            <line num="376" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="376" type="cond"/>
+            <line num="377" count="1" type="stmt"/>
+            <line num="379" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="findUp(Key) : Value" num="383" count="2" type="method"/>
+            <line num="384" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="384" type="cond"/>
+            <line num="385" count="1" type="stmt"/>
+            <line num="387" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\main\java\net\mooctest\BJTreeTester.java" name="BJTreeTester.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="5" loc="56" coveredmethods="0" methods="1" elements="21" classes="1" ncloc="34" statements="16" conditionals="4" coveredstatements="0"/>
+            <class name="BJTreeTester">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="5" coveredmethods="0" methods="1" elements="21" statements="16" conditionals="4" coveredstatements="0"/>
+            </class>
+            <line complexity="5" visibility="public" signature="main(String[]) : void" num="29" count="0" type="method"/>
+            <line num="32" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="32" type="cond"/>
+            <line num="33" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line num="41" count="0" type="stmt"/>
+            <line num="42" count="0" type="stmt"/>
+            <line num="43" count="0" type="stmt"/>
+            <line num="44" count="0" type="stmt"/>
+            <line num="45" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="45" type="cond"/>
+            <line num="46" count="0" type="stmt"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="48" count="0" type="stmt"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="52" count="0" type="stmt"/>
+            <line num="53" count="0" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\main\java\net\mooctest\CommandHandler.java" name="CommandHandler.java">
+            <metrics coveredelements="36" coveredconditionals="6" complexity="29" loc="244" coveredmethods="5" methods="6" elements="143" classes="1" ncloc="144" statements="93" conditionals="44" coveredstatements="25"/>
+            <class name="CommandHandler">
+               <metrics coveredelements="36" coveredconditionals="6" complexity="29" coveredmethods="5" methods="6" elements="143" statements="93" conditionals="44" coveredstatements="25"/>
+            </class>
+            <line complexity="1" visibility="public" signature="CommandHandler(BJTree&lt;String, Airport&gt;)" num="24" count="3" type="method"/>
+            <line num="25" count="3" type="stmt"/>
+            <line complexity="19" visibility="public" signature="processCommand(String) : String" num="46" count="0" type="method"/>
+            <line num="47" count="0" type="stmt"/>
+            <line num="48" count="0" type="stmt"/>
+            <line num="49" count="0" type="stmt"/>
+            <line num="50" count="0" type="stmt"/>
+            <line num="51" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="51" type="cond"/>
+            <line num="52" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="52" type="cond"/>
+            <line num="53" count="0" type="stmt"/>
+            <line num="55" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="55" type="cond"/>
+            <line num="60" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="60" type="cond"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="63" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line num="65" count="0" type="stmt"/>
+            <line num="66" count="0" type="stmt"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="68" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="68" type="cond"/>
+            <line num="69" count="0" type="stmt"/>
+            <line num="71" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="71" type="cond"/>
+            <line num="72" count="0" type="stmt"/>
+            <line num="74" count="0" type="stmt"/>
+            <line num="75" count="0" type="stmt"/>
+            <line num="76" count="0" type="stmt"/>
+            <line num="83" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="83" type="cond"/>
+            <line num="84" count="0" type="stmt"/>
+            <line num="85" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="85" type="cond"/>
+            <line num="86" count="0" type="stmt"/>
+            <line num="88" count="0" type="stmt"/>
+            <line num="89" count="0" type="stmt"/>
+            <line num="95" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="95" type="cond"/>
+            <line num="96" count="0" type="stmt"/>
+            <line num="97" count="0" type="stmt"/>
+            <line num="102" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="102" type="cond"/>
+            <line num="103" count="0" type="stmt"/>
+            <line num="104" count="0" type="stmt"/>
+            <line num="105" count="0" type="stmt"/>
+            <line num="110" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="110" type="cond"/>
+            <line num="111" count="0" type="stmt"/>
+            <line num="112" count="0" type="stmt"/>
+            <line num="113" count="0" type="stmt"/>
+            <line num="118" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="118" type="cond"/>
+            <line num="119" count="0" type="stmt"/>
+            <line num="120" count="0" type="stmt"/>
+            <line num="121" count="0" type="stmt"/>
+            <line num="126" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="126" type="cond"/>
+            <line num="127" count="0" type="stmt"/>
+            <line num="128" count="0" type="stmt"/>
+            <line num="133" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="133" type="cond"/>
+            <line num="134" count="0" type="stmt"/>
+            <line num="135" count="0" type="stmt"/>
+            <line num="141" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="141" type="cond"/>
+            <line num="142" count="0" type="stmt"/>
+            <line num="143" count="0" type="stmt"/>
+            <line num="144" count="0" type="stmt"/>
+            <line num="145" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="145" type="cond"/>
+            <line num="146" count="0" type="stmt"/>
+            <line num="148" count="0" type="stmt"/>
+            <line num="154" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="154" type="cond"/>
+            <line num="155" count="0" type="stmt"/>
+            <line num="157" count="0" type="stmt"/>
+            <line num="160" count="0" type="stmt"/>
+            <line num="161" count="0" type="stmt"/>
+            <line num="162" count="0" type="stmt"/>
+            <line num="164" count="0" type="stmt"/>
+            <line num="166" count="0" type="stmt"/>
+            <line complexity="2" visibility="package" signature="summarizeFind(String,String,Airport) : String" num="176" count="1" type="method"/>
+            <line num="177" count="1" type="stmt"/>
+            <line num="178" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="178" type="cond"/>
+            <line num="179" count="1" type="stmt"/>
+            <line num="181" count="0" type="stmt"/>
+            <line num="183" count="1" type="stmt"/>
+            <line complexity="2" visibility="package" signature="summarizeGet(String,Airport) : String" num="193" count="1" type="method"/>
+            <line num="194" count="1" type="stmt"/>
+            <line num="195" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="195" type="cond"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="198" count="0" type="stmt"/>
+            <line num="200" count="1" type="stmt"/>
+            <line complexity="2" visibility="package" signature="treeStructure(ArrayList&lt;String&gt;) : String" num="209" count="1" type="method"/>
+            <line num="210" count="1" type="stmt"/>
+            <line num="211" count="1" type="stmt"/>
+            <line num="212" count="1" type="stmt"/>
+            <line falsecount="0" truecount="1" num="212" type="cond"/>
+            <line num="213" count="1" type="stmt"/>
+            <line num="215" count="1" type="stmt"/>
+            <line complexity="3" visibility="package" signature="treeStructureHelper(Iterator&lt;String&gt;,String) : String" num="226" count="21" type="method"/>
+            <line num="227" count="21" type="stmt"/>
+            <line num="228" count="21" type="stmt"/>
+            <line num="229" count="21" type="stmt"/>
+            <line falsecount="11" truecount="10" num="229" type="cond"/>
+            <line num="230" count="10" type="stmt"/>
+            <line num="231" count="10" type="stmt"/>
+            <line num="232" count="10" type="stmt"/>
+            <line falsecount="10" truecount="0" num="232" type="cond"/>
+            <line num="233" count="0" type="stmt"/>
+            <line num="235" count="10" type="stmt"/>
+            <line num="236" count="10" type="stmt"/>
+            <line num="237" count="10" type="stmt"/>
+            <line num="240" count="11" type="stmt"/>
+            <line num="242" count="21" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\main\java\net\mooctest\Point2D.java" name="Point2D.java">
+            <metrics coveredelements="33" coveredconditionals="7" complexity="13" loc="104" coveredmethods="9" methods="9" elements="34" classes="1" ncloc="41" statements="17" conditionals="8" coveredstatements="17"/>
+            <class name="Point2D">
+               <metrics coveredelements="33" coveredconditionals="7" complexity="13" coveredmethods="9" methods="9" elements="34" statements="17" conditionals="8" coveredstatements="17"/>
+            </class>
+            <line complexity="2" visibility="public" signature="Point2D()" num="18" count="2" type="method"/>
+            <line num="19" count="2" type="stmt"/>
+            <line num="20" count="2" type="stmt"/>
+            <line falsecount="2" truecount="4" num="20" type="cond"/>
+            <line num="21" count="4" type="stmt"/>
+            <line complexity="1" visibility="public" signature="Point2D(float,float)" num="29" count="4" type="method"/>
+            <line num="30" count="4" type="stmt"/>
+            <line num="31" count="4" type="stmt"/>
+            <line num="32" count="4" type="stmt"/>
+            <line complexity="3" visibility="public" signature="Point2D(float[])" num="40" count="1" type="method"/>
+            <line falsecount="0" truecount="1" num="41" type="cond"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line falsecount="1" truecount="2" num="43" type="cond"/>
+            <line num="44" count="2" type="stmt"/>
+            <line complexity="2" visibility="public" signature="Point2D(Point2D)" num="52" count="1" type="method"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line falsecount="1" truecount="2" num="54" type="cond"/>
+            <line num="55" count="2" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getDim() : int" num="63" count="1" type="method"/>
+            <line num="64" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="get(int) : float" num="73" count="6" type="method"/>
+            <line num="74" count="6" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getX() : float" num="82" count="9" type="method"/>
+            <line num="83" count="9" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getY() : float" num="91" count="9" type="method"/>
+            <line num="92" count="9" type="stmt"/>
+            <line complexity="1" visibility="public" signature="toString() : String" num="100" count="3" type="method"/>
+            <line num="101" count="3" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="WeightBalancedTree2023 0.0.1-SNAPSHOT" timestamp="1697946109213">
+      <metrics coveredelements="142" complexity="18" loc="259" methods="17" classes="5" statements="123" packages="1" coveredconditionals="2" coveredmethods="17" elements="142" ncloc="197" files="5" conditionals="2" coveredstatements="123"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="142" complexity="18" loc="259" methods="17" classes="5" statements="123" coveredconditionals="2" coveredmethods="17" elements="142" ncloc="197" files="5" conditionals="2" coveredstatements="123"/>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\test\java\net\mooctest\AirportTest.java" name="AirportTest.java">
+            <metrics coveredelements="28" coveredconditionals="0" complexity="1" loc="41" coveredmethods="1" methods="1" elements="28" classes="1" ncloc="34" statements="27" conditionals="0" coveredstatements="27"/>
+            <class name="AirportTest">
+               <metrics coveredelements="28" complexity="1" methods="1" testruns="1" statements="27" coveredconditionals="0" coveredmethods="1" elements="28" testfailures="0" testduration="0.018" conditionals="0" coveredstatements="27" testpasses="1"/>
+            </class>
+            <line complexity="1" visibility="public" signature="test() : void" num="9" testsuccess="true" count="1" testduration="0.018" type="method"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="19" count="1" type="stmt"/>
+            <line num="21" count="1" type="stmt"/>
+            <line num="22" count="1" type="stmt"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="38" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\test\java\net\mooctest\BJTreeTest.java" name="BJTreeTest.java">
+            <metrics coveredelements="73" coveredconditionals="0" complexity="6" loc="114" coveredmethods="6" methods="6" elements="73" classes="1" ncloc="89" statements="67" conditionals="0" coveredstatements="67"/>
+            <class name="BJTreeTest">
+               <metrics coveredelements="73" complexity="6" methods="6" testruns="6" statements="67" coveredconditionals="0" coveredmethods="6" elements="73" testfailures="0" testduration="0.006" conditionals="0" coveredstatements="67" testpasses="6"/>
+            </class>
+            <line complexity="1" visibility="public" signature="find() : void" num="9" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="21" count="1" type="stmt"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getPreorderList() : void" num="38" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getMin() : void" num="51" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="60" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getMax() : void" num="64" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="68" count="1" type="stmt"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="71" count="1" type="stmt"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="74" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="findDown() : void" num="77" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="82" count="1" type="stmt"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="85" count="1" type="stmt"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="90" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="findUp() : void" num="96" testsuccess="true" count="1" testduration="0.003" type="method"/>
+            <line num="98" count="1" type="stmt"/>
+            <line num="99" count="1" type="stmt"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="103" count="1" type="stmt"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="112" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\test\java\net\mooctest\BJTreeTesterTest.java" name="BJTreeTesterTest.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="0" loc="11" coveredmethods="0" methods="0" elements="0" classes="1" ncloc="5" statements="0" conditionals="0" coveredstatements="0"/>
+            <class name="BJTreeTesterTest">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\test\java\net\mooctest\CommandHandlerTest.java" name="CommandHandlerTest.java">
+            <metrics coveredelements="17" coveredconditionals="2" complexity="5" loc="39" coveredmethods="4" methods="4" elements="17" classes="1" ncloc="29" statements="11" conditionals="2" coveredstatements="11"/>
+            <class name="CommandHandlerTest">
+               <metrics coveredelements="17" complexity="5" methods="4" testruns="4" statements="11" coveredconditionals="2" coveredmethods="4" elements="17" testfailures="0" testduration="0.002" conditionals="2" coveredstatements="11" testpasses="4"/>
+            </class>
+            <line complexity="1" visibility="public" signature="summarizeFind() : void" num="11" testsuccess="true" count="1" testduration="0.002" type="method"/>
+            <line num="13" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="summarizeGet() : void" num="18" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="21" count="1" type="stmt"/>
+            <line num="22" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="treeStructure() : void" num="25" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line falsecount="1" truecount="10" num="30" type="cond"/>
+            <line num="31" count="10" type="stmt"/>
+            <line num="33" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="treeStructureHelper() : void" num="36" testsuccess="true" count="1" testduration="0.0" type="method"/>
+         </file>
+         <file path="C:\mooctest\projects\7823\42358\WeightBalancedTree2023\src\test\java\net\mooctest\Point2DTest.java" name="Point2DTest.java">
+            <metrics coveredelements="24" coveredconditionals="0" complexity="6" loc="54" coveredmethods="6" methods="6" elements="24" classes="1" ncloc="40" statements="18" conditionals="0" coveredstatements="18"/>
+            <class name="Point2DTest">
+               <metrics coveredelements="24" complexity="6" methods="6" testruns="6" statements="18" coveredconditionals="0" coveredmethods="6" elements="24" testfailures="0" testduration="0.0" conditionals="0" coveredstatements="18" testpasses="6"/>
+            </class>
+            <line complexity="1" visibility="public" signature="test() : void" num="9" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="11" count="1" type="stmt"/>
+            <line num="12" count="1" type="stmt"/>
+            <line num="14" count="1" type="stmt"/>
+            <line num="15" count="1" type="stmt"/>
+            <line num="16" count="1" type="stmt"/>
+            <line num="17" count="1" type="stmt"/>
+            <line num="18" count="1" type="stmt"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="21" count="1" type="stmt"/>
+            <line num="22" count="1" type="stmt"/>
+            <line num="23" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="28" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getDim() : void" num="35" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="1" visibility="public" signature="get() : void" num="39" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="1" visibility="public" signature="getX() : void" num="43" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="1" visibility="public" signature="getY() : void" num="47" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line complexity="1" visibility="public" signature="testToString() : void" num="51" testsuccess="true" count="1" testduration="0.0" type="method"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

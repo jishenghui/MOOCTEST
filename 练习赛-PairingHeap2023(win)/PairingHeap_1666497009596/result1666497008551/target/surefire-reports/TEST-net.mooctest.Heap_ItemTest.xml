@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="14" failures="0" name="net.mooctest.Heap_ItemTest" time="0.071" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\java\jdk1.8.0_333\jre\bin"/>
+    <property name="java.vm.version" value="25.333-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\eclipse_win64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\eclipse_win64"/>
+    <property name="java.runtime.version" value="1.8.0_333-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\java\jdk1.8.0_333\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\29074\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\apache-maven-3.5.2\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\java\jdk1.8.0_333\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/java/jre1.8.0_333/bin/server;D:/java/jre1.8.0_333/bin;D:/java/jre1.8.0_333/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\python\python39\Scripts\;D:\python\python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\php\server\bin;D:\Program Files\Polyspace\R2020b\runtime\win64;D:\Program Files\Polyspace\R2020b\bin;D:\Program Files\Polyspace\R2020b\polyspace\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\php\server\mysql\bin;D:\CodeBlocks\MinGW\bin;D:\java\jdk1.8.0_333\bin;C:\Program Files\Git\cmd;D:\apache-maven-3.5.2\bin;C:\Users\29074\AppData\Local\Microsoft\WindowsApps;D:\文件夹\appserv\Apache24\bin;D:\文件夹\appserv\php7;D:\文件夹\appserv\MySQL\bin;C:\AppServ\Apache24\bin;C:\AppServ\php7;C:\AppServ\MySQL\bin;;D:\python\pycharm\PyCharm Community Edition 2021.2.1\bin;;C:\Users\29074\AppData\Local\Pandoc\;D:\eclipse_win64;;."/>
+    <property name="maven.conf" value="D:\apache-maven-3.5.2\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="D:\apache-maven-3.5.2\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\29074"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="29074"/>
+    <property name="java.class.path" value="D:\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\java\jdk1.8.0_333\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -file C:/mooctest/projects/7021/122973/PairingHeap clean clover:setup test clover:aggregate clover:clover"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_333"/>
+    <property name="java.ext.dirs" value="D:\java\jdk1.8.0_333\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\java\jdk1.8.0_333\jre\lib\resources.jar;D:\java\jdk1.8.0_333\jre\lib\rt.jar;D:\java\jdk1.8.0_333\jre\lib\sunrsasign.jar;D:\java\jdk1.8.0_333\jre\lib\jsse.jar;D:\java\jdk1.8.0_333\jre\lib\jce.jar;D:\java\jdk1.8.0_333\jre\lib\charsets.jar;D:\java\jdk1.8.0_333\jre\lib\jfr.jar;D:\java\jdk1.8.0_333\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\apache-maven-3.5.2\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test01" time="0.043"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test02" time="0"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test03" time="0.004"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test04" time="0.002"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test05" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test06" time="0.002"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test07" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test08" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test09" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test10" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test11" time="0.001"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test12" time="0.002"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test13" time="0.002"/>
+  <testcase classname="net.mooctest.Heap_ItemTest" name="test" time="0.01"/>
+</testsuite>

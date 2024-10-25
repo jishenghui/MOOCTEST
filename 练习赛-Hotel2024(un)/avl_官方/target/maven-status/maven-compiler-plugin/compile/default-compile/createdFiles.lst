@@ -1,0 +1,13 @@
+net\mooctest\OrderItem.class
+net\mooctest\Room.class
+net\mooctest\RoomState.class
+net\mooctest\RoomType.class
+net\mooctest\Shop.class
+net\mooctest\ShopKeeper.class
+net\mooctest\Order.class
+net\mooctest\Manager.class
+net\mooctest\Product.class
+net\mooctest\FreeTimeState.class
+net\mooctest\Hotel.class
+net\mooctest\CheckInState.class
+net\mooctest\BookedState.class

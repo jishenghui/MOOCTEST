@@ -1,0 +1,13 @@
+
+t
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(öËÕúÿÿÿÿ
+t
+java:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡û©»ûÿÿÿÿ
+D
+java:S2140N")Use "java.util.Random.nextInt()" instead.(ûñ«¢ùÿÿÿÿ
+V	java:S125O"<This block of commented-out lines of code should be removed.(‰íäÿÿÿÿÿ
+V	java:S125S"<This block of commented-out lines of code should be removed.(—Ûóäûÿÿÿÿ
+Q	java:S125U"<This block of commented-out lines of code should be removed.(ßîß 
+Q	java:S125]"<This block of commented-out lines of code should be removed.(å·ôµ
+H
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ

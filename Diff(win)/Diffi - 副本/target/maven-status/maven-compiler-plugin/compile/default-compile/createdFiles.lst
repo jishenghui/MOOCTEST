@@ -1,0 +1,9 @@
+net\mooctest\Option.class
+net\mooctest\IndexedString.class
+net\mooctest\ExtBoolArray.class
+net\mooctest\FileDiffPatch.class
+net\mooctest\StringFromFile.class
+net\mooctest\StringLink.class
+net\mooctest\RelativeString.class
+net\mooctest\StringIncrementor.class
+net\mooctest\Diffi.class

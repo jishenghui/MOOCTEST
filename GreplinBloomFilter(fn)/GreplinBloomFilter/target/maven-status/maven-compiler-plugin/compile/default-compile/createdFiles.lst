@@ -1,0 +1,11 @@
+net\mooctest\BloomMetadata.class
+net\mooctest\InvalidBloomFilter.class
+net\mooctest\Allocator.class
+net\mooctest\BucketSize.class
+net\mooctest\CloseCallback.class
+net\mooctest\BloomFilter$1.class
+net\mooctest\BloomFilter$NewBuilder.class
+net\mooctest\BloomFilter$OpenBuilder.class
+net\mooctest\BloomFilter.class
+net\mooctest\BloomFilter$2.class
+net\mooctest\RepeatedMurmurHash.class

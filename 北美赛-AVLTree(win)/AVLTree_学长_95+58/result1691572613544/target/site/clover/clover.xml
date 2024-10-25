@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1691572613246" clover="4.4.1">
+   <project name="AVLTree 0.0.1-SNAPSHOT" timestamp="1691572611182">
+      <metrics coveredelements="293" complexity="86" loc="397" methods="33" classes="3" statements="189" packages="1" coveredconditionals="81" coveredmethods="33" elements="314" ncloc="318" files="3" conditionals="92" coveredstatements="179"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="293" complexity="86" loc="397" methods="33" classes="3" statements="189" coveredconditionals="81" coveredmethods="33" elements="314" ncloc="318" files="3" conditionals="92" coveredstatements="179"/>
+         <file path="C:\mooctest\projects\7330\126581\AVLTree\src\main\java\net\mooctest\AVLNode.java" name="AVLNode.java">
+            <metrics coveredelements="138" coveredconditionals="49" complexity="48" loc="159" coveredmethods="18" methods="18" elements="151" classes="1" ncloc="127" statements="75" conditionals="58" coveredstatements="71"/>
+            <class name="AVLNode">
+               <metrics coveredelements="138" coveredconditionals="49" complexity="48" coveredmethods="18" methods="18" elements="151" statements="75" conditionals="58" coveredstatements="71"/>
+            </class>
+            <line complexity="1" visibility="public" signature="AVLNode(T)" num="14" count="48" type="method"/>
+            <line num="15" count="48" type="stmt"/>
+            <line complexity="1" visibility="public" signature="AVLNode(T,AVLNode&lt;T&gt;,AVLNode&lt;T&gt;)" num="18" count="48" type="method"/>
+            <line num="19" count="48" type="stmt"/>
+            <line num="20" count="48" type="stmt"/>
+            <line num="21" count="48" type="stmt"/>
+            <line complexity="10" visibility="private" signature="balance(AVLNode) : AVLNode" num="24" count="62" type="method"/>
+            <line num="25" count="62" type="stmt"/>
+            <line falsecount="60" truecount="2" num="25" type="cond"/>
+            <line num="26" count="2" type="stmt"/>
+            <line num="28" count="60" type="stmt"/>
+            <line falsecount="57" truecount="3" num="28" type="cond"/>
+            <line num="29" count="3" type="stmt"/>
+            <line falsecount="3" truecount="0" num="29" type="cond"/>
+            <line falsecount="3" truecount="0" num="29" type="cond"/>
+            <line falsecount="1" truecount="2" num="29" type="cond"/>
+            <line num="30" count="2" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="33" count="57" type="stmt"/>
+            <line falsecount="53" truecount="4" num="33" type="cond"/>
+            <line num="34" count="4" type="stmt"/>
+            <line falsecount="4" truecount="0" num="34" type="cond"/>
+            <line falsecount="4" truecount="0" num="34" type="cond"/>
+            <line falsecount="1" truecount="3" num="34" type="cond"/>
+            <line num="35" count="3" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="39" count="60" type="stmt"/>
+            <line complexity="1" visibility="private" signature="rotateWithRightChild(AVLNode) : AVLNode" num="42" count="5" type="method"/>
+            <line num="43" count="5" type="stmt"/>
+            <line num="44" count="5" type="stmt"/>
+            <line num="45" count="5" type="stmt"/>
+            <line num="46" count="5" type="stmt"/>
+            <line complexity="1" visibility="private" signature="rotateWithLeftChild(AVLNode) : AVLNode" num="49" count="4" type="method"/>
+            <line num="50" count="4" type="stmt"/>
+            <line num="51" count="4" type="stmt"/>
+            <line num="52" count="4" type="stmt"/>
+            <line num="53" count="4" type="stmt"/>
+            <line complexity="1" visibility="private" signature="doubleWithRightChild(AVLNode) : AVLNode" num="56" count="1" type="method"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line complexity="1" visibility="private" signature="doubleWithLeftChild(AVLNode) : AVLNode" num="61" count="1" type="method"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="63" count="1" type="stmt"/>
+            <line complexity="2" visibility="private" signature="getLeftHeight() : int" num="66" count="124" type="method"/>
+            <line num="67" count="124" type="stmt"/>
+            <line falsecount="74" truecount="50" num="67" type="cond"/>
+            <line complexity="2" visibility="private" signature="getRightHeight() : int" num="70" count="124" type="method"/>
+            <line num="71" count="124" type="stmt"/>
+            <line falsecount="88" truecount="36" num="71" type="cond"/>
+            <line complexity="8" visibility="private" signature="remove(Object,AVLNode) : AVLNode" num="74" count="6" type="method"/>
+            <line num="75" count="6" type="stmt"/>
+            <line num="77" count="6" type="stmt"/>
+            <line falsecount="5" truecount="1" num="77" type="cond"/>
+            <line num="78" count="1" type="stmt"/>
+            <line falsecount="1" truecount="0" num="78" type="cond"/>
+            <line num="79" count="0" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="5" type="stmt"/>
+            <line falsecount="5" truecount="0" num="81" type="cond"/>
+            <line num="82" count="0" type="stmt"/>
+            <line falsecount="0" truecount="0" num="82" type="cond"/>
+            <line num="83" count="0" type="stmt"/>
+            <line num="84" count="0" type="stmt"/>
+            <line num="85" count="5" type="stmt"/>
+            <line falsecount="4" truecount="1" num="85" type="cond"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="88" count="1" type="stmt"/>
+            <line num="90" count="4" type="stmt"/>
+            <line falsecount="4" truecount="0" num="90" type="cond"/>
+            <line num="91" count="6" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getElement() : T" num="94" count="77" type="method"/>
+            <line num="95" count="77" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getLeft() : AVLNode&lt;T&gt;" num="98" count="37" type="method"/>
+            <line num="99" count="37" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getRight() : AVLNode&lt;T&gt;" num="102" count="37" type="method"/>
+            <line num="103" count="37" type="stmt"/>
+            <line complexity="3" visibility="public" signature="getHeight() : int" num="106" count="240" type="method"/>
+            <line num="107" count="240" type="stmt"/>
+            <line falsecount="43" truecount="197" num="107" type="cond"/>
+            <line falsecount="34" truecount="206" num="107" type="cond"/>
+            <line complexity="5" visibility="public" signature="insert(T) : AVLNode&lt;T&gt;" num="110" count="57" type="method"/>
+            <line num="111" count="57" type="stmt"/>
+            <line num="112" count="57" type="stmt"/>
+            <line falsecount="30" truecount="27" num="112" type="cond"/>
+            <line num="113" count="27" type="stmt"/>
+            <line falsecount="14" truecount="13" num="113" type="cond"/>
+            <line num="114" count="13" type="stmt"/>
+            <line num="116" count="14" type="stmt"/>
+            <line num="118" count="30" type="stmt"/>
+            <line falsecount="1" truecount="29" num="118" type="cond"/>
+            <line num="119" count="29" type="stmt"/>
+            <line falsecount="21" truecount="8" num="119" type="cond"/>
+            <line num="120" count="8" type="stmt"/>
+            <line num="122" count="21" type="stmt"/>
+            <line num="125" count="1" type="stmt"/>
+            <line num="127" count="56" type="stmt"/>
+            <line complexity="2" visibility="public" signature="findMin(AVLNode&lt;T&gt;) : AVLNode&lt;T&gt;" num="130" count="2" type="method"/>
+            <line num="131" count="2" type="stmt"/>
+            <line falsecount="2" truecount="3" num="131" type="cond"/>
+            <line num="132" count="3" type="stmt"/>
+            <line num="134" count="2" type="stmt"/>
+            <line complexity="5" visibility="public" signature="search(T) : boolean" num="137" count="46" type="method"/>
+            <line num="138" count="46" type="stmt"/>
+            <line num="139" count="46" type="stmt"/>
+            <line num="140" count="46" type="stmt"/>
+            <line falsecount="34" truecount="12" num="140" type="cond"/>
+            <line num="141" count="12" type="stmt"/>
+            <line falsecount="10" truecount="2" num="141" type="cond"/>
+            <line num="142" count="2" type="stmt"/>
+            <line num="143" count="10" type="stmt"/>
+            <line num="144" count="34" type="stmt"/>
+            <line falsecount="19" truecount="15" num="144" type="cond"/>
+            <line num="145" count="15" type="stmt"/>
+            <line falsecount="10" truecount="5" num="145" type="cond"/>
+            <line num="146" count="5" type="stmt"/>
+            <line num="147" count="10" type="stmt"/>
+            <line num="149" count="39" type="stmt"/>
+            <line complexity="2" visibility="public" signature="delete(T) : AVLNode&lt;T&gt;" num="153" count="5" type="method"/>
+            <line num="154" count="5" type="stmt"/>
+            <line falsecount="1" truecount="4" num="154" type="cond"/>
+            <line num="155" count="4" type="stmt"/>
+            <line num="157" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7330\126581\AVLTree\src\main\java\net\mooctest\Tree.java" name="Tree.java">
+            <metrics coveredelements="76" coveredconditionals="12" complexity="22" loc="130" coveredmethods="10" methods="10" elements="84" classes="1" ncloc="110" statements="60" conditionals="14" coveredstatements="54"/>
+            <class name="Tree">
+               <metrics coveredelements="76" coveredconditionals="12" complexity="22" coveredmethods="10" methods="10" elements="84" statements="60" conditionals="14" coveredstatements="54"/>
+            </class>
+            <line complexity="1" visibility="public" signature="Tree()" num="19" count="10" type="method"/>
+            <line num="20" count="10" type="stmt"/>
+            <line complexity="1" visibility="public" signature="toString() : String" num="23" count="1" type="method"/>
+            <line num="25" count="1" type="stmt"/>
+            <line complexity="3" visibility="public" signature="insertWord(String) : boolean" num="28" count="19" type="method"/>
+            <line num="29" count="19" type="stmt"/>
+            <line falsecount="11" truecount="8" num="29" type="cond"/>
+            <line num="30" count="8" type="stmt"/>
+            <line num="31" count="8" type="stmt"/>
+            <line num="32" count="8" type="stmt"/>
+            <line num="34" count="11" type="stmt"/>
+            <line num="35" count="11" type="stmt"/>
+            <line num="36" count="10" type="stmt"/>
+            <line num="37" count="10" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="insertWords(File) : boolean[]" num="44" count="2" type="method"/>
+            <line num="45" count="2" type="stmt"/>
+            <line num="46" count="2" type="stmt"/>
+            <line num="47" count="1" type="stmt"/>
+            <line num="48" count="1" type="stmt"/>
+            <line num="49" count="1" type="stmt"/>
+            <line num="50" count="2" type="stmt"/>
+            <line num="51" count="2" type="stmt"/>
+            <line num="53" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line complexity="6" visibility="public" signature="deleteWord(String) : boolean" num="60" count="6" type="method"/>
+            <line num="61" count="6" type="stmt"/>
+            <line falsecount="0" truecount="6" num="61" type="cond"/>
+            <line num="62" count="6" type="stmt"/>
+            <line falsecount="4" truecount="2" num="62" type="cond"/>
+            <line num="63" count="2" type="stmt"/>
+            <line num="64" count="2" type="stmt"/>
+            <line num="65" count="2" type="stmt"/>
+            <line num="67" count="4" type="stmt"/>
+            <line num="68" count="4" type="stmt"/>
+            <line falsecount="3" truecount="1" num="68" type="cond"/>
+            <line num="69" count="1" type="stmt"/>
+            <line num="71" count="3" type="stmt"/>
+            <line num="72" count="3" type="stmt"/>
+            <line num="73" count="3" type="stmt"/>
+            <line falsecount="3" truecount="0" num="73" type="cond"/>
+            <line num="74" count="0" type="stmt"/>
+            <line num="76" count="3" type="stmt"/>
+            <line num="78" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="deleteWords(File) : boolean[]" num="82" count="1" type="method"/>
+            <line num="83" count="1" type="stmt"/>
+            <line num="84" count="1" type="stmt"/>
+            <line num="85" count="1" type="stmt"/>
+            <line num="86" count="1" type="stmt"/>
+            <line num="87" count="1" type="stmt"/>
+            <line num="88" count="2" type="stmt"/>
+            <line num="89" count="2" type="stmt"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="93" count="0" type="stmt"/>
+            <line num="94" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="searchWord(String) : boolean" num="98" count="5" type="method"/>
+            <line num="99" count="5" type="stmt"/>
+            <line falsecount="4" truecount="1" num="99" type="cond"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="102" count="4" type="stmt"/>
+            <line complexity="2" visibility="public" signature="searchWords(File) : boolean[]" num="106" count="1" type="method"/>
+            <line num="107" count="1" type="stmt"/>
+            <line num="108" count="1" type="stmt"/>
+            <line num="109" count="1" type="stmt"/>
+            <line num="110" count="1" type="stmt"/>
+            <line num="111" count="1" type="stmt"/>
+            <line num="112" count="2" type="stmt"/>
+            <line num="113" count="2" type="stmt"/>
+            <line num="115" count="1" type="stmt"/>
+            <line num="118" count="0" type="stmt"/>
+            <line num="120" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="getSize() : int" num="123" count="1" type="method"/>
+            <line num="124" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="getHeight() : int" num="127" count="2" type="method"/>
+            <line num="128" count="2" type="stmt"/>
+            <line falsecount="1" truecount="1" num="128" type="cond"/>
+         </file>
+         <file path="C:\mooctest\projects\7330\126581\AVLTree\src\main\java\net\mooctest\TreePrinter.java" name="TreePrinter.java">
+            <metrics coveredelements="79" coveredconditionals="20" complexity="16" loc="108" coveredmethods="5" methods="5" elements="79" classes="1" ncloc="81" statements="54" conditionals="20" coveredstatements="54"/>
+            <class name="TreePrinter">
+               <metrics coveredelements="79" coveredconditionals="20" complexity="16" coveredmethods="5" methods="5" elements="79" statements="54" conditionals="20" coveredstatements="54"/>
+            </class>
+            <line complexity="1" visibility="public" signature="printNode(AVLNode&lt;T&gt;) : String" num="14" count="3" type="method"/>
+            <line num="15" count="3" type="stmt"/>
+            <line num="16" count="3" type="stmt"/>
+            <line num="17" count="3" type="stmt"/>
+            <line complexity="9" visibility="private" signature="printNodeInternal(List&lt;AVLNode&lt;T&gt;&gt;,int,int,StringBuilder) : String" num="20" count="10" type="method"/>
+            <line num="21" count="10" type="stmt"/>
+            <line falsecount="7" truecount="3" num="21" type="cond"/>
+            <line num="22" count="3" type="stmt"/>
+            <line num="24" count="7" type="stmt"/>
+            <line num="25" count="7" type="stmt"/>
+            <line num="26" count="7" type="stmt"/>
+            <line num="27" count="7" type="stmt"/>
+            <line num="29" count="7" type="stmt"/>
+            <line num="31" count="7" type="stmt"/>
+            <line num="32" count="7" type="stmt"/>
+            <line num="33" count="13" type="stmt"/>
+            <line falsecount="1" truecount="12" num="33" type="cond"/>
+            <line num="34" count="12" type="stmt"/>
+            <line num="35" count="12" type="stmt"/>
+            <line num="36" count="12" type="stmt"/>
+            <line num="37" count="12" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="40" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="45" count="13" type="stmt"/>
+            <line num="47" count="7" type="stmt"/>
+            <line num="48" count="7" type="stmt"/>
+            <line num="50" count="7" type="stmt"/>
+            <line falsecount="7" truecount="8" num="50" type="cond"/>
+            <line num="51" count="8" type="stmt"/>
+            <line falsecount="8" truecount="14" num="51" type="cond"/>
+            <line num="52" count="14" type="stmt"/>
+            <line num="53" count="14" type="stmt"/>
+            <line falsecount="13" truecount="1" num="53" type="cond"/>
+            <line num="54" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="58" count="13" type="stmt"/>
+            <line falsecount="7" truecount="6" num="58" type="cond"/>
+            <line num="59" count="6" type="stmt"/>
+            <line num="60" count="6" type="stmt"/>
+            <line num="63" count="7" type="stmt"/>
+            <line num="65" count="13" type="stmt"/>
+            <line num="67" count="13" type="stmt"/>
+            <line falsecount="8" truecount="5" num="67" type="cond"/>
+            <line num="68" count="5" type="stmt"/>
+            <line num="69" count="5" type="stmt"/>
+            <line num="72" count="8" type="stmt"/>
+            <line num="74" count="13" type="stmt"/>
+            <line num="77" count="8" type="stmt"/>
+            <line num="78" count="8" type="stmt"/>
+            <line num="80" count="7" type="stmt"/>
+            <line num="81" count="7" type="stmt"/>
+            <line complexity="2" visibility="private" signature="printWhitespaces(int,StringBuilder) : void" num="84" count="76" type="method"/>
+            <line num="85" count="76" type="stmt"/>
+            <line falsecount="76" truecount="86" num="85" type="cond"/>
+            <line num="86" count="86" type="stmt"/>
+            <line num="87" count="86" type="stmt"/>
+            <line complexity="2" visibility="private" signature="maxLevel(AVLNode&lt;T&gt;) : int" num="92" count="27" type="method"/>
+            <line num="93" count="27" type="stmt"/>
+            <line falsecount="12" truecount="15" num="93" type="cond"/>
+            <line num="94" count="15" type="stmt"/>
+            <line num="96" count="12" type="stmt"/>
+            <line complexity="2" visibility="private" signature="isAllElementsNull(List&lt;T&gt;) : boolean" num="99" count="10" type="method"/>
+            <line num="100" count="10" type="stmt"/>
+            <line num="101" count="23" type="stmt"/>
+            <line falsecount="16" truecount="7" num="101" type="cond"/>
+            <line num="102" count="7" type="stmt"/>
+            <line num="105" count="3" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="AVLTree 0.0.1-SNAPSHOT" timestamp="1691572611182">
+      <metrics coveredelements="128" complexity="28" loc="466" methods="26" classes="2" statements="232" packages="1" coveredconditionals="0" coveredmethods="13" elements="258" ncloc="366" files="2" conditionals="0" coveredstatements="115"/>
+      <package name="net.mooctest">
+         <metrics coveredelements="128" complexity="28" loc="466" methods="26" classes="2" statements="232" coveredconditionals="0" coveredmethods="13" elements="258" ncloc="366" files="2" conditionals="0" coveredstatements="115"/>
+         <file path="C:\mooctest\projects\7330\126581\AVLTree\src\test\java\net\mooctest\AVLNodeTest.java" name="AVLNodeTest.java">
+            <metrics coveredelements="128" coveredconditionals="0" complexity="14" loc="234" coveredmethods="13" methods="13" elements="129" classes="1" ncloc="183" statements="116" conditionals="0" coveredstatements="115"/>
+            <class name="AVLNodeTest">
+               <metrics coveredelements="128" complexity="14" methods="13" testruns="13" statements="116" coveredconditionals="0" coveredmethods="13" elements="129" testfailures="0" testduration="0.083" conditionals="0" coveredstatements="115" testpasses="13"/>
+            </class>
+            <line complexity="1" visibility="public" signature="testInster() : void" num="18" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="20" count="1" type="stmt"/>
+            <line num="21" count="1" type="stmt"/>
+            <line num="22" count="1" type="stmt"/>
+            <line num="24" count="1" type="stmt"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="26" count="1" type="stmt"/>
+            <line num="27" count="1" type="stmt"/>
+            <line num="29" count="1" type="stmt"/>
+            <line num="30" count="1" type="stmt"/>
+            <line num="31" count="1" type="stmt"/>
+            <line num="32" count="1" type="stmt"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="35" count="1" type="stmt"/>
+            <line num="37" count="1" type="stmt"/>
+            <line num="38" count="1" type="stmt"/>
+            <line num="39" count="1" type="stmt"/>
+            <line num="41" count="1" type="stmt"/>
+            <line num="42" count="1" type="stmt"/>
+            <line num="43" count="1" type="stmt"/>
+            <line num="44" count="1" type="stmt"/>
+            <line num="45" count="1" type="stmt"/>
+            <line num="46" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDelete() : void" num="50" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="52" count="1" type="stmt"/>
+            <line num="55" count="1" type="stmt"/>
+            <line num="56" count="1" type="stmt"/>
+            <line num="57" count="1" type="stmt"/>
+            <line num="58" count="1" type="stmt"/>
+            <line num="61" count="1" type="stmt"/>
+            <line num="62" count="1" type="stmt"/>
+            <line num="64" count="1" type="stmt"/>
+            <line num="66" count="1" type="stmt"/>
+            <line num="67" count="1" type="stmt"/>
+            <line num="68" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testFindMin() : void" num="71" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="73" count="1" type="stmt"/>
+            <line num="75" count="1" type="stmt"/>
+            <line num="76" count="1" type="stmt"/>
+            <line num="77" count="1" type="stmt"/>
+            <line num="78" count="1" type="stmt"/>
+            <line num="79" count="1" type="stmt"/>
+            <line num="80" count="1" type="stmt"/>
+            <line num="81" count="1" type="stmt"/>
+            <line num="85" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testInsertWord() : void" num="89" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="91" count="1" type="stmt"/>
+            <line num="92" count="1" type="stmt"/>
+            <line num="93" count="1" type="stmt"/>
+            <line num="94" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testInsertWordsFromFile() : void" num="98" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="100" count="1" type="stmt"/>
+            <line num="101" count="1" type="stmt"/>
+            <line num="102" count="1" type="stmt"/>
+            <line num="104" count="1" type="stmt"/>
+            <line num="105" count="1" type="stmt"/>
+            <line num="106" count="1" type="stmt"/>
+            <line num="107" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDeleteWord() : void" num="110" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="112" count="1" type="stmt"/>
+            <line num="113" count="1" type="stmt"/>
+            <line num="114" count="1" type="stmt"/>
+            <line num="116" count="1" type="stmt"/>
+            <line num="117" count="1" type="stmt"/>
+            <line num="118" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDeleteWordsFromFile() : void" num="121" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="123" count="1" type="stmt"/>
+            <line num="124" count="1" type="stmt"/>
+            <line num="126" count="1" type="stmt"/>
+            <line num="127" count="1" type="stmt"/>
+            <line num="128" count="1" type="stmt"/>
+            <line num="130" count="1" type="stmt"/>
+            <line num="131" count="1" type="stmt"/>
+            <line num="132" count="1" type="stmt"/>
+            <line num="133" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSearchWord() : void" num="136" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="138" count="1" type="stmt"/>
+            <line num="139" count="1" type="stmt"/>
+            <line num="140" count="1" type="stmt"/>
+            <line num="142" count="1" type="stmt"/>
+            <line num="143" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSearchWordsFromFile() : void" num="146" testsuccess="true" count="1" testduration="0.005" type="method"/>
+            <line num="148" count="1" type="stmt"/>
+            <line num="149" count="1" type="stmt"/>
+            <line num="150" count="1" type="stmt"/>
+            <line num="151" count="1" type="stmt"/>
+            <line num="152" count="1" type="stmt"/>
+            <line num="154" count="1" type="stmt"/>
+            <line num="155" count="1" type="stmt"/>
+            <line num="156" count="1" type="stmt"/>
+            <line num="157" count="1" type="stmt"/>
+            <line complexity="2" visibility="public" signature="testException() : void" num="159" testsuccess="true" count="1" testduration="0.071" type="method"/>
+            <line num="161" count="1" type="stmt"/>
+            <line num="162" count="1" type="stmt"/>
+            <line num="163" count="1" type="stmt"/>
+            <line num="164" count="0" type="stmt"/>
+            <line num="167" count="1" type="stmt"/>
+            <line num="171" count="1" type="stmt"/>
+            <line num="172" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testGetSize() : void" num="175" testsuccess="true" count="1" testduration="0.0" type="method"/>
+            <line num="177" count="1" type="stmt"/>
+            <line num="178" count="1" type="stmt"/>
+            <line num="179" count="1" type="stmt"/>
+            <line num="180" count="1" type="stmt"/>
+            <line num="181" count="1" type="stmt"/>
+            <line num="183" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testGetHeightAndToString() : void" num="186" testsuccess="true" count="1" testduration="0.001" type="method"/>
+            <line num="188" count="1" type="stmt"/>
+            <line num="190" count="1" type="stmt"/>
+            <line num="191" count="1" type="stmt"/>
+            <line num="192" count="1" type="stmt"/>
+            <line num="193" count="1" type="stmt"/>
+            <line num="195" count="1" type="stmt"/>
+            <line num="196" count="1" type="stmt"/>
+            <line num="202" count="1" type="stmt"/>
+            <line num="203" count="1" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testPrintNode() : void" num="206" testsuccess="true" count="1" testduration="0.005" type="method"/>
+            <line num="208" count="1" type="stmt"/>
+            <line num="209" count="1" type="stmt"/>
+            <line num="210" count="1" type="stmt"/>
+            <line num="214" count="1" type="stmt"/>
+            <line num="215" count="1" type="stmt"/>
+            <line num="216" count="1" type="stmt"/>
+            <line num="217" count="1" type="stmt"/>
+            <line num="218" count="1" type="stmt"/>
+            <line num="219" count="1" type="stmt"/>
+            <line num="221" count="1" type="stmt"/>
+            <line num="228" count="1" type="stmt"/>
+            <line num="229" count="1" type="stmt"/>
+         </file>
+         <file path="C:\mooctest\projects\7330\126581\AVLTree\src\test\java\net\mooctest\AVLNodeTest2.java" name="AVLNodeTest2.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="14" loc="232" coveredmethods="0" methods="13" elements="129" classes="1" ncloc="183" statements="116" conditionals="0" coveredstatements="0"/>
+            <class name="AVLNodeTest2">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="14" coveredmethods="0" methods="13" elements="129" statements="116" conditionals="0" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="testInster() : void" num="18" count="0" type="method"/>
+            <line num="20" count="0" type="stmt"/>
+            <line num="21" count="0" type="stmt"/>
+            <line num="22" count="0" type="stmt"/>
+            <line num="24" count="0" type="stmt"/>
+            <line num="25" count="0" type="stmt"/>
+            <line num="26" count="0" type="stmt"/>
+            <line num="27" count="0" type="stmt"/>
+            <line num="29" count="0" type="stmt"/>
+            <line num="30" count="0" type="stmt"/>
+            <line num="31" count="0" type="stmt"/>
+            <line num="32" count="0" type="stmt"/>
+            <line num="34" count="0" type="stmt"/>
+            <line num="35" count="0" type="stmt"/>
+            <line num="37" count="0" type="stmt"/>
+            <line num="38" count="0" type="stmt"/>
+            <line num="39" count="0" type="stmt"/>
+            <line num="41" count="0" type="stmt"/>
+            <line num="42" count="0" type="stmt"/>
+            <line num="43" count="0" type="stmt"/>
+            <line num="44" count="0" type="stmt"/>
+            <line num="45" count="0" type="stmt"/>
+            <line num="46" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDelete() : void" num="50" count="0" type="method"/>
+            <line num="52" count="0" type="stmt"/>
+            <line num="55" count="0" type="stmt"/>
+            <line num="56" count="0" type="stmt"/>
+            <line num="57" count="0" type="stmt"/>
+            <line num="58" count="0" type="stmt"/>
+            <line num="61" count="0" type="stmt"/>
+            <line num="62" count="0" type="stmt"/>
+            <line num="64" count="0" type="stmt"/>
+            <line num="66" count="0" type="stmt"/>
+            <line num="67" count="0" type="stmt"/>
+            <line num="68" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testFindMin() : void" num="71" count="0" type="method"/>
+            <line num="73" count="0" type="stmt"/>
+            <line num="75" count="0" type="stmt"/>
+            <line num="76" count="0" type="stmt"/>
+            <line num="77" count="0" type="stmt"/>
+            <line num="78" count="0" type="stmt"/>
+            <line num="79" count="0" type="stmt"/>
+            <line num="80" count="0" type="stmt"/>
+            <line num="81" count="0" type="stmt"/>
+            <line num="85" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testInsertWord() : void" num="89" count="0" type="method"/>
+            <line num="91" count="0" type="stmt"/>
+            <line num="92" count="0" type="stmt"/>
+            <line num="93" count="0" type="stmt"/>
+            <line num="94" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testInsertWordsFromFile() : void" num="98" count="0" type="method"/>
+            <line num="100" count="0" type="stmt"/>
+            <line num="101" count="0" type="stmt"/>
+            <line num="102" count="0" type="stmt"/>
+            <line num="104" count="0" type="stmt"/>
+            <line num="105" count="0" type="stmt"/>
+            <line num="106" count="0" type="stmt"/>
+            <line num="107" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDeleteWord() : void" num="110" count="0" type="method"/>
+            <line num="112" count="0" type="stmt"/>
+            <line num="113" count="0" type="stmt"/>
+            <line num="114" count="0" type="stmt"/>
+            <line num="116" count="0" type="stmt"/>
+            <line num="117" count="0" type="stmt"/>
+            <line num="118" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testDeleteWordsFromFile() : void" num="121" count="0" type="method"/>
+            <line num="123" count="0" type="stmt"/>
+            <line num="124" count="0" type="stmt"/>
+            <line num="126" count="0" type="stmt"/>
+            <line num="127" count="0" type="stmt"/>
+            <line num="128" count="0" type="stmt"/>
+            <line num="130" count="0" type="stmt"/>
+            <line num="131" count="0" type="stmt"/>
+            <line num="132" count="0" type="stmt"/>
+            <line num="133" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSearchWord() : void" num="136" count="0" type="method"/>
+            <line num="138" count="0" type="stmt"/>
+            <line num="139" count="0" type="stmt"/>
+            <line num="140" count="0" type="stmt"/>
+            <line num="142" count="0" type="stmt"/>
+            <line num="143" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testSearchWordsFromFile() : void" num="146" count="0" type="method"/>
+            <line num="148" count="0" type="stmt"/>
+            <line num="149" count="0" type="stmt"/>
+            <line num="150" count="0" type="stmt"/>
+            <line num="151" count="0" type="stmt"/>
+            <line num="152" count="0" type="stmt"/>
+            <line num="154" count="0" type="stmt"/>
+            <line num="155" count="0" type="stmt"/>
+            <line num="156" count="0" type="stmt"/>
+            <line num="157" count="0" type="stmt"/>
+            <line complexity="2" visibility="public" signature="testException() : void" num="159" count="0" type="method"/>
+            <line num="161" count="0" type="stmt"/>
+            <line num="162" count="0" type="stmt"/>
+            <line num="163" count="0" type="stmt"/>
+            <line num="164" count="0" type="stmt"/>
+            <line num="167" count="0" type="stmt"/>
+            <line num="169" count="0" type="stmt"/>
+            <line num="170" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testGetSize() : void" num="173" count="0" type="method"/>
+            <line num="175" count="0" type="stmt"/>
+            <line num="176" count="0" type="stmt"/>
+            <line num="177" count="0" type="stmt"/>
+            <line num="178" count="0" type="stmt"/>
+            <line num="179" count="0" type="stmt"/>
+            <line num="181" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testGetHeightAndToString() : void" num="184" count="0" type="method"/>
+            <line num="186" count="0" type="stmt"/>
+            <line num="188" count="0" type="stmt"/>
+            <line num="189" count="0" type="stmt"/>
+            <line num="190" count="0" type="stmt"/>
+            <line num="191" count="0" type="stmt"/>
+            <line num="193" count="0" type="stmt"/>
+            <line num="194" count="0" type="stmt"/>
+            <line num="200" count="0" type="stmt"/>
+            <line num="201" count="0" type="stmt"/>
+            <line complexity="1" visibility="public" signature="testPrintNode() : void" num="204" count="0" type="method"/>
+            <line num="206" count="0" type="stmt"/>
+            <line num="207" count="0" type="stmt"/>
+            <line num="208" count="0" type="stmt"/>
+            <line num="212" count="0" type="stmt"/>
+            <line num="213" count="0" type="stmt"/>
+            <line num="214" count="0" type="stmt"/>
+            <line num="215" count="0" type="stmt"/>
+            <line num="216" count="0" type="stmt"/>
+            <line num="217" count="0" type="stmt"/>
+            <line num="219" count="0" type="stmt"/>
+            <line num="226" count="0" type="stmt"/>
+            <line num="227" count="0" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

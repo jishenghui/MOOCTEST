@@ -1,0 +1,6 @@
+net\mooctest\SwitchArgumentTest.class
+net\mooctest\ArgumentTest.class
+net\mooctest\KeyArgumentTest.class
+net\mooctest\StringArgumentTest.class
+net\mooctest\ParameterArgumentTest.class
+net\mooctest\KeyArgumentTest$ConcreteKeyArgument.class

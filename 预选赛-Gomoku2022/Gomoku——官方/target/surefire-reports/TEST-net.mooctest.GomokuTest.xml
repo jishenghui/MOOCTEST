@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="6" failures="0" name="net.mooctest.GomokuTest" time="1.259" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17+35-LTS-2724"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk-17\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Program Files\eclipse"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Program Files\eclipse"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="17+35-LTS-2724"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\llx\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="D:\Program Files\apache-maven-3.8.3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;D:\Programs\Python\Python39\Scripts\;D:\Programs\Python\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin;D:\Program Files (x86)\cmake-3.17.0-rc3-win64-x64\bin;D:\Program Files\apache-maven-3.8.3\bin;D:\Program Files\Java\jdk-17\bin;D:\Program Files\Java\jdk-17\jre\lib;C:\Users\llx\AppData\Local\Microsoft\WindowsApps;;D:\Programs\Microsoft VS Code\bin;D:\Program Files\Bandizip\;."/>
+    <property name="maven.conf" value="D:\Program Files\apache-maven-3.8.3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="D:\Program Files\apache-maven-3.8.3\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\llx"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="llx"/>
+    <property name="java.class.path" value="D:\Program Files\apache-maven-3.8.3\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -file C:/mooctest/projects/6190/113863/Gomoku clean clover:setup test clover:aggregate clover:clover"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk-17"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17"/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Program Files\apache-maven-3.8.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-09-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="net.mooctest.GomokuTest" name="test" time="0.708"/>
+  <testcase classname="net.mooctest.GomokuTest" name="test2" time="0.005"/>
+  <testcase classname="net.mooctest.GomokuTest" name="test3" time="0.509"/>
+  <testcase classname="net.mooctest.GomokuTest" name="test4" time="0.002"/>
+  <testcase classname="net.mooctest.GomokuTest" name="test5" time="0.032"/>
+  <testcase classname="net.mooctest.GomokuTest" name="test6" time="0.003"/>
+</testsuite>
