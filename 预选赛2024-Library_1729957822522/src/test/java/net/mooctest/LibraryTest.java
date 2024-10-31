@@ -15,13 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class LibraryTest {
-    /*
-    import org.junit.*;
-    import org.junit.Test;
-    import java.io.*;
-    import java.util.*;
-    import static org.junit.Assert.*;
-    */
+
     //mvn test-compile org.pitest:pitest-maven:mutationCoverage
     ByteArrayOutputStream outContent;
     String lineSeparator = System.lineSeparator();//操作系统换行符
@@ -65,7 +59,7 @@ public class LibraryTest {
         for (int i = 0; i < 15; i++) {
             books[i] = new Book(title[i], author[i], isbn[i], bookTypes[i % 4], nums[i]);
         }
-        user=new VIPUser("jsh","000-1");
+        user = new VIPUser("jsh", "000-1");
     }
 
     @After
@@ -92,7 +86,7 @@ public class LibraryTest {
 
         BorrowRecord borrowRecord1 = vipUser.findBorrowRecord(books[0]);
         AutoRenewalService autoRenewalService = new AutoRenewalService();
-        autoRenewalService.autoRenew(vipUser,books[0]);
+        autoRenewalService.autoRenew(vipUser, books[0]);
         assertEquals(0, borrowRecord1.calculateFine(), 0.01);
         assertEquals(books[0], borrowRecord1.getBook());
         Date date1 = borrowRecord1.getDueDate();
@@ -286,8 +280,8 @@ public class LibraryTest {
         assertEquals(false, books[0].isAvailable());
         try {
             books[0].borrow();
-        }catch (Exception e) {
-            
+        } catch (Exception e) {
+
         }
         books[0].reportDamage();
         books[0].setInRepair(true);
@@ -303,23 +297,23 @@ public class LibraryTest {
 
         }
         books[0].setTitle("aaaaa");
-        assertEquals("aaaaa",books[0].getTitle());
+        assertEquals("aaaaa", books[0].getTitle());
         assertEquals(125, books[0].getAvailableCopies());
         books[0].removeReservation(new Reservation(books[2], new VIPUser("jjj", "000")));
 
 
         String out = GetOutPutAfter();
-        assertEquals("Successfully borrowed the book. Remaining copies:3"+lineSeparator +
-                "Successfully returned the book. Currently available copies for borrowing:4"+lineSeparator +
-                "Report book damage."+lineSeparator +
-                "Report book repair."+lineSeparator +
-                "The book is damaged and cannot be borrowed."+lineSeparator +
-                "The book is damaged and cannot be borrowed."+lineSeparator +
-                "This book is damaged. No need to report it again."+lineSeparator +
-                "The book is under repair and temporarily unavailable."+lineSeparator +
-                "The book is already under repair."+lineSeparator +
-                "For VIP users' reservations, the priority is enhanced."+lineSeparator +
-                "This reservation is not in the reservation queue."+lineSeparator, out);
+        assertEquals("Successfully borrowed the book. Remaining copies:3" + lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:4" + lineSeparator +
+                "Report book damage." + lineSeparator +
+                "Report book repair." + lineSeparator +
+                "The book is damaged and cannot be borrowed." + lineSeparator +
+                "The book is damaged and cannot be borrowed." + lineSeparator +
+                "This book is damaged. No need to report it again." + lineSeparator +
+                "The book is under repair and temporarily unavailable." + lineSeparator +
+                "The book is already under repair." + lineSeparator +
+                "For VIP users' reservations, the priority is enhanced." + lineSeparator +
+                "This reservation is not in the reservation queue." + lineSeparator, out);
         GetOutPutEnd();
     }
 
@@ -328,35 +322,35 @@ public class LibraryTest {
         GetOutPutBefore();
         AutoRenewalService autoRenewalService = new AutoRenewalService();
         try {
-            autoRenewalService.autoRenew(user,books[0]);
-        }catch (Exception e){
+            autoRenewalService.autoRenew(user, books[0]);
+        } catch (Exception e) {
             System.out.println("The borrowing record of this book is not found.");
         }
-        user.creditScore=59;
+        user.creditScore = 59;
         try {
-            autoRenewalService.autoRenew(user,books[0]);
-        }catch (Exception e){
+            autoRenewalService.autoRenew(user, books[0]);
+        } catch (Exception e) {
             System.out.println("The credit score is too low to renew the loan.");
         }
         user.reserveBook(books[0]);
         try {
-            autoRenewalService.autoRenew(user,books[0]);
-        }catch (Exception e){
+            autoRenewalService.autoRenew(user, books[0]);
+        } catch (Exception e) {
             System.out.println("The book has been reserved by other users and cannot be renewed.");
         }
         user.setAccountStatus(AccountStatus.BLACKLISTED);
         try {
-            autoRenewalService.autoRenew(user,books[0]);
-        }catch (Exception e){
+            autoRenewalService.autoRenew(user, books[0]);
+        } catch (Exception e) {
             System.out.println("The account is frozen and cannot be automatically renewed.");
         }
         String s = GetOutPutAfter();
-        assertEquals("The borrowing record of this book is not found."+lineSeparator +
-                "The credit score is too low to renew the loan."+lineSeparator +
-                "For VIP users' reservations, the priority is enhanced."+lineSeparator +
-                "Reservation added successfully."+lineSeparator +
-                "The book has been reserved by other users and cannot be renewed."+lineSeparator +
-                "The account is frozen and cannot be automatically renewed."+lineSeparator,s);
+        assertEquals("The borrowing record of this book is not found." + lineSeparator +
+                "The credit score is too low to renew the loan." + lineSeparator +
+                "For VIP users' reservations, the priority is enhanced." + lineSeparator +
+                "Reservation added successfully." + lineSeparator +
+                "The book has been reserved by other users and cannot be renewed." + lineSeparator +
+                "The account is frozen and cannot be automatically renewed." + lineSeparator, s);
         GetOutPutEnd();
     }
 
