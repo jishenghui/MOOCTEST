@@ -1,4 +1,4 @@
-/* dcParseArgs - Java library to simplify args[] handling
+package net.mooctest;/* dcParseArgs - Java library to simplify args[] handling
  * 
  * Copyright (C) 2008 Roland Koller <roland@devcity.de>
  *
