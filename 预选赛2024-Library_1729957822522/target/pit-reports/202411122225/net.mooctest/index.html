@@ -1,0 +1,177 @@
+<html>
+<head>
+  
+    <style type='text/css'>
+   
+   .tests{ 
+     width : 50%;
+     float : left;
+   }
+   
+   .mutees{
+     float : right;
+     width : 50%;
+   }
+   
+   .unit {
+     padding-top : 20px;
+     clear : both;
+   }
+   
+   .coverage_bar {
+    display : inline-block;
+    height : 1.1em;
+    width: 130px;
+    background: #FAA;
+    margin: 0 5px;
+    vertical-align: middle;
+    border: 1px solid #AAA;
+    position : relative;
+   }
+   
+   .coverage_complete {
+    display : inline-block;
+    height : 100%;
+    background: #DFD;
+    float: left;
+   }
+   
+   .coverage_ledgend {
+        position : absolute;
+        height : 100%;
+        width: 100%;
+        left : 0;
+        top : 0;
+        text-align : center;
+   }
+   
+   .line, .mut {
+        vertical-align : middle;
+   }
+   
+   .coveragePercentage {
+        display: inline-block;
+        width: 3em;
+        text-align: right;
+   }
+  </style>
+  
+</head>
+<body>
+
+<h1>Pit Test Coverage Report</h1>
+<h2>Package Summary</h2>
+<h3>net.mooctest</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Number of Classes</th>
+            <th>Line Coverage</th>
+            <th>Mutation Coverage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>12</td>
+            <td>51% <div class="coverage_bar"><div class="coverage_complete" style="width:51%"></div><div class="coverage_ledgend">220/435</div></div></td>
+            <td>20% <div class="coverage_bar"><div class="coverage_complete" style="width:20%"></div><div class="coverage_ledgend">51/261</div></div></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Breakdown by Class</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Line Coverage</th>
+            <th>Mutation Coverage</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td><a href="./AutoRenewalService.java.html">AutoRenewalService.java</a></td>
+            <td><div class="coveragePercentage">67% </div><div class="coverage_bar"><div class="coverage_complete" style="width:67%"></div><div class="coverage_ledgend">8/12</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/7</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./Book.java.html">Book.java</a></td>
+            <td><div class="coveragePercentage">91% </div><div class="coverage_bar"><div class="coverage_complete" style="width:91%"></div><div class="coverage_ledgend">59/65</div></div></td>
+            <td><div class="coveragePercentage">85% </div><div class="coverage_bar"><div class="coverage_complete" style="width:85%"></div><div class="coverage_ledgend">29/34</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./BorrowRecord.java.html">BorrowRecord.java</a></td>
+            <td><div class="coveragePercentage">41% </div><div class="coverage_bar"><div class="coverage_complete" style="width:41%"></div><div class="coverage_ledgend">15/37</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/23</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./CreditRepairService.java.html">CreditRepairService.java</a></td>
+            <td><div class="coveragePercentage">86% </div><div class="coverage_bar"><div class="coverage_complete" style="width:86%"></div><div class="coverage_ledgend">6/7</div></div></td>
+            <td><div class="coveragePercentage">43% </div><div class="coverage_bar"><div class="coverage_complete" style="width:43%"></div><div class="coverage_ledgend">3/7</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./ExternalLibraryAPI.java.html">ExternalLibraryAPI.java</a></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/5</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/3</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./InventoryService.java.html">InventoryService.java</a></td>
+            <td><div class="coveragePercentage">36% </div><div class="coverage_bar"><div class="coverage_complete" style="width:36%"></div><div class="coverage_ledgend">5/14</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/10</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./Library.java.html">Library.java</a></td>
+            <td><div class="coveragePercentage">84% </div><div class="coverage_bar"><div class="coverage_complete" style="width:84%"></div><div class="coverage_ledgend">47/56</div></div></td>
+            <td><div class="coveragePercentage">19% </div><div class="coverage_bar"><div class="coverage_complete" style="width:19%"></div><div class="coverage_ledgend">5/27</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./NotificationService.java.html">NotificationService.java</a></td>
+            <td><div class="coveragePercentage">75% </div><div class="coverage_bar"><div class="coverage_complete" style="width:75%"></div><div class="coverage_ledgend">18/24</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/14</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./RegularUser.java.html">RegularUser.java</a></td>
+            <td><div class="coveragePercentage">44% </div><div class="coverage_bar"><div class="coverage_complete" style="width:44%"></div><div class="coverage_ledgend">25/57</div></div></td>
+            <td><div class="coveragePercentage">17% </div><div class="coverage_bar"><div class="coverage_complete" style="width:17%"></div><div class="coverage_ledgend">7/42</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./Reservation.java.html">Reservation.java</a></td>
+            <td><div class="coveragePercentage">59% </div><div class="coverage_bar"><div class="coverage_complete" style="width:59%"></div><div class="coverage_ledgend">13/22</div></div></td>
+            <td><div class="coveragePercentage">20% </div><div class="coverage_bar"><div class="coverage_complete" style="width:20%"></div><div class="coverage_ledgend">3/15</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./User.java.html">User.java</a></td>
+            <td><div class="coveragePercentage">26% </div><div class="coverage_bar"><div class="coverage_complete" style="width:26%"></div><div class="coverage_ledgend">21/81</div></div></td>
+            <td><div class="coveragePercentage">9% </div><div class="coverage_bar"><div class="coverage_complete" style="width:9%"></div><div class="coverage_ledgend">4/47</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./VIPUser.java.html">VIPUser.java</a></td>
+            <td><div class="coveragePercentage">5% </div><div class="coverage_bar"><div class="coverage_complete" style="width:5%"></div><div class="coverage_ledgend">3/55</div></div></td>
+            <td><div class="coveragePercentage">0% </div><div class="coverage_bar"><div class="coverage_complete" style="width:0%"></div><div class="coverage_ledgend">0/32</div></div></td>
+        </tr>
+
+     </tbody>
+</table>
+<br/>
+
+
+
+<hr/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.1.10
+
+</body>
+</html>

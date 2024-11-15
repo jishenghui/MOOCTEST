@@ -1,3 +1,5 @@
+package net.mooctest;
+
 import java.util.Arrays;
 
 class SuffixArray

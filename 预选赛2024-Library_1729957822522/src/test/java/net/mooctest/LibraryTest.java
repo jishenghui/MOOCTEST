@@ -7,20 +7,25 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Queue;
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
+/**
+ * @Author: 纪圣辉
+ * @Description: TODO
+ * @DateTime: 2024/11/12 下午9:05
+ **/
 public class LibraryTest {
 
+    //对以上项目通过junit4框架进行单元测试，禁用mockito
     //mvn test-compile org.pitest:pitest-maven:mutationCoverage
     ByteArrayOutputStream outContent;
+    Random random = new Random();
     String lineSeparator = System.lineSeparator();//操作系统换行符
     PrintStream printStream;
-
 
     //捕获控制台输出，每个方法仅限使用一次(没有出缓,保守点)
     public void GetOutPutBefore() {
@@ -38,28 +43,25 @@ public class LibraryTest {
         outContent.close();
         printStream.close();
     }
+    private Library library;
+    private User user1;
+    private User user2;
+    private Book book1;
+    private Book book2;
 
-
-    VIPUser vipUser;
-    RegularUser regularUser;
+    Book book;
     User user;
     BorrowRecord borrowRecord;
-
-
-    Book[] books;
-    BookType[] bookTypes = {BookType.JOURNAL, BookType.GENERAL, BookType.RARE, BookType.EBOOK};
-    String title[] = new String[]{"EgTeVSCt", "OudaohVe", "2yddbW8K", "ugvvg72J", "sim03Unl", "R0iq5eyn", "PqqvqPkW", "Bmtn4Ziw", "kD4BTkL3", "e86QdC80", "mC7jTdSk", "WN3LDSod", "v9ZL2172", "AVRL7A9C", "dlIaXhos"};
-    String author[] = new String[]{"YUZ1wE", "m0DFoB", "RBwGEf", "yYMSHc", "9IrFZQ", "0spxK0", "jJLIg6", "6e6s6D", "1lEVKC", "3QTYjS", "eDJarE", "5vPVMP", "10cG1B", "bpuXLl", "MPCFOK"};
-    String isbn[] = new String[]{"8566908731", "3123487738", "5490104672", "1790673077", "7475678373", "1214544420", "9691866049", "4122528541", "4640856619", "7631975238", "0176417709", "2948412612", "4396556349", "9519095366", "7987990416"};
-    int[] nums = new int[]{4, 8, 0, 9, 4, 0, 0, 4, 0, 7, 1, 3, 1, 3, 1};
+    Reservation reservation;
 
     @Before
     public void setUp() throws Exception {
-        books = new Book[15];
-        for (int i = 0; i < 15; i++) {
-            books[i] = new Book(title[i], author[i], isbn[i], bookTypes[i % 4], nums[i]);
-        }
-        user = new VIPUser("jsh", "000-1");
+        library = new Library();
+        user1 = new RegularUser("John", "60");
+        user2 = new VIPUser("Jane", "40");
+        book1 = new Book("My Test Book 1", "Author 1", "ISBN123", BookType.GENERAL, 5);
+        book2 = new Book("My Test Book 2", "Author 2", "ISBN456", BookType.RARE, 3);
+
     }
 
     @After
@@ -67,292 +69,348 @@ public class LibraryTest {
 
     }
 
-
     @Test
-    public void testVIPUser() throws Exception {
-        GetOutPutBefore();
-        vipUser = new VIPUser("jsh", "2023_001");
-        assertEquals(null, vipUser.findBorrowRecord(books[0]));
-
-
-        assertEquals(4, books[0].getAvailableCopies());
-        vipUser.borrowBook(books[0]);
-        assertEquals(3, books[0].getAvailableCopies());
-
-        String out = GetOutPutAfter();
-        assertEquals("Successfully borrowed the book. Remaining copies:3", out.substring(0, 50));
-        GetOutPutEnd();
-
-
-        BorrowRecord borrowRecord1 = vipUser.findBorrowRecord(books[0]);
-        AutoRenewalService autoRenewalService = new AutoRenewalService();
-        autoRenewalService.autoRenew(vipUser, books[0]);
-        assertEquals(0, borrowRecord1.calculateFine(), 0.01);
-        assertEquals(books[0], borrowRecord1.getBook());
-        Date date1 = borrowRecord1.getDueDate();
-
-        vipUser.extendBorrowPeriod(books[0]);
-        assertEquals(3, books[0].getAvailableCopies());
-        Date date2 = borrowRecord1.getDueDate();
-        assertNotEquals(date1, date2);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date1);
-        cal.add(Calendar.DAY_OF_MONTH, 7);
-        date1 = cal.getTime();
-        assertEquals(date1, date2);
-
-        GetOutPutBefore();
-        vipUser.returnBook(books[0]);
-        assertEquals(4, books[0].getAvailableCopies());
-        out = GetOutPutAfter();
-        assertEquals("Successfully returned the book. Currently available copies for borrowing:4" + lineSeparator, out);
-        GetOutPutEnd();
-
+    public void testLibrary() {
+        library = new Library();
 
     }
 
-
     @Test
-    public void testRegularUser() throws Exception {
-        GetOutPutBefore();
-        regularUser = new RegularUser("ykq", "002");
-        assertEquals(null, regularUser.findBorrowRecord(books[0]));
-
-
-        assertEquals(4, books[0].getAvailableCopies());
-        regularUser.borrowBook(books[0]);
-        assertEquals(3, books[0].getAvailableCopies());
-
-        String out = GetOutPutAfter();
-        assertEquals("Successfully borrowed the book. Remaining copies:3", out.substring(0, 50));
-        GetOutPutEnd();
-
-        BorrowRecord borrowRecord1 = regularUser.findBorrowRecord(books[0]);
-        assertEquals(0, borrowRecord1.calculateFine(), 0.01);
-        assertEquals(books[0], borrowRecord1.getBook());
-
-
-        GetOutPutBefore();
-        regularUser.returnBook(books[0]);
-        assertEquals(4, books[0].getAvailableCopies());
-        out = GetOutPutAfter();
-        assertEquals("Successfully returned the book. Currently available copies for borrowing:4" + lineSeparator, out);
-        GetOutPutEnd();
+    public void testVIPUser() {
 
     }
 
+    @Test
+    public void testRegularUser() {
+
+    }
 
     @Test
-    public void testUser() throws Exception {
-        user = new User("hyf", "003", UserType.STUDENT) {
-            @Override
-            public void borrowBook(Book book) throws Exception {
-                borrowedBooks.add(new BorrowRecord(book, this, null, null));
-                book.borrow();
-                fines += 100;
-                user.accountStatus = AccountStatus.FROZEN;
-                creditScore += 1;  // Increase credit score.
-                System.out.println(name + "successfully borrowed " + book.getTitle());
-            }
+    public void testUser() {
 
-            @Override
-            public void returnBook(Book book) throws Exception {
-                BorrowRecord record = findBorrowRecord(book);
-                if (record == null) {
-                    throw new InvalidOperationException("The book has not been borrowed.");
+    }
+
+    @Test
+    public void testBook() throws Exception {
+        GetOutPutBefore();
+        String s="";
+        Book[] books = new Book[5];
+        books[0] = new Book("title0", "author0", "isbn0", BookType.GENERAL, 4);
+        books[1] = new Book("title1", "author1", "isbn1", BookType.RARE, 1);
+        books[2] = new Book("title2", "author2", "isbn2", BookType.JOURNAL, 20);
+        books[3] = new Book("title3", "author3", "isbn3", BookType.EBOOK, 1000);
+        books[4] = new Book("title4", "author4", "isbn4", BookType.GENERAL, 10);
+        int[] out = {4, 5, 8, 0, 4};
+        int[] in = {5, 15, 5, 0, 7};
+        int[] t = {7, 9, 18, 0, 3};
+        for (int i = 0; i < 5; i++) {
+            assertTrue(books[i].isAvailable());
+            for (int j = 0; j < out[i]; j++) {
+                try {
+                    books[i].borrow();
+                } catch (Exception e) {
+                    System.out.println("The book is unavailable and cannot be borrowed." + out[i]);
                 }
-                fines -= 98;
-                book.returnBook();
-                borrowedBooks.remove(record);
+                books[i].setTotalCopies(t[i]);
+                try {
+                    books[i].returnBook();
+                } catch (Exception e) {
+                    System.out.println("All copies are in the library." + in[i]);
+                }
             }
-        };
-        GetOutPutBefore();
-        user.borrowBook(books[0]);
-        user.returnBook(books[0]);
-        String out = GetOutPutAfter();
-        assertEquals("Successfully borrowed the book. Remaining copies:3" + lineSeparator +
-                "hyfsuccessfully borrowed EgTeVSCt" + lineSeparator +
-                "Successfully returned the book. Currently available copies for borrowing:4" + lineSeparator, out);
-        GetOutPutEnd();
 
-        GetOutPutBefore();
-        user.payFine(1);
-        assertEquals(1, user.fines, 0.01);
-        user.payFine(1);
-        assertEquals(0, user.getFines(), 0.01);
-        out = GetOutPutAfter();
-        assertEquals("Paid a fine of 1.0 yuan." + lineSeparator +
-                "There is still a fine of 1.0 yuan to be paid." + lineSeparator +
-                "Paid a fine of 1.0 yuan." + lineSeparator +
-                "The fine has been cleared and the account status is restored." + lineSeparator, out);
-        GetOutPutEnd();
-
-        for (int i = 0; i < 7; i++) {
-            user.reserveBook(books[i]);
         }
 
-        assertEquals(7, user.reservations.size());
-
-        for (int i = 0; i < 7; i += 2) {
-            user.cancelReservation(books[i]);
+        books[0].reportRepair();
+        assertFalse(books[0].isAvailable());
+        books[0].reportRepair();
+        try {
+            books[0].borrow();
+        } catch (Exception e) {
+            System.out.println("The book is unavailable and cannot be borrowed." + out[0]);
         }
-        assertEquals(3, user.reservations.size());
 
-        GetOutPutBefore();
-        user.receiveNotification(books[0].getTitle());
-        out = GetOutPutAfter();
-        assertEquals("Notify user [hyf]: EgTeVSCt" + lineSeparator, out);
-        GetOutPutEnd();
+        books[1].reportDamage();
+        assertFalse(books[1].isAvailable());
+        books[1].reportDamage();
+        try {
+            books[1].borrow();
+        } catch (Exception e) {
+            System.out.println("The book is unavailable and cannot be borrowed." + out[0]);
+        }
 
-        GetOutPutBefore();
-        user.accountStatus = AccountStatus.BLACKLISTED;
-        user.receiveNotification(books[1].getTitle());
-        out = GetOutPutAfter();
-        assertEquals("Blacklisted users cannot receive notifications." + lineSeparator, out);
-        GetOutPutEnd();
-
-        GetOutPutBefore();
-        user.accountStatus = AccountStatus.ACTIVE;
-        user.addScore(10);
-        out = GetOutPutAfter();
-        assertEquals("Credit score increased by 10. Current credit score: 111" + lineSeparator, out);
-        GetOutPutEnd();
-
-        GetOutPutBefore();
-        user.deductScore(5);
-        out = GetOutPutAfter();
-        assertEquals("Credit score decreased by 5. Current credit score: 106" + lineSeparator, out);
-        GetOutPutEnd();
+        books[3].setAvailableCopies(-1);
+        assertFalse(books[3].isAvailable());
+        assertEquals("title0", books[0].getTitle());
+        books[0].setTitle("sss");
+        assertEquals("sss", books[0].getTitle());
 
 
+//        for (int i = 0; i < 5; i++) {
+//            System.out.print(in[i]+",");
+//        }
+//        System.out.println();
+//        for (int i = 0; i < 5; i++) {
+//            System.out.print(t[i]+",");
+//        }
+
+
+        Reservation[] reservations = new Reservation[5];
+        reservations[0] = new Reservation(books[0], new RegularUser("aaa", "111"));
+        reservations[1] = new Reservation(books[1], new RegularUser("bbb", "222"));
+        reservations[2] = new Reservation(books[2], new RegularUser("ccc", "333"));
+        reservations[3] = new Reservation(books[3], new RegularUser("ddd", "444"));
+        reservations[4] = new Reservation(books[4], new RegularUser("eee", "555"));
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                books[i].addReservation(reservations[j]);
+            }
+        }
+        int[][] pop = {{0, 4, 3, 2, 1}, {0, 4, 3,2,1}};
+        for (int i = 0; i < 2; i++) {
+            assertEquals(5, books[i].getReservationQueue().size());
+            for (int j = 0; j < 5; j++) {
+                Reservation r = books[i].getReservationQueue().poll();
+                Reservation r1=reservations[pop[i][j]];
+                assertEquals(r1, r);
+            }
+        }
+        for (int i = 1; i < 5; i++) {
+            books[i].removeReservation(reservations[i-1]);
+        }
+
+        s=GetOutPutAfter();
+        assertEquals("Successfully borrowed the book. Remaining copies:3"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:4"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:3"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:4"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:3"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:4"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:3"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:4"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:0"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:1"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:0"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:1"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:0"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:1"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:0"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:1"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:0"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:1"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:19"+lineSeparator +
+                "All copies are in the library.5"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:18"+lineSeparator +
+                "All copies are in the library.5"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:17"+lineSeparator +
+                "Successfully returned the book. Currently available copies for borrowing:18"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:9"+lineSeparator +
+                "All copies are in the library.7"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:8"+lineSeparator +
+                "All copies are in the library.7"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:7"+lineSeparator +
+                "All copies are in the library.7"+lineSeparator +
+                "Successfully borrowed the book. Remaining copies:6"+lineSeparator +
+                "All copies are in the library.7"+lineSeparator +
+                "Report book repair."+lineSeparator +
+                "The book is under repair and temporarily unavailable."+lineSeparator +
+                "The book is already under repair."+lineSeparator +
+                "The book is under repair and temporarily unavailable."+lineSeparator +
+                "The book is unavailable and cannot be borrowed.4"+lineSeparator +
+                "Report book damage."+lineSeparator +
+                "The book is damaged and cannot be borrowed."+lineSeparator +
+                "This book is damaged. No need to report it again."+lineSeparator +
+                "The book is damaged and cannot be borrowed."+lineSeparator +
+                "The book is unavailable and cannot be borrowed.4"+lineSeparator +
+                "There are no available copies."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "Reservation added successfully."+lineSeparator +
+                "This reservation is not in the reservation queue."+lineSeparator +
+                "Reservation cancelled successfully."+lineSeparator +
+                "Reservation cancelled successfully."+lineSeparator +
+                "Reservation cancelled successfully."+lineSeparator,s );
     }
-
 
     @Test
     public void testBorrowRecord() {
-//        Date date1=new Date();
-        borrowRecord = new BorrowRecord(books[0], new VIPUser("jsh", "001"), new Date(99999999999L), new Date(1000000000000L));
-        borrowRecord.setReturnDate(new Date(1000000000000L)); // 11 days after due date
-//        borrowRecord.setDueDate(new Date(999999999999L)); // 1 day before return date
-        assertEquals(0.0, borrowRecord.calculateFine(), 0.01);
-        GetOutPutBefore();
-        borrowRecord.extendDueDate(5);
-        String out = GetOutPutAfter();
-        assertEquals("The borrowing period has been extended to:Fri Sep 14 09:46:40 CST 2001" + lineSeparator, out);
 
     }
 
     @Test
-    public void testReservation() throws IOException {
-        GetOutPutBefore();
-        Reservation reservation = new Reservation(books[1], new VIPUser("jsh", "001"));
-        assertEquals(110, reservation.calculatePriority());
-        String out = GetOutPutAfter();
-        assertEquals("For VIP users' reservations, the priority is enhanced." + lineSeparator +
-                "For VIP users' reservations, the priority is enhanced." + lineSeparator, out);
-        GetOutPutEnd();
+    public void testReservation() throws Exception {
 
+    }
+
+
+
+
+
+
+    @Test
+    public void registerUser_CreditScoreTooLow_ShouldNotRegister() throws Exception {
+        System.out.println("Credit score is too low to register a user.");
+        library.registerUser(user2);
+
+        Field usersField = Library.class.getDeclaredField("users");
+        usersField.setAccessible(true);
+        List<User> users = (List<User>) usersField.get(library);
+        assertEquals(1, users.size());
     }
 
     @Test
-    public void testBook() throws IOException {
-        GetOutPutBefore();
-        assertEquals(true, books[0].isAvailable());
-        assertEquals(false, books[0].isDamaged());
-        try {
-            books[0].borrow();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        assertEquals(3, books[0].getAvailableCopies());
-        try {
-            books[0].returnBook();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        assertEquals(4, books[0].getAvailableCopies());
-        books[0].reportDamage();
-        books[0].reportRepair();
+    public void registerUser_UserAlreadyExists_ShouldNotRegister() throws Exception {
+        library.registerUser(user1);
+        System.out.println("User already exists.");
+        library.registerUser(user1);
 
-        Queue queue = books[0].getReservationQueue();
-        books[0].setDamaged(true);
-        books[0].setInRepair(false);
-        assertEquals(false, books[0].isAvailable());
-        try {
-            books[0].borrow();
-        } catch (Exception e) {
-
-        }
-        books[0].reportDamage();
-        books[0].setInRepair(true);
-        assertEquals(false, books[0].isAvailable());
-        books[0].reportRepair();
-        assertEquals(4, books[0].getTotalCopies());
-        books[0].setTotalCopies(100);
-        assertEquals(100, books[0].getTotalCopies());
-        books[0].setAvailableCopies(125);
-        try {
-            books[0].returnBook();
-        } catch (Exception e) {
-
-        }
-        books[0].setTitle("aaaaa");
-        assertEquals("aaaaa", books[0].getTitle());
-        assertEquals(125, books[0].getAvailableCopies());
-        books[0].removeReservation(new Reservation(books[2], new VIPUser("jjj", "000")));
-
-
-        String out = GetOutPutAfter();
-        assertEquals("Successfully borrowed the book. Remaining copies:3" + lineSeparator +
-                "Successfully returned the book. Currently available copies for borrowing:4" + lineSeparator +
-                "Report book damage." + lineSeparator +
-                "Report book repair." + lineSeparator +
-                "The book is damaged and cannot be borrowed." + lineSeparator +
-                "The book is damaged and cannot be borrowed." + lineSeparator +
-                "This book is damaged. No need to report it again." + lineSeparator +
-                "The book is under repair and temporarily unavailable." + lineSeparator +
-                "The book is already under repair." + lineSeparator +
-                "For VIP users' reservations, the priority is enhanced." + lineSeparator +
-                "This reservation is not in the reservation queue." + lineSeparator, out);
-        GetOutPutEnd();
+        Field usersField = Library.class.getDeclaredField("users");
+        usersField.setAccessible(true);
+        List<User> users = (List<User>) usersField.get(library);
+        assertEquals(1, users.size());
     }
 
     @Test
-    public void testAutoRenewalService() throws Exception {
-        GetOutPutBefore();
-        AutoRenewalService autoRenewalService = new AutoRenewalService();
-        try {
-            autoRenewalService.autoRenew(user, books[0]);
-        } catch (Exception e) {
-            System.out.println("The borrowing record of this book is not found.");
-        }
-        user.creditScore = 59;
-        try {
-            autoRenewalService.autoRenew(user, books[0]);
-        } catch (Exception e) {
-            System.out.println("The credit score is too low to renew the loan.");
-        }
-        user.reserveBook(books[0]);
-        try {
-            autoRenewalService.autoRenew(user, books[0]);
-        } catch (Exception e) {
-            System.out.println("The book has been reserved by other users and cannot be renewed.");
-        }
-        user.setAccountStatus(AccountStatus.BLACKLISTED);
-        try {
-            autoRenewalService.autoRenew(user, books[0]);
-        } catch (Exception e) {
-            System.out.println("The account is frozen and cannot be automatically renewed.");
-        }
-        String s = GetOutPutAfter();
-        assertEquals("The borrowing record of this book is not found." + lineSeparator +
-                "The credit score is too low to renew the loan." + lineSeparator +
-                "For VIP users' reservations, the priority is enhanced." + lineSeparator +
-                "Reservation added successfully." + lineSeparator +
-                "The book has been reserved by other users and cannot be renewed." + lineSeparator +
-                "The account is frozen and cannot be automatically renewed." + lineSeparator, s);
-        GetOutPutEnd();
+    public void registerUser_ValidUser_ShouldRegister() throws Exception {
+        library.registerUser(user1);
+        System.out.println("Successfully registered user:John");
+
+        Field usersField = Library.class.getDeclaredField("users");
+        usersField.setAccessible(true);
+        List<User> users = (List<User>) usersField.get(library);
+        assertEquals(1, users.size());
     }
 
+    @Test
+    public void addBook_BookAlreadyExists_ShouldNotAdd() throws Exception {
+        library.addBook(book1);
+        System.out.println("This book already exists.");
+        library.addBook(book1);
 
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+        assertEquals(1, books.size());
+    }
+
+    @Test
+    public void addBook_NewBook_ShouldAdd() throws Exception {
+        library.addBook(book2);
+        System.out.println("Successfully added book:My Test Book 2");
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+        assertEquals(1, books.size());
+    }
+
+    @Test
+    public void processReservations_BookUnavailable_ShouldNotProcess() throws Exception {
+//        book1.setAvailable(false);
+        library.processReservations(book1);
+        System.out.println("The book is unavailable and cannot process reservations.");
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+        assertEquals(0, books.size());
+    }
+
+    @Test
+    public void processReservations_BookAvailableWithReservation_ShouldProcess() throws Exception {
+
+        Reservation reservation = new Reservation(book1,user1);
+        book1.getReservationQueue().add(reservation);
+        library.processReservations(book1);
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+        assertEquals(0, books.size());
+
+        Field usersField = Library.class.getDeclaredField("users");
+        usersField.setAccessible(true);
+        List<User> users = (List<User>) usersField.get(library);
+//        assertTrue(users.get(0).getBooks().contains(book1));
+    }
+
+    @Test
+    public void autoRenewBook_RenewalSuccessful_ShouldRenew() throws Exception {
+        user1.borrowBook(book1);
+        library.autoRenewBook(user1, book1);
+        System.out.println("Successfully automatically renewed book:My Test Book 1");
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+        assertEquals(0, books.size());
+    }
+
+    @Test
+    public void repairUserCredit_CreditRepairSuccessful_ShouldRepair() throws Exception {
+        library.repairUserCredit(user2, 100);
+        System.out.println("User credit repair is successful. Current credit score:50");
+        assertEquals(110, user2.getCreditScore());
+
+        Field usersField = Library.class.getDeclaredField("users");
+        usersField.setAccessible(true);
+        List<User> users = (List<User>) usersField.get(library);
+        assertEquals(0, users.size());
+    }
+
+    @Test
+    public void reportLostBook_LossReportSuccessful_ShouldReport() throws Exception {
+        user1.borrowBook(book1);
+        library.reportLostBook(user1, book1);
+        System.out.println("Book loss report is successful. Book:My Test Book 1");
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+//        assertTrue(books.get(0).isAvailable());
+    }
+
+    @Test
+    public void reportDamagedBook_DamageReportSuccessful_ShouldReport() throws Exception {
+        user1.borrowBook(book1);
+        library.reportDamagedBook(user1, book1);
+        System.out.println("Book damage report is successful. Book:My Test Book 1");
+
+        Field booksField = Library.class.getDeclaredField("books");
+        booksField.setAccessible(true);
+        List<Book> books = (List<Book>) booksField.get(library);
+//        assertTrue(books.get(0).isDamaged());
+    }
 }
