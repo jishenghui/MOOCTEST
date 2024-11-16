@@ -1,0 +1,6 @@
+变异命令：mvn test-compile org.pitest:pitest-maven:mutationCoverage
+每次清除：mvn clean test-compile org.pitest:pitest-maven:mutationCoverage
+变异30%
+覆盖30%
+运行效率20%
+命名规范20%

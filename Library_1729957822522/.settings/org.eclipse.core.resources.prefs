@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/java/net/mooctest/AutoRenewalService.java=UTF-8
+encoding//src/main/java/net/mooctest/Book.java=UTF-8
+encoding//src/main/java/net/mooctest/BorrowRecord.java=UTF-8
+encoding//src/main/java/net/mooctest/CreditRepairService.java=UTF-8
+encoding//src/main/java/net/mooctest/ExternalLibraryAPI.java=UTF-8
+encoding//src/main/java/net/mooctest/InventoryService.java=UTF-8
+encoding//src/main/java/net/mooctest/Library.java=UTF-8
+encoding//src/main/java/net/mooctest/NotificationService.java=UTF-8
+encoding//src/main/java/net/mooctest/RegularUser.java=UTF-8
+encoding//src/main/java/net/mooctest/Reservation.java=UTF-8
+encoding//src/main/java/net/mooctest/User.java=UTF-8
+encoding//src/main/java/net/mooctest/UserType.java=UTF-8
+encoding//src/main/java/net/mooctest/VIPUser.java=UTF-8
+encoding//src/test/java=UTF-8
