@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Grid.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PathFinding</a> &gt; <a href="index.source.html" class="el_package">net.mooctest</a> &gt; <span class="el_source">Grid.java</span></div><h1>Grid.java</h1><pre class="source lang-java linenums">package net.mooctest;
+
+import static net.mooctest.Utils.check;
+import static net.mooctest.Utils.mask;
+
+<span class="pc bpc" id="L6" title="1 of 2 branches missed.">public class Grid {</span>
+
+    static final int NODE_BITS = 12;
+<span class="fc" id="L9">    static final int NODE_MASK = mask(NODE_BITS);</span>
+    static final int NODE_NULL = 0;
+<span class="fc" id="L11">    static final int NODE_CLOSED = NODE_MASK;</span>
+
+    static final int NODE_PARENT_DIRECTION_BITS = 3; // 8方向
+<span class="fc" id="L14">    static final int NODE_PARENT_DIRECTION_MASK = mask(NODE_PARENT_DIRECTION_BITS);</span>
+    static final int NODE_PARENT_DIRECTION_SHIFT = NODE_BITS;
+<span class="fc" id="L16">    static final int NODE_PARENT_DIRECTION_SHIFT_MASK =</span>
+            NODE_PARENT_DIRECTION_MASK &lt;&lt; NODE_PARENT_DIRECTION_SHIFT;
+
+    static final int WALKABLE_BITS = 1;
+<span class="fc" id="L20">    static final int WALKABLE_MASK = mask(WALKABLE_BITS);</span>
+    static final int WALKABLE_SHIFT = NODE_PARENT_DIRECTION_SHIFT + NODE_PARENT_DIRECTION_BITS;
+<span class="fc" id="L22">    static final int WALKABLE_SHIFT_MASK = WALKABLE_MASK &lt;&lt; WALKABLE_SHIFT;</span>
+
+    // const
+    static final int DIRECTION_UP = 0;
+    static final int DIRECTION_DOWN = 1;
+    static final int DIRECTION_LEFT = 2;
+    static final int DIRECTION_RIGHT = 3;
+    static final int DIRECTION_LEFT_UP = 4;
+    static final int DIRECTION_LEFT_DOWN = 5;
+    static final int DIRECTION_RIGHT_UP = 6;
+    static final int DIRECTION_RIGHT_DOWN = 7;
+
+<span class="fc" id="L34">    static final int MAX_OPEN_NODE_SIZE = NODE_MASK - 1; // 全0全1都被用了</span>
+
+    // data
+    final short[][] grid;
+    final int width;
+    final int height;
+
+<span class="fc" id="L41">    public Grid(int width, int height) {</span>
+<span class="pc bpc" id="L42" title="1 of 4 branches missed.">        check(width &gt; 0 &amp;&amp; width &lt;= Node.X_MASK + 1);</span>
+<span class="pc bpc" id="L43" title="1 of 4 branches missed.">        check(height &gt; 0 &amp;&amp; height &lt;= Node.Y_MASK + 1);</span>
+<span class="fc" id="L44">        this.grid = new short[width][height];</span>
+<span class="fc" id="L45">        this.width = width;</span>
+<span class="fc" id="L46">        this.height = height;</span>
+<span class="fc" id="L47">    }</span>
+
+    int info(int x, int y) {
+<span class="fc" id="L50">        return grid[x][y] &amp; (WALKABLE_SHIFT_MASK | NODE_MASK);</span>
+    }
+
+    static boolean isUnwalkable(int info) {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        return (info &amp; WALKABLE_SHIFT_MASK) != 0;</span>
+    }
+
+    static boolean isNullNode(int info) {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        return info == NODE_NULL;</span>
+    }
+
+    static boolean isClosedNode(int info) {
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        return info == NODE_CLOSED;</span>
+    }
+
+    static int openNodeIdx(int info) {
+<span class="pc bpc" id="L66" title="3 of 6 branches missed.">        assert info &gt; 0 &amp;&amp; info &lt;= MAX_OPEN_NODE_SIZE;</span>
+<span class="fc" id="L67">        return info - 1;</span>
+    }
+
+    void nodeClosed(int x, int y) {
+<span class="fc" id="L71">        grid[x][y] |= NODE_CLOSED;</span>
+<span class="fc" id="L72">    }</span>
+
+    void openNodeIdxUpdate(int x, int y, int idx) {
+<span class="pc bpc" id="L75" title="3 of 6 branches missed.">        assert idx &gt;= 0 &amp;&amp; idx &lt; MAX_OPEN_NODE_SIZE;</span>
+<span class="fc" id="L76">        grid[x][y] = (short) (grid[x][y] &amp; ~NODE_MASK | (idx + 1));</span>
+<span class="fc" id="L77">    }</span>
+
+    void nodeParentDirectionUpdate(int x, int y, int d) {
+<span class="pc bpc" id="L80" title="3 of 6 branches missed.">        assert d &gt;= 0 &amp;&amp; d &lt;= NODE_PARENT_DIRECTION_MASK;</span>
+<span class="fc" id="L81">        grid[x][y] =</span>
+                (short)
+                        (grid[x][y] &amp; ~NODE_PARENT_DIRECTION_SHIFT_MASK | (d &lt;&lt; NODE_PARENT_DIRECTION_SHIFT));
+<span class="fc" id="L84">    }</span>
+
+    int nodeParentDirection(int x, int y) {
+<span class="fc" id="L87">        return grid[x][y] &gt;&gt;&gt; NODE_PARENT_DIRECTION_SHIFT &amp; NODE_PARENT_DIRECTION_MASK;</span>
+    }
+
+    void clear() {
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        for (int i = 0; i &lt; width; i++) {</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">            for (int j = 0; j &lt; height; j++) {</span>
+<span class="fc" id="L93">                grid[i][j] &amp;= WALKABLE_SHIFT_MASK;</span>
+            }
+        }
+<span class="fc" id="L96">    }</span>
+
+    boolean isClean() {
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        for (int i = 0; i &lt; width; i++) {</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">            for (int j = 0; j &lt; height; j++) {</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">                if ((grid[i][j] &amp; (NODE_PARENT_DIRECTION_SHIFT_MASK | NODE_MASK)) != 0) {</span>
+<span class="nc" id="L102">                    return false;</span>
+                }
+            }
+        }
+<span class="fc" id="L106">        return true;</span>
+    }
+
+    public void setWalkable(int x, int y, boolean flag) {
+<span class="fc bfc" id="L110" title="All 2 branches covered.">        if (flag) {</span>
+<span class="fc" id="L111">            grid[x][y] &amp;= ~WALKABLE_SHIFT_MASK;</span>
+        } else {
+<span class="fc" id="L113">            grid[x][y] |= WALKABLE_SHIFT_MASK;</span>
+        }
+<span class="fc" id="L115">    }</span>
+
+    public boolean isWalkable(int x, int y) {
+<span class="fc bfc" id="L118" title="All 4 branches covered.">        if (x &lt; 0 || x &gt;= width) {</span>
+<span class="fc" id="L119">            return false;</span>
+        }
+<span class="fc bfc" id="L121" title="All 4 branches covered.">        if (y &lt; 0 || y &gt;= height) {</span>
+<span class="fc" id="L122">            return false;</span>
+        }
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        return (grid[x][y] &amp; WALKABLE_SHIFT_MASK) == 0;</span>
+    }
+
+    public int getWidth() {
+<span class="fc" id="L128">        return width;</span>
+    }
+
+    public int getHeight() {
+<span class="fc" id="L132">        return height;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

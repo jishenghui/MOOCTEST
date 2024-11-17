@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Node.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PathFinding</a> &gt; <a href="index.source.html" class="el_package">net.mooctest</a> &gt; <span class="el_source">Node.java</span></div><h1>Node.java</h1><pre class="source lang-java linenums">package net.mooctest;
+
+import static net.mooctest.Utils.mask;
+
+<span class="nc" id="L5">class Node {</span>
+    //  int x, y;
+    //  int g, f;
+
+    static final int F_BITS = 16;
+<span class="fc" id="L10">    static final int F_MASK = mask(F_BITS);</span>
+
+    static final int G_BITS = 16;
+<span class="fc" id="L13">    static final int G_MASK = mask(G_BITS);</span>
+    static final int G_SHIFT = F_BITS;
+
+<span class="fc" id="L16">    static final long G_F_MASK_COMPLEMENT = ~((long) G_MASK &lt;&lt; G_SHIFT | F_MASK);</span>
+
+    static final int Y_BITS = 16;
+<span class="fc" id="L19">    static final int Y_MASK = mask(Y_BITS);</span>
+    static final int Y_SHIFT = G_SHIFT + G_BITS;
+
+    static final int X_BITS = 16;
+<span class="fc" id="L23">    static final int X_MASK = mask(X_BITS);</span>
+    static final int X_SHIFT = Y_SHIFT + Y_BITS;
+
+    static long toNode(int x, int y, int g, int f) {
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if (f &lt; 0) { // 如果这里报错，Cost类里改成2:3? 或者保存h而不是f?</span>
+<span class="nc" id="L28">            throw new TooLongPathException(&quot;TooBigF&quot;);</span>
+        }
+<span class="fc" id="L30">        return (long) x &lt;&lt; X_SHIFT | (long) y &lt;&lt; Y_SHIFT | (long) g &lt;&lt; G_SHIFT | f;</span>
+    }
+
+    static int getX(long l) {
+<span class="fc" id="L34">        return (int) (l &gt;&gt;&gt; X_SHIFT);</span>
+    }
+
+    static int getY(long l) {
+<span class="fc" id="L38">        return (int) (l &gt;&gt;&gt; Y_SHIFT &amp; Y_MASK);</span>
+    }
+
+    static int getG(long l) {
+<span class="fc" id="L42">        return (int) (l &gt;&gt; G_SHIFT &amp; G_MASK);</span>
+    }
+
+    static int getF(long l) {
+<span class="fc" id="L46">        return (int) (l &amp; F_MASK);</span>
+    }
+
+    static long setGF(long l, int g, int f) { // f一定比原f值更小，g一定小于等于f，所以两个值都&gt;0
+<span class="nc" id="L50">        return l &amp; G_F_MASK_COMPLEMENT | ((long) g &lt;&lt; G_SHIFT) | f;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

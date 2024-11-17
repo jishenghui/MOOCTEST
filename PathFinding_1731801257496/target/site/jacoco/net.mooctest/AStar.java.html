@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AStar.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PathFinding</a> &gt; <a href="index.source.html" class="el_package">net.mooctest</a> &gt; <span class="el_source">AStar.java</span></div><h1>AStar.java</h1><pre class="source lang-java linenums">package net.mooctest;
+
+import static net.mooctest.Cost.COST_DIAGONAL;
+import static net.mooctest.Cost.COST_ORTHOGONAL;
+import static net.mooctest.Cost.hCost;
+import static net.mooctest.Grid.*;
+import static net.mooctest.Node.*;
+import static net.mooctest.Reachability.isReachable;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
+/**
+ * 代码使用UTF-8编码，若eclipse打开后代码注释有乱码，请尝试切换为UTF-8编码
+ */
+
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">public class AStar {</span>
+
+    final Nodes nodes;
+
+<span class="fc" id="L20">    public AStar() {</span>
+<span class="fc" id="L21">        this.nodes = new Nodes();</span>
+<span class="fc" id="L22">    }</span>
+
+    public Path search(int sx, int sy, int ex, int ey, Grid map) {
+<span class="fc" id="L25">        return search(sx, sy, ex, ey, map, false);</span>
+    }
+
+    public Path search(int sx, int sy, int ex, int ey, Grid map, boolean smooth) {
+<span class="fc" id="L29">        Path p = new Path();</span>
+<span class="fc" id="L30">        search(sx, sy, ex, ey, map, p, smooth);</span>
+<span class="fc" id="L31">        return p;</span>
+    }
+
+    public void search(int sx, int sy, int ex, int ey, Grid map, Path path) {
+<span class="fc" id="L35">        search(sx, sy, ex, ey, map, path, false);</span>
+<span class="fc" id="L36">    }</span>
+
+    public void search(int sx, int sy, int ex, int ey, Grid map, Path path, boolean smooth) {
+<span class="pc bpc" id="L39" title="2 of 4 branches missed.">        assert isCLean(map);</span>
+<span class="fc" id="L40">        path.clear();</span>
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (!map.isWalkable(sx, sy)) {</span>
+<span class="fc" id="L43">            return;</span>
+        }
+
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (!map.isWalkable(ex, ey)) {</span>
+<span class="nc" id="L47">            return;</span>
+        }
+
+<span class="pc bpc" id="L50" title="3 of 4 branches missed.">        if (sx == ex &amp;&amp; sy == ey) {</span>
+<span class="nc" id="L51">            return;</span>
+        }
+
+<span class="fc" id="L54">        int endX = map.getWidth() - 1;</span>
+<span class="fc" id="L55">        int endY = map.getHeight() - 1;</span>
+
+        try {
+<span class="fc" id="L58">            nodes.map = map; // It must be placed at the beginning.</span>
+<span class="fc" id="L59">            nodes.open(sx, sy, 0, hCost(sx, sy, ex, ey), DIRECTION_UP); // The direction of the starting point will not be used.</span>
+
+            while (true) {
+<span class="fc" id="L62">                long n = nodes.close();</span>
+<span class="pc bpc" id="L63" title="1 of 2 branches missed.">                if (n == 0) {</span>
+<span class="nc" id="L64">                    return;</span>
+                }
+
+<span class="fc" id="L67">                int x = getX(n);</span>
+<span class="fc" id="L68">                int y = getY(n);</span>
+
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">                if (x == ex &amp;&amp; y == ey) {</span>
+<span class="fc" id="L71">                    fillPath(ex, ey, sx, sy, path, map, smooth);</span>
+<span class="fc" id="L72">                    return;</span>
+                }
+
+<span class="fc" id="L75">                int pg = getG(n);</span>
+
+<span class="fc" id="L77">                int x1 = max(x - 1, 0);</span>
+<span class="fc" id="L78">                int x2 = min(x + 1, endX);</span>
+<span class="fc" id="L79">                int y1 = max(y - 1, 0);</span>
+<span class="fc" id="L80">                int y2 = min(y + 1, endY);</span>
+
+<span class="fc" id="L82">                open(x, y1, pg + COST_ORTHOGONAL, DIRECTION_UP, ex, ey, map);</span>
+<span class="fc" id="L83">                open(x, y2, pg + COST_ORTHOGONAL, DIRECTION_DOWN, ex, ey, map);</span>
+<span class="fc" id="L84">                open(x2, y, pg + COST_ORTHOGONAL, DIRECTION_LEFT, ex, ey, map);</span>
+<span class="fc" id="L85">                open(x1, y, pg + COST_ORTHOGONAL, DIRECTION_RIGHT, ex, ey, map);</span>
+<span class="fc" id="L86">                open(x2, y1, pg + COST_DIAGONAL, DIRECTION_LEFT_UP, ex, ey, map);</span>
+<span class="fc" id="L87">                open(x2, y2, pg + COST_DIAGONAL, DIRECTION_LEFT_DOWN, ex, ey, map);</span>
+<span class="fc" id="L88">                open(x1, y1, pg + COST_DIAGONAL, DIRECTION_RIGHT_UP, ex, ey, map);</span>
+<span class="fc" id="L89">                open(x1, y2, pg + COST_DIAGONAL, DIRECTION_RIGHT_DOWN, ex, ey, map);</span>
+<span class="fc" id="L90">            }</span>
+<span class="nc" id="L91">        } catch (Exception e) {</span>
+<span class="nc" id="L92">            path.clear();</span>
+<span class="nc" id="L93">            throw e;</span>
+        } finally {
+<span class="fc" id="L95">            clear();</span>
+<span class="pc bpc" id="L96" title="2 of 4 branches missed.">            assert isCLean(map);</span>
+        }
+    }
+
+    public void open(int x, int y, int g, int pd, int ex, int ey, Grid map) {
+<span class="fc" id="L101">        int info = map.info(x, y);</span>
+
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        if (isUnwalkable(info)) {</span>
+<span class="fc" id="L104">            return;</span>
+        }
+
+        /*
+         * 方向是直角坐标系第一象限中的方向，即0,0点在左下角所以一个格子的坐下角点，左边，下边都属于这个格子，而上边，右边及右上角点都属于其他格子
+         * 假设在网格坐标系中，一个格子大小是100*100
+         *
+         * 点(0,0)是(0,0)格子的左下角点边(0,0-99)是(0,0)格子的左边边(0-99,0)是(0,0)格子的下边
+         *
+         * 点(100,100)是(1,1)格子的左下角点,边(0-99,100)是(0,1)格子的下边,边(100,0-99)是(1,0)格子的右边
+         */
+<span class="fc bfc" id="L115" title="All 3 branches covered.">        switch (pd) {</span>
+            case DIRECTION_RIGHT_DOWN: // 往左上走
+<span class="fc bfc" id="L117" title="All 2 branches covered.">                if (!map.isWalkable(x + 1, y)) {</span>
+<span class="fc" id="L118">                    return;</span>
+                }
+                break;
+
+            case DIRECTION_LEFT_UP: // 往右下走
+<span class="fc bfc" id="L123" title="All 2 branches covered.">                if (!map.isWalkable(x, y + 1)) {</span>
+<span class="fc" id="L124">                    return;</span>
+                }
+                break;
+        }
+
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        if (isNullNode(info)) {</span>
+<span class="fc" id="L130">            nodes.open(x, y, g, hCost(x, y, ex, ey), pd);</span>
+<span class="fc" id="L131">            return;</span>
+        }
+
+<span class="fc bfc" id="L134" title="All 2 branches covered.">        if (isClosedNode(info)) {</span>
+<span class="fc" id="L135">            return;</span>
+        }
+
+<span class="fc" id="L138">        int idx = openNodeIdx(info);</span>
+<span class="fc" id="L139">        long n = nodes.getOpenNode(idx);</span>
+
+<span class="fc" id="L141">        int ng = getG(n);</span>
+<span class="pc bpc" id="L142" title="1 of 2 branches missed.">        if (g &gt;= ng) {</span>
+<span class="fc" id="L143">            return;</span>
+        }
+
+<span class="nc" id="L146">        n = setGF(n, g, getF(n) - ng + g);</span>
+<span class="nc" id="L147">        nodes.openNodeParentChanged(n, idx, pd);</span>
+<span class="nc" id="L148">    }</span>
+
+    public void fillPath(int ex, int ey, int sx, int sy, Path path, Grid map, boolean smooth) {
+<span class="fc" id="L151">        fillPath(ex, ey, path, map, smooth);</span>
+<span class="fc" id="L152">        int pd = map.nodeParentDirection(ex, ey);</span>
+
+        while (true) {
+<span class="pc bpc" id="L155" title="5 of 9 branches missed.">            switch (pd) {</span>
+                case DIRECTION_UP:
+<span class="fc" id="L157">                    ey++;</span>
+<span class="fc" id="L158">                    break;</span>
+
+                case DIRECTION_DOWN:
+<span class="fc" id="L161">                    ey--;</span>
+<span class="fc" id="L162">                    break;</span>
+
+                case DIRECTION_LEFT:
+<span class="fc" id="L165">                    ex--;</span>
+<span class="fc" id="L166">                    break;</span>
+
+                case DIRECTION_RIGHT:
+<span class="nc" id="L169">                    ex++;</span>
+<span class="nc" id="L170">                    break;</span>
+
+                case DIRECTION_LEFT_UP:
+<span class="nc" id="L173">                    ex--;</span>
+<span class="nc" id="L174">                    ey++;</span>
+<span class="nc" id="L175">                    break;</span>
+
+                case DIRECTION_LEFT_DOWN:
+<span class="fc" id="L178">                    ex--;</span>
+<span class="fc" id="L179">                    ey--;</span>
+<span class="fc" id="L180">                    break;</span>
+
+                case DIRECTION_RIGHT_UP:
+<span class="nc" id="L183">                    ex++;</span>
+<span class="nc" id="L184">                    ey++;</span>
+<span class="nc" id="L185">                    break;</span>
+
+                case DIRECTION_RIGHT_DOWN:
+<span class="nc" id="L188">                    ex++;</span>
+<span class="nc" id="L189">                    ey--;</span>
+<span class="nc" id="L190">                    break;</span>
+
+                default:
+<span class="nc" id="L193">                    throw new RuntimeException(&quot;illegal direction: &quot; + pd);</span>
+            }
+
+<span class="fc bfc" id="L196" title="All 4 branches covered.">            if (ex == sx &amp;&amp; ey == sy) {</span>
+<span class="fc" id="L197">                fillPath(ex, ey, path, map, smooth);</span>
+<span class="fc" id="L198">                return;</span>
+            }
+
+<span class="fc" id="L201">            int ppd = map.nodeParentDirection(ex, ey);</span>
+<span class="fc bfc" id="L202" title="All 2 branches covered.">            if (ppd != pd) {</span>
+<span class="fc" id="L203">                fillPath(ex, ey, path, map, smooth);</span>
+<span class="fc" id="L204">                pd = ppd;</span>
+            }
+<span class="fc" id="L206">        }</span>
+    }
+
+    public void fillPath(int x, int y, Path path, Grid map, boolean smooth) {
+<span class="fc bfc" id="L210" title="All 2 branches covered.">        if (!smooth) {</span>
+<span class="fc" id="L211">            path.add(x, y);</span>
+<span class="fc" id="L212">            return;</span>
+        }
+
+<span class="fc bfc" id="L215" title="All 2 branches covered.">        while (path.size() &gt;= 2) {</span>
+<span class="fc" id="L216">            long p = path.get(1); // 这个点到上一个点是直达的，所以只用从上上个点开始</span>
+<span class="fc" id="L217">            int x2 = Point.getX(p);</span>
+<span class="fc" id="L218">            int y2 = Point.getY(p);</span>
+
+            // 即使到这个点不可达，但到其父节点还是有可能是可达的，这里直接结束是考虑性能和概率问题
+<span class="pc bpc" id="L221" title="1 of 2 branches missed.">            if (!isReachable(x, y, x2, y2, map)) {</span>
+<span class="fc" id="L222">                path.add(x, y);</span>
+<span class="fc" id="L223">                return;</span>
+            }
+
+<span class="nc" id="L226">            path.remove();</span>
+<span class="nc" id="L227">        }</span>
+<span class="fc" id="L228">        path.add(x, y);</span>
+<span class="fc" id="L229">    }</span>
+
+    public void clear() {
+<span class="fc" id="L232">        nodes.clear();</span>
+<span class="fc" id="L233">    }</span>
+
+    public boolean isCLean(Grid map) { // for test
+<span class="pc bpc" id="L236" title="2 of 4 branches missed.">        return nodes.isClean() &amp;&amp; map.isClean();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Reachability.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PathFinding</a> &gt; <a href="index.source.html" class="el_package">net.mooctest</a> &gt; <span class="el_source">Reachability.java</span></div><h1>Reachability.java</h1><pre class="source lang-java linenums">package net.mooctest;
+
+import static net.mooctest.Point.toPoint;
+
+<span class="nc" id="L5">public class Reachability {</span>
+
+  public static boolean isReachable(int x1, int y1, int x2, int y2, Grid grid) {
+<span class="fc" id="L8">    return isReachable(x1, y1, x2, y2, 1, grid);</span>
+  }
+
+  public static boolean isReachable(int x1, int y1, int x2, int y2, int scale, Grid grid) {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">    return getClosestWalkablePointToTarget(x1, y1, x2, y2, scale, grid) == toPoint(x2, y2);</span>
+  }
+
+  public static long getClosestWalkablePointToTarget(int x1, int y1, int x2, int y2, Grid grid) {
+<span class="nc" id="L16">    return getClosestWalkablePointToTarget(x1, y1, x2, y2, 1, grid);</span>
+  }
+
+  public static long getClosestWalkablePointToTarget(
+      int x1, int y1, int x2, int y2, int scale, Grid grid) {
+<span class="fc" id="L21">    return getClosestWalkablePointToTarget(x1, y1, x2, y2, scale, grid, null);</span>
+  }
+
+  public static long getClosestWalkablePointToTarget(
+      int x1, int y1, int x2, int y2, int scale, Grid grid, Fence fence) {
+<span class="fc bfc" id="L26" title="All 2 branches covered.">    if (scale &lt; 1) {</span>
+<span class="fc" id="L27">      throw new IllegalArgumentException(&quot;Illegal scale: &quot; + scale);</span>
+    }
+
+<span class="pc bpc" id="L30" title="1 of 4 branches missed.">    if (fence != null &amp;&amp; fence.isReachable(x1, y1, x2, y2)) {</span>
+<span class="nc" id="L31">      fence = null; // 后面都不用判断了</span>
+    }
+
+<span class="fc" id="L34">    double cx1 = scaleDown(x1 + 0.5, scale);</span>
+<span class="fc" id="L35">    double cy1 = scaleDown(y1 + 0.5, scale);</span>
+
+<span class="fc" id="L37">    int gx1 = (int) cx1;</span>
+<span class="fc" id="L38">    int gy1 = (int) cy1;</span>
+
+    // 起始格就不可行走
+<span class="fc bfc" id="L41" title="All 2 branches covered.">    if (!grid.isWalkable(gx1, gy1)) {</span>
+<span class="fc" id="L42">      return toPoint(x1, y1);</span>
+    }
+
+<span class="fc" id="L45">    final double cx2 = scaleDown(x2 + 0.5, scale);</span>
+<span class="fc" id="L46">    final double cy2 = scaleDown(y2 + 0.5, scale);</span>
+
+<span class="fc" id="L48">    final int gx2 = (int) cx2;</span>
+<span class="fc" id="L49">    final int gy2 = (int) cy2;</span>
+
+    // 在同一格
+<span class="fc bfc" id="L52" title="All 4 branches covered.">    if (gx1 == gx2 &amp;&amp; gy1 == gy2) {</span>
+<span class="pc bpc" id="L53" title="3 of 4 branches missed.">      if (fence != null &amp;&amp; !fence.isReachable(x1, y1, x2, y2)) {</span>
+<span class="nc" id="L54">        return toPoint(x1, y1);</span>
+      }
+<span class="fc" id="L56">      return toPoint(x2, y2);</span>
+    }
+
+    // 水平直线
+<span class="fc bfc" id="L60" title="All 2 branches covered.">    if (y1 == y2) { // 绝对水平</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">      int inc = gx2 &gt; gx1 ? 1 : -1;</span>
+<span class="fc" id="L62">      for (int gx = gx1 + inc; ; gx += inc) {</span>
+<span class="pc bpc" id="L63" title="1 of 6 branches missed.">        if (!grid.isWalkable(gx, gy1)</span>
+            || (fence != null
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">                &amp;&amp; !fence.isReachable(x1, y1, gx == gx2 ? x2 : scaleUp(gx, scale), y2))) {</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">          if (gx - inc == gx1) { // 第二格就不可走了，返回起始点</span>
+<span class="fc" id="L67">            return toPoint(x1, y1);</span>
+          }
+<span class="fc" id="L69">          return toPoint(scaleUp(gx - inc, scale), y1); // 中间某一格不可行走了，保留y轴</span>
+        }
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        if (gx == gx2) {</span>
+<span class="fc" id="L72">          return toPoint(x2, y2);</span>
+        }
+      }
+    }
+
+    // 竖直直线
+<span class="fc bfc" id="L78" title="All 2 branches covered.">    if (x1 == x2) { // 绝对竖直</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">      int inc = gy2 &gt; gy1 ? 1 : -1;</span>
+<span class="pc" id="L80">      for (int gy = gy1 + inc; ; gy += inc) {</span>
+<span class="pc bpc" id="L81" title="2 of 6 branches missed.">        if (!grid.isWalkable(gx1, gy)</span>
+            || (fence != null
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">                &amp;&amp; !fence.isReachable(x1, y1, x2, gy == gy2 ? y2 : scaleUp(gy, scale)))) {</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">          if (gy - inc == gy1) {</span>
+<span class="fc" id="L85">            return toPoint(x1, y1);</span>
+          }
+<span class="nc" id="L87">          return toPoint(x1, scaleUp(gy - inc, scale));</span>
+        }
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">        if (gy == gy2) {</span>
+<span class="fc" id="L90">          return toPoint(x2, y2);</span>
+        }
+      }
+    }
+
+    // 斜线的情况
+    // y=k*x+b, k=dy/dx, b=y-k*x
+
+<span class="fc" id="L98">    final double dx = cx2 - cx1;</span>
+<span class="fc" id="L99">    final double dy = cy2 - cy1;</span>
+
+<span class="fc" id="L101">    final double k = dy / dx;</span>
+<span class="fc" id="L102">    final double b = cy1 - k * cx1;</span>
+
+    final boolean stepX;
+    final double addDx, addDy;
+
+<span class="fc bfc" id="L107" title="All 2 branches covered.">    if (Math.abs(dx) &gt; Math.abs(dy)) { // 偏x轴，递增x</span>
+<span class="fc" id="L108">      stepX = true;</span>
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">      addDx = dx &gt; 0 ? 1 : -1;</span>
+<span class="fc" id="L110">      addDy = addDx * k;</span>
+    } else { // 偏y轴，递增y
+<span class="fc" id="L112">      stepX = false;</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">      addDy = dy &gt; 0 ? 1 : -1;</span>
+<span class="fc" id="L114">      addDx = addDy / k;</span>
+    }
+
+<span class="fc" id="L117">    double cx = cx1;</span>
+<span class="fc" id="L118">    double cy = cy1;</span>
+
+    while (true) {
+<span class="fc" id="L121">      cx += addDx;</span>
+<span class="fc" id="L122">      cy += addDy;</span>
+
+<span class="fc" id="L124">      int gx = (int) cx;</span>
+<span class="fc" id="L125">      int gy = (int) cy;</span>
+
+<span class="pc bpc" id="L127" title="6 of 14 branches missed.">      if (stepX</span>
+          ? (addDx &gt; 0 ? gx &gt;= gx2 : gx &lt;= gx2)
+          : (addDy &gt; 0 ? gy &gt;= gy2 : gy &lt;= gy2)) { // 最后一个点要保证精确相等
+<span class="fc" id="L130">        gx = gx2;</span>
+<span class="fc" id="L131">        gy = gy2;</span>
+      }
+
+<span class="fc bfc" id="L134" title="All 2 branches covered.">      if (!grid.isWalkable(gx, gy)) {</span>
+<span class="fc" id="L135">        break;</span>
+      }
+
+<span class="pc bpc" id="L138" title="2 of 4 branches missed.">      if (gx != gx1 &amp;&amp; gy != gy1) { // 格子的xy坐标都变了</span>
+<span class="pc bpc" id="L139" title="1 of 2 branches missed.">        int x0 = dx &gt; 0 ? gx : gx1;</span>
+<span class="fc" id="L140">        double y0 = k * x0 + b; // x为该格子的起始点时，y的坐标</span>
+
+        // 如果y0正好是个整数，表明该直线正好穿过格子的交叉点
+        // 而当k&gt;0，说明该直线又是个左下右上直线
+        // 这种情况，该交叉点是属于右上格子额，所以没穿过其他格子，不用多余判断
+<span class="pc bpc" id="L145" title="1 of 4 branches missed.">        if (Math.rint(y0) != y0 || k &lt; 0) {</span>
+<span class="fc" id="L146">          int gy0 = (int) y0;</span>
+<span class="pc bpc" id="L147" title="1 of 2 branches missed.">          if (gy0 == gy) {</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">            if (!grid.isWalkable(gx1, gy)) {</span>
+<span class="nc" id="L149">              break;</span>
+            }
+          } else {
+<span class="pc bpc" id="L152" title="1 of 2 branches missed.">            if (!grid.isWalkable(gx, gy1)) {</span>
+<span class="nc" id="L153">              break;</span>
+            }
+          }
+        }
+      }
+
+<span class="pc bpc" id="L159" title="2 of 4 branches missed.">      if (gx == gx2 &amp;&amp; gy == gy2) {</span>
+<span class="pc bpc" id="L160" title="1 of 4 branches missed.">        if (fence != null &amp;&amp; !fence.isReachable(x1, y1, x2, y2)) {</span>
+<span class="fc" id="L161">          break;</span>
+        }
+<span class="fc" id="L163">        return toPoint(x2, y2);</span>
+      }
+
+<span class="nc bnc" id="L166" title="All 4 branches missed.">      if (fence != null &amp;&amp; !fence.isReachable(x1, y1, scaleUp(cx, scale), scaleUp(cy, scale))) {</span>
+<span class="nc" id="L167">        break;</span>
+      }
+
+<span class="nc" id="L170">      cx1 = cx;</span>
+<span class="nc" id="L171">      cy1 = cy;</span>
+
+<span class="nc" id="L173">      gx1 = gx;</span>
+<span class="nc" id="L174">      gy1 = gy;</span>
+<span class="nc" id="L175">    }</span>
+
+    // 因不可行走导致中断，倒退回上一个检查点并返回
+<span class="fc" id="L178">    return scaleUpPoint(cx1, cy1, scale);</span>
+  }
+
+  public static double scaleDown(double d, int scale) {
+<span class="fc" id="L182">    return d / scale;</span>
+  }
+
+  public static int scaleUp(int i, int scale) {
+<span class="fc" id="L186">    return i * scale + scale / 2; // 大格的中心点</span>
+  }
+
+  public static int scaleUp(double d, int scale) {
+<span class="fc" id="L190">    return (int) (d * scale);</span>
+  }
+
+  public static long scaleUpPoint(double x, double y, int scale) {
+<span class="fc" id="L194">    return toPoint(scaleUp(x, scale), scaleUp(y, scale));</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

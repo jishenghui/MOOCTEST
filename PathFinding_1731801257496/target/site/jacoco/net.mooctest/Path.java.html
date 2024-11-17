@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Path.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PathFinding</a> &gt; <a href="index.source.html" class="el_package">net.mooctest</a> &gt; <span class="el_source">Path.java</span></div><h1>Path.java</h1><pre class="source lang-java linenums">package net.mooctest;
+
+import java.util.Arrays;
+
+import static net.mooctest.Point.toPoint;
+
+<span class="pc bpc" id="L7" title="1 of 2 branches missed.">public class Path {</span>
+
+   long[] ps;
+   int size;
+
+<span class="fc" id="L12">  public Path() {</span>
+<span class="fc" id="L13">    this.ps = new long[8];</span>
+<span class="fc" id="L14">  }</span>
+
+  void add(int x, int y) { // 从后向前加
+<span class="fc" id="L17">    long p = toPoint(x, y);</span>
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">    if (size &gt;= ps.length) {</span>
+<span class="nc" id="L19">      grow(size + 1);</span>
+    }
+<span class="fc" id="L21">    ps[size] = p;</span>
+<span class="fc" id="L22">    size++;</span>
+<span class="fc" id="L23">  }</span>
+
+  void remove() {
+<span class="fc" id="L26">    size--;</span>
+<span class="fc" id="L27">  }</span>
+
+  public long get(int i) {
+<span class="pc bpc" id="L30" title="1 of 6 branches missed.">    assert i &gt;= 0 &amp;&amp; i &lt; size;</span>
+<span class="fc" id="L31">    return ps[size - 1 - i];</span>
+  }
+
+  public int size() {
+<span class="fc" id="L35">    return size;</span>
+  }
+
+  public boolean isEmpty() {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">    return size &lt; 2; // 至少两点才能构成一段路径</span>
+  }
+
+  public void clear() {
+<span class="fc" id="L43">    size = 0;</span>
+<span class="fc" id="L44">  }</span>
+
+  public void grow(int minCapacity) {
+<span class="fc" id="L47">    int oldCapacity = ps.length;</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">    int newCapacity = oldCapacity + ((oldCapacity &lt; 64) ? (oldCapacity + 2) : (oldCapacity &gt;&gt; 1));</span>
+
+<span class="fc bfc" id="L50" title="All 2 branches covered.">    if (newCapacity &lt; minCapacity) {</span>
+<span class="fc" id="L51">      newCapacity = minCapacity;</span>
+    }
+
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">    if (newCapacity &lt; 0) {</span>
+<span class="nc" id="L55">      throw new RuntimeException(&quot;Overflow&quot;);</span>
+    }
+<span class="fc" id="L57">    ps = Arrays.copyOf(ps, newCapacity);</span>
+<span class="fc" id="L58">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

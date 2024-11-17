@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="22" failures="0" name="net.mooctest.AStarTest" time="0.027" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
+    <property name="java.vm.version" value="25.261-b12"/>
+    <property name="user.country.format" value="HK"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\JSH.HP\Desktop\Past Events\PathFinding_1731801257496"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\JSH.HP\Desktop\Past Events\PathFinding_1731801257496"/>
+    <property name="java.runtime.version" value="1.8.0_261-b12"/>
+    <property name="user.script.format" value="Hans"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_261\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\JSH.HP\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_261\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\System64；;\windows;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\HP\OMEN-Broadcast\Common;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk1.8.0_261\bin;C:\TDM-GCC-64\bin;C:\Program Files\mingw64\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2023b\runtime\win64;C:\Program Files\MATLAB\R2023b\bin;C:\windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\Pandoc\;C:\Program Files\MySQL\MySQL Server 8.4\bin;C:\Program Files\MySQL\mysql-5.7.44-winx64\mysql-5.7.44-winx64\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\apache-tomcat-10.1.31\bin;C:\Program Files\nodejs\;C:\windows;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files (x86)\NetSarang\Xshell 8\;C:\Program Files (x86)\NetSarang\Xftp 8\;C:\Program Files\HP\HP One Agent;C:\Program Files\Tailscale\;C:\Program Files\putty-x64-0.81-cn1;C:\Program Files\Redis\;C:\Users\JSH.HP\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\JSH.HP\AppData\Local\Programs\Python\Python312\;C:\Users\JSH.HP\AppData\Local\Microsoft\WindowsApps;C:\Users\JSH.HP\.dotnet\tools;C:\Program Files\Bandizip\;C:\ProgramData\JSH.HP\GitHubDesktop\bin;C:\Program Files\mingw64\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin;;C:\Users\JSH.HP\AppData\Local\GitHubDesktop\bin;C:\Users\JSH.HP\AppData\Roaming\npm;C:\Users\JSH.HP\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.6.3\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\JSH.HP"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="JSH.HP"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_261\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test jacoco:report"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_261"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_261\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_261\jre\classes"/>
+    <property name="sun.stderr.encoding" value="ms936"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.6.3\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="ms936"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="net.mooctest.AStarTest" name="testPathReachesTarget" time="0.018"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_UnwalkableMiddle" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testVerticalLine_FenceBlocking" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_CrossingIntersection_PositiveSlope" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testVerticalLine_UnwalkableMiddle" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_FenceBlocking" time="0.001"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_NotCrossingIntersection_PositiveSlope" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testSearch_WithNoPath_ShouldReturnEmptyPath" time="0.001"/>
+  <testcase classname="net.mooctest.AStarTest" name="testHorizontalLine_Blocked" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_CrossingIntersection_NegativeSlope" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_NotCrossingIntersection_NegativeSlope" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testSearch_WithValidPath_ShouldFindPath" time="0.001"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_CrossingIntersection" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testReachability" time="0.001"/>
+  <testcase classname="net.mooctest.AStarTest" name="testPathBlockedByFence" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testPathBlocked" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testHorizontalLine_FullyWalkable" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testHorizontalLine_SecondGridBlocked" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testVerticalLine_FullyWalkable" time="0.002"/>
+  <testcase classname="net.mooctest.AStarTest" name="testSearch_WithNoObstacles_ShouldReturnPath" time="0.003"/>
+  <testcase classname="net.mooctest.AStarTest" name="testHorizontalLine_BlockedByFence" time="0"/>
+  <testcase classname="net.mooctest.AStarTest" name="testDiagonalLine_FullyWalkable" time="0"/>
+</testsuite>

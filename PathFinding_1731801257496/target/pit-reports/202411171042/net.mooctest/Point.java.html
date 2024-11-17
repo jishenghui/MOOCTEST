@@ -1,0 +1,375 @@
+<html>
+<head>
+<style type='text/css'>
+html, body, div, span, p, blockquote, pre {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	line-height: 1;
+	color: black;
+	background: white;
+	margin-left: 20px;
+}
+
+.src { 
+	border: 1px solid #dddddd;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-family: Consolas, Courier, monospace;
+}
+
+
+.covered {background-color: #ddffdd}
+.uncovered {background-color: #ffdddd}
+.killed {background-color: #aaffaa}
+.survived {background-color: #ffaaaa}
+.uncertain {background-color: #dde7ef}
+.run_error {background-color: #dde7ef}
+.na {background-color: #eeeeee}
+.timed_out {background-color: #dde7ef}
+.non_viable {background-color: #aaffaa}
+.memory_error {background-color: #dde7ef}
+.not_started {background-color: #dde7ef; color : red}
+.no_coverage {background-color: #ffaaaa}
+
+
+.pop {outline:none; }
+.pop strong {line-height:30px;}
+.pop {text-decoration:none;}
+.pop span { z-index:10;display:none; padding:14px 20px; margin-top:-30px; margin-left:28px; width:800px; line-height:16px; word-wrap:break-word; }
+.pop:hover span{ display:inline; position:absolute; color:#111; border:1px solid #DCA; background:#fffAF0;}
+
+.pop span { border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -moz-box-shadow: 5px 5px 8px #CCC; -webkit-box-shadow: 5px 5px 8px #CCC; box-shadow: 5px 5px 8px #CCC; }
+</style>
+
+</head>
+<body>
+
+
+<h1>Point.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_1'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package net.mooctest;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_2'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_3'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>public class Point {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_4'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_5'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static int getX(long p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_6'/>
+6
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_6'>2</a>
+<span>
+
+1. getX : Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED<br/>
+
+2. getX : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return (int) (p &#62;&#62;&#62; 32);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_7'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_8'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_9'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static int getY(long p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_10'/>
+10
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_10'>1</a>
+<span>
+
+1. getY : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return (int) p;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_11'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_12'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_13'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static long toPoint(int x, int y) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_14'/>
+14
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_14'>4</a>
+<span>
+
+1. toPoint : Replaced Shift Left with Shift Right &rarr; KILLED<br/>
+
+2. toPoint : Replaced bitwise AND with OR &rarr; KILLED<br/>
+
+3. toPoint : Replaced bitwise OR with AND &rarr; KILLED<br/>
+
+4. toPoint : replaced return of long value with value + 1 for net/mooctest/Point::toPoint &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return (((long) x) &#60;&#60; 32) | (y &#38; 0xFFFFFFFFL);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_15'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@18e6b72b_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_16'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@18e6b72b_6'>6</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_6'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>none</span></span> Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getX<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@18e6b72b_10'>10</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_10'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getY<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@18e6b72b_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@18e6b72b_14'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toPoint<br/><b>Killed by : </b>net.mooctest.AStarTest.testVerticalLine_UnwalkableMiddle(net.mooctest.AStarTest)</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>toPoint<br/><b>Killed by : </b>net.mooctest.AStarTest.testVerticalLine_UnwalkableMiddle(net.mooctest.AStarTest)</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>toPoint<br/><b>Killed by : </b>net.mooctest.AStarTest.testVerticalLine_UnwalkableMiddle(net.mooctest.AStarTest)</span></span> Replaced bitwise OR with AND &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>toPoint<br/><b>Killed by : </b>net.mooctest.AStarTest.testVerticalLine_UnwalkableMiddle(net.mooctest.AStarTest)</span></span> replaced return of long value with value + 1 for net/mooctest/Point::toPoint &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>net.mooctest.AStarTest.testPathBlocked(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_FenceBlocking(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testHorizontalLine_FullyWalkable(net.mooctest.AStarTest) (2 ms)</li><li>net.mooctest.AStarTest.testHorizontalLine_BlockedByFence(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testPathBlockedByFence(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testPathReachesTarget(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testHorizontalLine_Blocked(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_CrossingIntersection_PositiveSlope(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_CrossingIntersection_NegativeSlope(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testSearch_WithNoPath_ShouldReturnEmptyPath(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_CrossingIntersection(net.mooctest.AStarTest) (16 ms)</li><li>net.mooctest.AStarTest.testSearch_WithNoObstacles_ShouldReturnPath(net.mooctest.AStarTest) (3 ms)</li><li>net.mooctest.AStarTest.testHorizontalLine_SecondGridBlocked(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_NotCrossingIntersection_PositiveSlope(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testVerticalLine_UnwalkableMiddle(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testReachability(net.mooctest.AStarTest) (2 ms)</li><li>net.mooctest.AStarTest.testVerticalLine_FullyWalkable(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_NotCrossingIntersection_NegativeSlope(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testSearch_WithValidPath_ShouldFindPath(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_UnwalkableMiddle(net.mooctest.AStarTest) (1 ms)</li><li>net.mooctest.AStarTest.testVerticalLine_FenceBlocking(net.mooctest.AStarTest) (0 ms)</li><li>net.mooctest.AStarTest.testDiagonalLine_FullyWalkable(net.mooctest.AStarTest) (1 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.1.10
+
+</body>
+</html>
